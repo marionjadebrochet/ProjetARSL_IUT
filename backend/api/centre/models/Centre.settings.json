@@ -1,0 +1,37 @@
+{
+  "connection": "default",
+  "collectionName": "centres",
+  "info": {
+    "name": "centre",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "Adresse": {
+      "type": "string"
+    },
+    "heureOuvertureMatin": {
+      "type": "date"
+    },
+    "heureFermetureMatin": {
+      "type": "date"
+    },
+    "heureFermetureSoir": {
+      "type": "date"
+    },
+    "heureOuvertureSoir": {
+      "type": "date"
+    },
+    "tel": {
+      "type": "string"
+    },
+    "association": {
+      "model": "association",
+      "via": "centres"
+    }
+  }
+}

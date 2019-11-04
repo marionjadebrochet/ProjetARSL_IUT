@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "associations",
+  "info": {
+    "name": "association",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "centres": {
+      "collection": "centre",
+      "via": "association"
+    },
+    "nom": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}
