@@ -2,16 +2,21 @@
   <div>
     <Header />
 
+    <Nav />
+
     <nuxt />
   </div>
 </template>
 
 <script>
-// Import your new Header component
+// Import Header component
 import Header from '~/components/Header.vue'
+import Nav from '~/components/Nav.vue'
 export default {
   components: {
-    Header
+    Header,
+    Nav
   }
 }
+
 </script>
