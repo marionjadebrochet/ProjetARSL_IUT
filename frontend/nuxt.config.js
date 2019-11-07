@@ -40,10 +40,19 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/apollo',
   ],
   /*
   ** Build configuration
   */
+  apollo: {
+  clientConfigs: {
+    default: {
+      httpEndpoint: 'http://localhost:1337/graphql'
+    }
+  }
+},
+
   build: {
     /*
     ** You can extend webpack config here
