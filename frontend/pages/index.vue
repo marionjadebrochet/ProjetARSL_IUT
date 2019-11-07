@@ -1,6 +1,6 @@
 <template>
 <body>
-    <p> Centres ouverts </p>
+    <h3> Centres ouverts </h3>
   <div id="liste_asso"> </div>
 </body>
 </template>

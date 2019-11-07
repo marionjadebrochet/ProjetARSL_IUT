@@ -1,13 +1,17 @@
 <template>
-  <div>
+  <header>
     <h1>SIAO Limoges</h1>
-    <h3>Langue</h3>
-    <select>
-      <option>Français</option>
-      <option>Anglais</option>
-      <option>Arabe</option>
-      <option>Russe</option>
-    </select>
-    <input type="button" value="Connexion">
-  </div>
+      <div class="choixLangue">
+        <div>
+        <label for="langue">Langue</label>
+        <select id="langue">
+          <option>Français</option>
+          <option>Anglais</option>
+          <option>Arabe</option>
+          <option>Russe</option>
+        </select>
+        </div>
+      <button>Connexion</button>
+      </div>
+  </header>
 </template>
