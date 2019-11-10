@@ -7,13 +7,13 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
     "comment": ""
   },
   "attributes": {
-    "Adresse": {
-      "type": "string"
-    },
     "heureOuvertureMatin": {
       "type": "date"
     },
@@ -32,6 +32,9 @@
     "association": {
       "model": "association",
       "via": "centres"
+    },
+    "adresse": {
+      "type": "string"
     }
   }
 }

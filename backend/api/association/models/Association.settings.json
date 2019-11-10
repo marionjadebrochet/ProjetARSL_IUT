@@ -14,10 +14,6 @@
     "comment": ""
   },
   "attributes": {
-    "centres": {
-      "collection": "centre",
-      "via": "association"
-    },
     "nom": {
       "type": "string"
     },
@@ -28,6 +24,10 @@
       "model": "file",
       "via": "related",
       "plugin": "upload"
+    },
+    "centres": {
+      "collection": "centre",
+      "via": "association"
     }
   }
 }
