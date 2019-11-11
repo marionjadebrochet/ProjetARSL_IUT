@@ -1,3 +1,7 @@
+html {
+  font-family: 'Lato', sans-serif;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -23,15 +27,22 @@ h4 {
   text-align: center;
 }
 
+h5 {
+  padding: 5px 0px;
+  font-size: 20px;
+}
+
 header {
   height: 100px;
-  background-color: grey;
+  background-color:#2251dd;
   color: white;
   align-items: center;
 }
+
 .choixLangue > button {
   font-size: 20px;
 }
+
 .choixLangue {
   display: flex;
   flex-direction: row;
@@ -39,32 +50,30 @@ header {
   align-items: center;
   margin: 10px 10px 0px 10px;
 }
+
 li{
   font-size: 18px;
-  font-weight: bold;
   padding: 10px;
   width: 30%;
   text-align: center;
   background-color: #ffa333;
   border-collapse: collapse;
 }
+
 ul {
-  margin: 10px 0px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   border-collapse: collapse;
 }
 
-
-nav > button {
-  font-size: 40px;
-  font-weight: bold;
-  margin: 10px 0px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+p {
+  font-size:18px;
 }
-
+nav {
+  background-color: #ffa333;
+  width:100%;
+}
 
 label {
   font-size:30px;
@@ -79,6 +88,15 @@ section {
   text-align: justify;
 }
 
+.call {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .association {
   width: 90%;
   display: flex;
@@ -91,6 +109,39 @@ section {
   display: block;
   margin: auto;
 }
+
+.accueilDeJour {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+.listeCentre {
+  margin: 30px 0px;
+}
+.centre > h4 {
+  margin-bottom: 20px;
+}
+
+.map > h4{
+  margin-bottom: 20px;
+}
+
+.map > iframe {
+  width: 100%;
+  height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 786px) {
   h1 {
@@ -113,7 +164,7 @@ section {
     background-color: #e67e00;
     transition: 0.5s;
   }
-  nav > button:hover {
+  .call:hover {
     font-size: 50px;
     transition: 0.5s;
   }
@@ -128,5 +179,18 @@ section {
   .association > img{
     width: 40%
   }
+
+  .accueilDeJour {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .listeCentre, .map {
+    width: 40%;
+  }
+
+
+
 
 }

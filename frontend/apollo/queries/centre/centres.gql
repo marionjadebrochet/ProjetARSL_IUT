@@ -1,4 +1,4 @@
-query Centres {
+query Centre {
   centres {
     id
     association {

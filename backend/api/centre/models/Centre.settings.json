@@ -14,18 +14,6 @@
     "comment": ""
   },
   "attributes": {
-    "heureOuvertureMatin": {
-      "type": "date"
-    },
-    "heureFermetureMatin": {
-      "type": "date"
-    },
-    "heureFermetureSoir": {
-      "type": "date"
-    },
-    "heureOuvertureSoir": {
-      "type": "date"
-    },
     "tel": {
       "type": "string"
     },
@@ -34,6 +22,18 @@
       "via": "centres"
     },
     "adresse": {
+      "type": "string"
+    },
+    "heureOuvertureMatin": {
+      "type": "string"
+    },
+    "heureFermetureMatin": {
+      "type": "string"
+    },
+    "heureFermetureSoir": {
+      "type": "string"
+    },
+    "heureOuvertureSoir": {
       "type": "string"
     }
   }
