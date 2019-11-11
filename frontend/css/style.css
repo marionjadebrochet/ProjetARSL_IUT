@@ -1,4 +1,10 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
 h1 {
+  color: white;
   font-size: 48px;
   text-align: center;
 }
@@ -10,6 +16,10 @@ h2 {
 
 h3 {
   font-size: 30px;
+  text-align: center;
+}
+h4 {
+  font-size: 26px;
   text-align: center;
 }
 
@@ -30,13 +40,13 @@ header {
   margin: 10px 10px 0px 10px;
 }
 li{
+  font-size: 18px;
+  font-weight: bold;
   padding: 10px;
   width: 30%;
   text-align: center;
-  border: 1px solid black;
+  background-color: #ffa333;
   border-collapse: collapse;
-  display: inline-block;
-
 }
 ul {
   margin: 10px 0px;
@@ -63,15 +73,60 @@ label {
 select {
   size:40px;
 }
-
-a {
-  text-decoration: none;
-  color: black;
+section {
+  font-size: 24px;
+  padding: 10px;
+  text-align: justify;
 }
 
-
-
+.association {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.association > img {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
 
 @media screen and (min-width: 786px) {
+  h1 {
+    font-size: 60px;
+    padding-top:10px;
+  }
+  header {
+    height: 150px;
+  }
+  label{
+    font-size: 50px;
+    margin: 0 15px;
+  }
+  li {
+    width: 15%;
+    font-size: 30px;
+  }
+
+  li:hover {
+    background-color: #e67e00;
+    transition: 0.5s;
+  }
+  nav > button:hover {
+    font-size: 50px;
+    transition: 0.5s;
+  }
+
+  .association {
+    margin-top:20px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+  }
+  .association > img{
+    width: 40%
+  }
 
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
   <header>
-    <h1>SIAO Limoges</h1>
+    <router-link tag="a" to="/" exact><h1>SIAO Limoges</h1></router-link>
       <div class="choixLangue">
         <div>
         <label for="langue">Langue</label>

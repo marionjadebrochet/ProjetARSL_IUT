@@ -4,8 +4,10 @@
 
     <div class="association" v-for="association in filteredList" v-bind:key="association">
        <img :src="'http://localhost:1337/' + association.logo.url">
-       <h4>{{association.nom}}</h4>
-       <p>{{association.description}}</p>
+       <div class="infoAssociation">
+          <h4>{{association.nom}}</h4>
+          <section>{{association.description}}</section>
+       </div>
     </div>
 
   </div>
