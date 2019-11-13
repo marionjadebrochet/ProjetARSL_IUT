@@ -100,6 +100,10 @@ section {
   margin-right: auto;
 }
 
+.centre {
+  margin-top: 20px;
+}
+
 .association {
   width: 90%;
   display: flex;
@@ -111,6 +115,7 @@ section {
   height: auto;
   display: block;
   margin: auto;
+  padding:20px 0px;
 }
 
 .accueilDeJour {
@@ -154,6 +159,10 @@ button {
     font-size: 60px;
     padding-top:10px;
   }
+  h4 {
+    width:90%;
+    padding:10px 0px;
+  }
   header {
     height: 150px;
   }
@@ -168,9 +177,11 @@ button {
 
   li:hover {
     background-color: #f13d0e;
+    font-size: 36px;
     transition: 0.5s;
   }
   button:hover {
+    font-size:30px;
     color:#f26340;
     background-color: black;
     transition: 0.5s;
@@ -201,12 +212,18 @@ button {
     align-items: baseline;
     justify-content: space-around;
     margin-top: 20px;
+    background-color: #EEE;
   }
 
   .listeCentre, .map {
     width: 40%;
   }
 
+  #deco {
+    heigth:200px;
+    width:50px;
+    background-color: #f26340;
+  }
 
 
 

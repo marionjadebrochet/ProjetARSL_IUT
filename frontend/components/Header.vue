@@ -5,12 +5,13 @@
         <div class="choixLangue">
           <div>
           <label for="langue">Langue</label>
-          <select id="langue">
-            <option>Français</option>
-            <option>Anglais</option>
-            <option>Arabe</option>
-            <option>Russe</option>
-          </select>
+          <select v-on:input="doGTranslate(this)">
+            <option value="">Choose your language</option>
+            <option value="fr|ar">Arabic</option>
+            <option value="fr|en">English</option>
+            <option value="fr|fr">French</option>
+            <option value="fr|ru">Russian</option>
+            </select>
           </div>
         <button>Connexion</button>
         </div>
