@@ -18,8 +18,6 @@
           <h4> Les centres </h4>
           <iframe src="https://www.google.com/maps/d/embed?mid=1SJ0fyamK-fWDJJytAadYBpUfF4w13y1-"></iframe>
       </div>
-
-
     </div>
   </body>
 </template>

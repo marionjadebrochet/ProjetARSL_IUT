@@ -1,7 +1,7 @@
 html {
   font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
-
 a {
   text-decoration: none;
   color: black;
@@ -11,6 +11,7 @@ h1 {
   color: white;
   font-size: 48px;
   text-align: center;
+  font-weight: bold;
 }
 
 h2 {
@@ -21,10 +22,12 @@ h2 {
 h3 {
   font-size: 30px;
   text-align: center;
+  font-weight: 500;
 }
 h4 {
   font-size: 26px;
   text-align: center;
+  font-weight: 400;
 }
 
 h5 {
@@ -52,11 +55,12 @@ header {
 }
 
 li{
-  font-size: 18px;
+  font-size: 24px;
   padding: 10px;
   width: 30%;
   text-align: center;
   border-collapse: collapse;
+  font-weight: 600;
 }
 
 ul {
@@ -172,7 +176,6 @@ button {
     transition: 0.5s;
   }
   .call:hover {
-    color:white;
     font-size: 50px;
   }
 
@@ -184,7 +187,13 @@ button {
     border: 1px solid black;
   }
   .association > img{
-    width: 40%
+    width: 30%;
+    padding:40px;
+  }
+
+  .infoAssociation {
+    width: 60%;
+    padding-right:50px;
   }
 
   .accueilDeJour {
@@ -193,6 +202,7 @@ button {
     justify-content: space-around;
     margin-top: 20px;
   }
+
   .listeCentre, .map {
     width: 40%;
   }

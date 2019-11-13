@@ -18,7 +18,7 @@
     <nav>
       <ul>
         <li><router-link tag="a" to="/centre" exact>Accueil de jour</router-link></li>
-        <li><router-link tag="a" to="/association" exact>Association</router-link></li>
+        <li><router-link tag="a" to="/association" exact>Associations</router-link></li>
       </ul>
     </nav>
     <h2> Signaler quelque chose ?  </h2>
