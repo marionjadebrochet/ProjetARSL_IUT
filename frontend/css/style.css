@@ -34,7 +34,7 @@ h5 {
 
 header {
   height: 100px;
-  background-color:#2251dd;
+  background-color:#2b303a;
   color: white;
   align-items: center;
 }
@@ -56,7 +56,6 @@ li{
   padding: 10px;
   width: 30%;
   text-align: center;
-  background-color: #ffa333;
   border-collapse: collapse;
 }
 
@@ -71,7 +70,7 @@ p {
   font-size:18px;
 }
 nav {
-  background-color: #ffa333;
+  background-color: #f26340;
   width:100%;
 }
 
@@ -132,7 +131,10 @@ section {
   height: 400px;
 }
 
-
+button {
+  border:3px solid black;
+  background-color: white;
+}
 
 
 
@@ -161,12 +163,17 @@ section {
   }
 
   li:hover {
-    background-color: #e67e00;
+    background-color: #f13d0e;
+    transition: 0.5s;
+  }
+  button:hover {
+    color:#f26340;
+    background-color: black;
     transition: 0.5s;
   }
   .call:hover {
+    color:white;
     font-size: 50px;
-    transition: 0.5s;
   }
 
   .association {

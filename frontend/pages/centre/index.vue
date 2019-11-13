@@ -19,8 +19,7 @@
 
         <div class="map">
             <h4> Les centres </h4>
-            <iframe src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Limoges+(Les%20centres)&amp;ie=UTF8&amp;t=&amp;z=12&amp;iwloc=B&amp;output=embed">
-            </iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1SJ0fyamK-fWDJJytAadYBpUfF4w13y1-"></iframe>
         </div>
     </div>
   </div>
