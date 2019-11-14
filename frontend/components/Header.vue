@@ -1,11 +1,11 @@
 <template>
   <div>
     <header>
-      <router-link tag="a" to="/" exact><h1>SIAO Limoges</h1></router-link>
+      <router-link tag="a" to="/" exact><h1>SIAO 115 <br> Haute-Vienne</h1></router-link>
         <div class="choixLangue">
           <div>
           <label for="langue">Langue</label>
-          <select v-on:input="doGTranslate(this)">
+          <select v-on:change="doGTranslate(this)">
             <option value="">Choose your language</option>
             <option value="fr|ar">Arabic</option>
             <option value="fr|en">English</option>

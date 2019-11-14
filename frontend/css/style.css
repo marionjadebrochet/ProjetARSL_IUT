@@ -36,7 +36,6 @@ h5 {
 }
 
 header {
-  height: 100px;
   background-color:#2b303a;
   color: white;
   align-items: center;
@@ -164,7 +163,7 @@ button {
     padding:10px 0px;
   }
   header {
-    height: 150px;
+    height: 200px;
   }
   label{
     font-size: 50px;
@@ -177,7 +176,6 @@ button {
 
   li:hover {
     background-color: #f13d0e;
-    font-size: 36px;
     transition: 0.5s;
   }
   button:hover {
