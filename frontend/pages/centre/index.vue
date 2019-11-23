@@ -10,7 +10,7 @@
             <h4>{{centre.association.nom}}</h4>
             <h5>Adresse : </h5>
             <p>{{centre.adresse}}</p>
-            <h5>Horraire d'ouverture : </h5>
+            <h5>Horaire d'ouverture : </h5>
             <p>Matin : {{centre.heureOuvertureMatin}} - {{centre.heureFermetureMatin}}</p>
             <p>Après-midi : {{centre.heureOuvertureSoir}} - {{centre.heureFermetureSoir}}</p>
           </div>

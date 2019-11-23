@@ -53,6 +53,11 @@ header {
   margin: 10px 10px 0px 10px;
 }
 
+.choixLangue > div{
+  display:flex;
+  flex-direction: column;
+}
+
 li{
   font-size: 24px;
   padding: 10px;
@@ -145,13 +150,13 @@ button {
 }
 
 
-
-
-
-
-
-
-
+#goog-gt-tt {display:none;heigth:0px;}
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    }
+body {
+    top: 0px !important;
+    }
 
 @media screen and (min-width: 786px) {
   h1 {
@@ -223,6 +228,10 @@ button {
     background-color: #f26340;
   }
 
+  .choixLangue > div {
+    flex-direction: row;
+    align-items: baseline;
+  }
 
 
 }
