@@ -35,6 +35,7 @@ export default {
             pageLanguage: 'fr',
             includedLanguages: 'fr,en,ar,ru',
             layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: true,
           }, 'google_translate_element');
         }
 

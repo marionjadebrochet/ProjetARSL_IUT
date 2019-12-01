@@ -25,6 +25,12 @@
       "via": "related",
       "plugin": "upload"
     },
+    "Adresse": {
+      "type": "text"
+    },
+    "Email": {
+      "type": "email"
+    },
     "centres": {
       "collection": "centre",
       "via": "association"

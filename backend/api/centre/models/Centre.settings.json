@@ -17,10 +17,6 @@
     "tel": {
       "type": "string"
     },
-    "association": {
-      "model": "association",
-      "via": "centres"
-    },
     "adresse": {
       "type": "string"
     },
@@ -35,6 +31,13 @@
     },
     "heureOuvertureSoir": {
       "type": "string"
+    },
+    "Animaux": {
+      "type": "boolean"
+    },
+    "association": {
+      "model": "association",
+      "via": "centres"
     }
   }
 }
