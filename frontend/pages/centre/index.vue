@@ -19,8 +19,7 @@
 
         <div class="map">
             <h4> Les centres </h4>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1SJ0fyamK-fWDJJytAadYBpUfF4w13y1-"></iframe>
-        </div>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=10B3EB07xHA2NsGIkl3oS4JymcHtICPx6" width="640" height="480"></iframe>        </div>
     </div>
   </div>
 </template>
