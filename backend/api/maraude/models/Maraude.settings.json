@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "maraudes",
+  "info": {
+    "name": "maraude",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "lieuDepart": {
+      "type": "string"
+    },
+    "lieuArrive": {
+      "type": "string"
+    },
+    "maraude": {
+      "model": "maraude"
+    },
+    "association": {
+      "model": "association",
+      "via": "maraudes"
+    }
+  }
+}

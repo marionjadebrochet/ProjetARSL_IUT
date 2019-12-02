@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "partenaires",
+  "info": {
+    "name": "partenaire",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

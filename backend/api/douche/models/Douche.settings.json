@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "douches",
+  "info": {
+    "name": "douche",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "centre": {
+      "model": "centre",
+      "via": "douche"
+    },
+    "jours": {
+      "collection": "jours"
+    }
+  }
+}

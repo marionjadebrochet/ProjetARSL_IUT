@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "jours",
+  "info": {
+    "name": "jours",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "jour": {
+      "type": "string"
+    },
+    "horairesMatin": {
+      "type": "integer"
+    },
+    "horairesAprem": {
+      "type": "string"
+    }
+  }
+}

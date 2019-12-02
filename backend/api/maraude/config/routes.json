@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/maraudes",
+      "handler": "Maraude.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/maraudes/count",
+      "handler": "Maraude.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/maraudes/:id",
+      "handler": "Maraude.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/maraudes",
+      "handler": "Maraude.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/maraudes/:id",
+      "handler": "Maraude.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/maraudes/:id",
+      "handler": "Maraude.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

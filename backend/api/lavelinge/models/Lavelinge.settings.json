@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "lavelinges",
+  "info": {
+    "name": "lavelinge",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "centre": {
+      "model": "centre",
+      "via": "lavelinge"
+    },
+    "jours": {
+      "collection": "jours"
+    }
+  }
+}

@@ -31,6 +31,16 @@
     "Email": {
       "type": "email"
     },
+    "responsable": {
+      "model": "responsable"
+    },
+    "partenaires": {
+      "collection": "partenaire"
+    },
+    "maraudes": {
+      "collection": "maraude",
+      "via": "association"
+    },
     "centres": {
       "collection": "centre",
       "via": "association"

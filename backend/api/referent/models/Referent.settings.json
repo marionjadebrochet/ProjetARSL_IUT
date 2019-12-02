@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "referents",
+  "info": {
+    "name": "referent",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "titre": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

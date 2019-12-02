@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "collations",
+  "info": {
+    "name": "collation",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "centre": {
+      "model": "centre",
+      "via": "collation"
+    },
+    "jours": {
+      "collection": "jours"
+    }
+  }
+}

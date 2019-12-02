@@ -38,6 +38,33 @@
     "association": {
       "model": "association",
       "via": "centres"
+    },
+    "jours": {
+      "collection": "jours"
+    },
+    "distribution": {
+      "model": "distribution",
+      "via": "centre"
+    },
+    "vestiaire": {
+      "model": "vestiaire",
+      "via": "centre"
+    },
+    "douche": {
+      "model": "douche",
+      "via": "centre"
+    },
+    "collation": {
+      "model": "collation",
+      "via": "centre"
+    },
+    "lavelinge": {
+      "model": "lavelinge",
+      "via": "centre"
+    },
+    "services": {
+      "model": "services",
+      "via": "centre"
     }
   }
 }
