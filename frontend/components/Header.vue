@@ -25,18 +25,29 @@ export default {
     mounted: function()
     {
         this.$nextTick(() => {
-            this.googleTranslateElementInit();
+            this.googleTranslateInit();
         });
 
     },
+
     methods: {
-        googleTranslateElementInit: function() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'fr',
-            includedLanguages: 'fr,en,ar,ru',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: true,
-          }, 'google_translate_element');
+
+        googleTranslateInit: function() {
+
+            let checkIfGoogleLoaded = setInterval(() => {
+
+                if (google.translate.TranslateElement != null) {
+                    clearInterval(checkIfGoogleLoaded);
+
+                    this.googleTranslateElement('google_translate_element');
+                }
+
+            }, 100);
+
+        },
+
+        googleTranslateElement: function(id) {
+            new google.translate.TranslateElement({pageLanguage: 'fr',includedLanguages: 'fr,en,ru,ar'}, id);
         }
 
     },
@@ -44,7 +55,5 @@ export default {
 </script>
 
 <style>
-
-
 
 </style>
