@@ -1,0 +1,44 @@
+{
+  "connection": "default",
+  "collectionName": "utilisateurs",
+  "info": {
+    "name": "utilisateur",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "motDePasse": {
+      "type": "password"
+    },
+    "login": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "integer"
+    },
+    "roleutilisateur": {
+      "model": "roleutilisateur"
+    },
+    "referent": {
+      "model": "referent",
+      "via": "utilisateur"
+    },
+    "association": {
+      "model": "association",
+      "via": "utilisateurs"
+    }
+  }
+}

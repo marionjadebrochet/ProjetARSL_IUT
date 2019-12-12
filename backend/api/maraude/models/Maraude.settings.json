@@ -7,7 +7,10 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
     "comment": ""
   },
   "attributes": {
@@ -17,11 +20,11 @@
     "lieuArrive": {
       "type": "string"
     },
-    "maraude": {
-      "model": "maraude"
+    "heureDepart": {
+      "type": "integer"
     },
-    "association": {
-      "model": "association",
+    "referent": {
+      "model": "referent",
       "via": "maraudes"
     }
   }

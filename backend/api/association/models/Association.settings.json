@@ -31,15 +31,16 @@
     "Email": {
       "type": "email"
     },
-    "responsable": {
-      "model": "responsable"
-    },
     "partenaires": {
-      "collection": "partenaire"
-    },
-    "maraudes": {
-      "collection": "maraude",
+      "collection": "partenaire",
       "via": "association"
+    },
+    "utilisateurs": {
+      "collection": "utilisateur",
+      "via": "association"
+    },
+    "telephone": {
+      "type": "integer"
     },
     "centres": {
       "collection": "centre",

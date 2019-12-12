@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/roleutilisateurs",
+      "handler": "Roleutilisateur.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/roleutilisateurs/count",
+      "handler": "Roleutilisateur.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/roleutilisateurs/:id",
+      "handler": "Roleutilisateur.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/roleutilisateurs",
+      "handler": "Roleutilisateur.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/roleutilisateurs/:id",
+      "handler": "Roleutilisateur.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/roleutilisateurs/:id",
+      "handler": "Roleutilisateur.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

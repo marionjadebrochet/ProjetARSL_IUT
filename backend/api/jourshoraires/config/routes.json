@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/jourshoraires",
+      "handler": "Jourshoraires.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jourshoraires/count",
+      "handler": "Jourshoraires.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jourshoraires/:id",
+      "handler": "Jourshoraires.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/jourshoraires",
+      "handler": "Jourshoraires.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/jourshoraires/:id",
+      "handler": "Jourshoraires.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/jourshoraires/:id",
+      "handler": "Jourshoraires.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

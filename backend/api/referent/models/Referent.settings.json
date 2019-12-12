@@ -7,24 +7,23 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
     "comment": ""
   },
   "attributes": {
-    "nom": {
-      "type": "string"
-    },
-    "prenom": {
-      "type": "string"
-    },
     "titre": {
       "type": "string"
     },
-    "telephone": {
-      "type": "integer"
+    "maraudes": {
+      "collection": "maraude",
+      "via": "referent"
     },
-    "email": {
-      "type": "email"
+    "utilisateur": {
+      "model": "utilisateur",
+      "via": "referent"
     }
   }
 }

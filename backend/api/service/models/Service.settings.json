@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "partenaires",
+  "collectionName": "services",
   "info": {
-    "name": "partenaire",
+    "name": "service",
     "description": ""
   },
   "options": {
@@ -14,15 +14,11 @@
     "nom": {
       "type": "string"
     },
-    "telephone": {
-      "type": "integer"
+    "description": {
+      "type": "string"
     },
-    "email": {
-      "type": "email"
-    },
-    "association": {
-      "model": "association",
-      "via": "partenaires"
+    "jourshoraires": {
+      "model": "jourshoraires"
     }
   }
 }

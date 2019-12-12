@@ -1,0 +1,18 @@
+{
+  "connection": "default",
+  "collectionName": "roleutilisateurs",
+  "info": {
+    "name": "roleutilisateur",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "libelleRole": {
+      "type": "string"
+    }
+  }
+}

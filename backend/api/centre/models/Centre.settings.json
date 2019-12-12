@@ -20,18 +20,6 @@
     "adresse": {
       "type": "string"
     },
-    "heureOuvertureMatin": {
-      "type": "string"
-    },
-    "heureFermetureMatin": {
-      "type": "string"
-    },
-    "heureFermetureSoir": {
-      "type": "string"
-    },
-    "heureOuvertureSoir": {
-      "type": "string"
-    },
     "Animaux": {
       "type": "boolean"
     },
@@ -39,32 +27,11 @@
       "model": "association",
       "via": "centres"
     },
-    "jours": {
-      "collection": "jours"
+    "publicConcerne": {
+      "type": "string"
     },
-    "distribution": {
-      "model": "distribution",
-      "via": "centre"
-    },
-    "vestiaire": {
-      "model": "vestiaire",
-      "via": "centre"
-    },
-    "douche": {
-      "model": "douche",
-      "via": "centre"
-    },
-    "collation": {
-      "model": "collation",
-      "via": "centre"
-    },
-    "lavelinge": {
-      "model": "lavelinge",
-      "via": "centre"
-    },
-    "services": {
-      "model": "services",
-      "via": "centre"
+    "jourshoraires": {
+      "model": "jourshoraires"
     }
   }
 }

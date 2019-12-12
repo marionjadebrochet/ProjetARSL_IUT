@@ -1,0 +1,57 @@
+{
+  "connection": "default",
+  "collectionName": "jourshoraires",
+  "info": {
+    "name": "jourshoraires",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "lundiMatin": {
+      "type": "string"
+    },
+    "lundiApresMidi": {
+      "type": "string"
+    },
+    "mardiMatin": {
+      "type": "string"
+    },
+    "mardinApresMidi": {
+      "type": "string"
+    },
+    "mercrediMatin": {
+      "type": "string"
+    },
+    "mercrediApresMidi": {
+      "type": "string"
+    },
+    "jeudiMatin": {
+      "type": "string"
+    },
+    "jeudiApresMidi": {
+      "type": "string"
+    },
+    "vendrediMatin": {
+      "type": "string"
+    },
+    "vendrediApresMidi": {
+      "type": "string"
+    },
+    "samediMatin": {
+      "type": "string"
+    },
+    "samediApresMidi": {
+      "type": "string"
+    },
+    "dimancheMatin": {
+      "type": "string"
+    },
+    "dimancheApresMidi": {
+      "type": "string"
+    }
+  }
+}
