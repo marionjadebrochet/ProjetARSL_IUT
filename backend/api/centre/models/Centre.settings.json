@@ -32,6 +32,9 @@
     },
     "jourshoraires": {
       "model": "jourshoraires"
+    },
+    "services": {
+      "collection": "service"
     }
   }
 }
