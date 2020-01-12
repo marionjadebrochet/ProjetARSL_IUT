@@ -1,25 +1,9 @@
-query Centre {
+query Centres {
   centres {
     id
     association {
       nom
     }
     adresse
-    joursHoraires{
-      lundiMatin
-      lundiAprem
-      mardiMatin
-      mardiAprem
-      mercrediMatin
-      mercrediAprem
-      jeudiMatin
-      jeudiAprem
-      vendrediMatin
-      vendrediAprem
-      samediMatin
-      samediAprem
-      dimancheMatin
-      dimancheAprem
-    }
   }
 }
