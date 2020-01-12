@@ -23,9 +23,8 @@
     "heureDepart": {
       "type": "integer"
     },
-    "referent": {
-      "model": "referent",
-      "via": "maraudes"
+    "rapport": {
+      "model": "rapport"
     }
   }
 }

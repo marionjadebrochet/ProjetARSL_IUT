@@ -35,16 +35,17 @@
       "collection": "partenaire",
       "via": "association"
     },
-    "utilisateurs": {
-      "collection": "utilisateur",
-      "via": "association"
-    },
     "telephone": {
       "type": "integer"
     },
     "centres": {
       "collection": "centre",
       "via": "association"
+    },
+    "users": {
+      "collection": "user",
+      "via": "association",
+      "plugin": "users-permissions"
     }
   }
 }

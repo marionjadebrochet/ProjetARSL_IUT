@@ -23,10 +23,6 @@
     "Animaux": {
       "type": "boolean"
     },
-    "association": {
-      "model": "association",
-      "via": "centres"
-    },
     "publicConcerne": {
       "type": "string"
     },
@@ -35,6 +31,10 @@
     },
     "services": {
       "collection": "service"
+    },
+    "association": {
+      "model": "association",
+      "via": "centres"
     }
   }
 }
