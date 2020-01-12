@@ -3,10 +3,10 @@
     <form @submit.stop.prevent="handleSubmit">
       <fieldset>
         <legend>Connectez-vous avec vos identifiants</legend>
-        <label for="email">Email</label>
-        <input v-model="email" type="email" value="jeandupont@arsl.com">
+        <label for="username">Identifiant</label>
+        <input v-model="username" type="text">
         <label for="motdepasse">Mot de passe</label>
-        <input v-model="password" type="password" value="testuser">
+        <input v-model="password" type="password">
         <button :disabled="loading" type="submit">Se connecter</button>
       </fieldset>
     </form>
@@ -20,7 +20,7 @@ import strapi from '~/utils/Strapi'
 export default {  
   data() {
     return {
-      email: '',
+      username: '',
       password: '',
       loading: false
     }
@@ -30,7 +30,7 @@ export default {
       try {
         this.loading = true
         const response = await strapi.login(
-          this.email,
+          this.username,
           this.password
         )
         this.loading = false
