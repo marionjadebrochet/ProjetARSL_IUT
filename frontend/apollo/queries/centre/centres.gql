@@ -5,9 +5,21 @@ query Centre {
       nom
     }
     adresse
-    heureOuvertureMatin
-    heureFermetureMatin
-    heureOuvertureSoir
-    heureFermetureSoir
+    joursHoraires{
+      lundiMatin
+      lundiAprem
+      mardiMatin
+      mardiAprem
+      mercrediMatin
+      mercrediAprem
+      jeudiMatin
+      jeudiAprem
+      vendrediMatin
+      vendrediAprem
+      samediMatin
+      samediAprem
+      dimancheMatin
+      dimancheAprem
+    }
   }
 }
