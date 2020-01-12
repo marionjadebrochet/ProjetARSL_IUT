@@ -1,13 +1,9 @@
-query Centre {
+query Centres {
   centres {
     id
     association {
       nom
     }
     adresse
-    heureOuvertureMatin
-    heureFermetureMatin
-    heureOuvertureSoir
-    heureFermetureSoir
   }
 }
