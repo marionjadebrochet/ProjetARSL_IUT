@@ -35,6 +35,9 @@
     "association": {
       "model": "association",
       "via": "centres"
+    },
+    "coordonnees": {
+      "type": "string"
     }
   }
 }
