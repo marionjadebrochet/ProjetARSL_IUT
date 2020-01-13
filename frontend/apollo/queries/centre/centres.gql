@@ -5,5 +5,21 @@ query Centres {
       nom
     }
     adresse
+    jourshoraires {
+      lundiMatin
+      lundiApresMidi
+      mardiMatin
+      mardinApresMidi
+      mercrediMatin
+      mercrediApresMidi
+      jeudiMatin
+      jeudiApresMidi
+      vendrediMatin
+      vendrediApresMidi
+      samediMatin
+      samediApresMidi
+      dimancheMatin
+      dimancheApresMidi
+    }
   }
 }
