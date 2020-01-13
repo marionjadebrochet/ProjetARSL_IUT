@@ -3,8 +3,6 @@
 
     <h3> Centres ouverts </h3>
 
-    <p v-on:click="getDay">Clique</p>
-
     <div class="accueilDeJour">
       <div class="listeCentre">
         <div class="centre" v-for="centre in filteredList" v-bind:key="centre">
