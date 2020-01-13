@@ -61,7 +61,7 @@ header {
 li{
   font-size: 24px;
   padding: 10px;
-  width: 30%;
+  width: 40%;
   text-align: center;
   border-collapse: collapse;
   font-weight: 600;
@@ -82,6 +82,25 @@ nav {
   width:100%;
 }
 
+/* POUR NAV DE L'INTRA */
+
+.sous {
+  display: none;
+  background-color: #f26340;
+}
+
+nav > ul li:hover .sous {
+  display: block;
+}
+
+.sous li {
+  width: 100%;
+  text-align: center;
+}
+
+.deroulant {
+  width: 50%;
+}
 label {
   font-size:30px;
 }
@@ -179,9 +198,14 @@ body {
     font-size: 30px;
   }
 
-  li:hover {
+  .deroulant:hover {
     background-color: #f13d0e;
     transition: 0.5s;
+  }
+
+  .sousligne:hover {
+    background-color: #f13d0e;
+    padding-left: 0px;
   }
   button:hover {
     font-size:30px;
