@@ -1,6 +1,10 @@
 <template>
   <body>
+
     <h3> Centres ouverts </h3>
+
+    <p v-on:click="getDay">Clique</p>
+
     <div class="accueilDeJour">
       <div class="listeCentre">
         <div class="centre" v-for="centre in filteredList" v-bind:key="centre">
@@ -8,8 +12,27 @@
           <h5>Adresse : </h5>
           <p>{{centre.adresse}}</p>
           <h5>Horaire d'ouverture : </h5>
-          <p>Matin : {{centre.heureOuvertureMatin}} - {{centre.heureFermetureMatin}}</p>
-          <p>Après-midi : {{centre.heureOuvertureSoir}} - {{centre.heureFermetureSoir}}</p>
+          <div v-if="getDay == 1">
+            <p>{{centre.jourshoraires.lundiMatin}} {{centre.jourshoraires.lundiApresMidi}}</p>
+          </div>
+          <div v-if="getDay == 2">
+            <p>{{centre.jourshoraires.mardiMatin}} {{centre.jourshoraires.mardinApresMidi}}</p>
+          </div>
+          <div v-if="getDay == 3">
+            <p>{{centre.jourshoraires.mercrediMatin}} {{centre.jourshoraires.mercrediApresMidi}}</p>
+          </div>
+          <div v-if="getDay == 4">
+            <p>{{centre.jourshoraires.jeudiMatin}} {{centre.jourshoraires.jeudiApresMidi}}</p>
+          </div>
+          <div v-if="getDay == 5">
+            <p>{{centre.jourshoraires.vendrediMatin}} {{centre.jourshoraires.vendrediApresMidi}}</p>
+          </div>
+          <div v-if="getDay == 6">
+            <p>{{centre.jourshoraires.samediMatin}} {{centre.jourshoraires.samediApresMidi}}</p>
+          </div>
+          <div v-if="getDay == 0">
+            <p>{{centre.jourshoraires.dimancheMatin}} {{centre.jourshoraires.dimancheApresMidi}}</p>
+          </div>
         </div>
       </div>
 
@@ -34,7 +57,7 @@ export default {
   data() {
     return {
       centres: [],
-      query: ""
+      query: "",
     };
   },
   apollo: {
@@ -50,6 +73,10 @@ export default {
         return centre.id.toLowerCase().includes(this.query.toLowerCase())
       })
     },
-  }
+    getDay() {
+      var day = new Date();
+      return day.getDay();
+    },
+  },
 };
 </script>
