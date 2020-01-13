@@ -3,23 +3,34 @@
     <h3> Centres </h3>
     <div class="accueilDeJour">
 
-
         <div class="listeCentre">
 
-          <div class="centre" v-for="centre in filteredList" v-bind:key="centre">
+          <div class="centre" v-for="centre in filteredList" v-bind:key="centre.id">
             <h4>{{centre.association.nom}}</h4>
             <h5>Adresse : </h5>
             <p>{{centre.adresse}}</p>
             <h5>Horaire d'ouverture : </h5>
             <p>Matin : {{centre.heureOuvertureMatin}} - {{centre.heureFermetureMatin}}</p>
             <p>Après-midi : {{centre.heureOuvertureSoir}} - {{centre.heureFermetureSoir}}</p>
+            <p>coordonnes : {{centre.latitude}} - {{centre.longitude}} </p>
           </div>
 
         </div>
 
         <div class="map">
             <h4> Les centres </h4>
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=10B3EB07xHA2NsGIkl3oS4JymcHtICPx6" width="640" height="480"></iframe>        </div>
+            <div id="map-wrap" style="height: 100vh">
+             <client-only>
+               <l-map :zoom=13 :center="[45.8188956,1.2521794]">
+                 <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
+                    <div class="marker" v-for="centre in filteredList" v-bind:key="centre">
+                        <!-- <l-marker :lat-lng="[centre.latitude,centre.longitude]" /> -->
+                        <!--  <l-popup :content="centre.association.nom"/> -->
+                    </div>
+               </l-map>
+             </client-only>
+            </div>
+        </div>
     </div>
   </div>
 </template>
@@ -31,7 +42,7 @@ export default {
   data() {
     return {
       centres: [],
-      query: ''
+      query: '',
     }
   },
   apollo: {
@@ -47,7 +58,7 @@ export default {
         return centre.adresse.toLowerCase().includes(this.query.toLowerCase())
       })
     },
-  }
+  },
 }
 
 </script>

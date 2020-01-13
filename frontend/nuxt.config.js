@@ -44,6 +44,7 @@ export default {
   */
   modules: [
     '@nuxtjs/apollo',
+    'nuxt-leaflet',
   ],
   /*
   ** Build configuration

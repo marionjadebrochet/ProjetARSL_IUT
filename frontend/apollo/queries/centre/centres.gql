@@ -1,6 +1,8 @@
 query Centres {
   centres {
     id
+    latitude
+    longitude
     association {
       nom
     }

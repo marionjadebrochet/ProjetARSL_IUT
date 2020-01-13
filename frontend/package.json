@@ -16,6 +16,7 @@
     "graphql": "^14.5.8",
     "js-cookie": "^2.2.1",
     "nuxt": "^2.0.0",
+    "nuxt-leaflet": "^0.0.19",
     "strapi-sdk-javascript": "^0.3.3"
   },
   "devDependencies": {}
