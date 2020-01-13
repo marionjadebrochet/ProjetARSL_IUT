@@ -45,7 +45,7 @@ export default {
   apollo: {
     centres: {
       prefetch: true,
-      query: centreQuery
+      query: centresQuery
     }
   },
   computed: {

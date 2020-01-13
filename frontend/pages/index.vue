@@ -5,7 +5,7 @@
 
     <div class="accueilDeJour">
       <div class="listeCentre">
-        <div class="centre" v-for="centre in filteredList" v-bind:key="centre">
+        <div class="centre" v-for="centre in filteredList" v-bind:key="centre.id">
           <h4>{{centre.association.nom}}</h4>
           <h5>Adresse : </h5>
           <p>{{centre.adresse}}</p>
@@ -31,6 +31,7 @@
           <div v-if="getDay == 0">
             <p>{{centre.jourshoraires.dimancheMatin}} {{centre.jourshoraires.dimancheApresMidi}}</p>
           </div>
+          <router-link :to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>
         </div>
       </div>
 
@@ -39,7 +40,7 @@
           <div id="map-wrap" style="height: 100vh">
              <l-map :zoom=13 :center="[45.8188956,1.2521794]">
                <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
-                  <div class="marker" v-for="centre in filteredList" v-bind:key="centre">
+                  <div class="marker" v-for="centre in filteredList" v-bind:key="centre.id">
                        <l-marker :lat-lng="[centre.latitude, centre.longitude]" >
                        <l-popup :content="centre.association.nom + ' | ' + centre.adresse"/> </l-marker>
                      </div>

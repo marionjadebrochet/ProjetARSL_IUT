@@ -1,0 +1,25 @@
+query Centre($id: ID!) {
+  centre(id: $id) {
+    id
+    association {
+      nom
+    }
+    adresse
+    jourshoraires {
+      lundiMatin
+      lundiApresMidi
+      mardiMatin
+      mardinApresMidi
+      mercrediMatin
+      mercrediApresMidi
+      jeudiMatin
+      jeudiApresMidi
+      vendrediMatin
+      vendrediApresMidi
+      samediMatin
+      samediApresMidi
+      dimancheMatin
+      dimancheApresMidi
+    }
+  }
+}
