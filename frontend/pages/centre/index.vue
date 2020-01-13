@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <h3> Centres </h3>
     <div class="accueilDeJour">
@@ -12,23 +13,19 @@
             <h5>Horaire d'ouverture : </h5>
             <p>Matin : {{centre.heureOuvertureMatin}} - {{centre.heureFermetureMatin}}</p>
             <p>Après-midi : {{centre.heureOuvertureSoir}} - {{centre.heureFermetureSoir}}</p>
-            <p>coordonnes : {{centre.latitude}} - {{centre.longitude}} </p>
           </div>
-
         </div>
 
         <div class="map">
             <h4> Les centres </h4>
             <div id="map-wrap" style="height: 100vh">
-             <client-only>
                <l-map :zoom=13 :center="[45.8188956,1.2521794]">
                  <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
                     <div class="marker" v-for="centre in filteredList" v-bind:key="centre">
-                        <!-- <l-marker :lat-lng="[centre.latitude,centre.longitude]" /> -->
-                        <!--  <l-popup :content="centre.association.nom"/> -->
-                    </div>
+                         <l-marker :lat-lng="[centre.latitude, centre.longitude]" >
+                         <l-popup :content="centre.association.nom + ' | ' + centre.adresse"/> </l-marker>
+                       </div>
                </l-map>
-             </client-only>
             </div>
         </div>
     </div>

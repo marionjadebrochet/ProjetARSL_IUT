@@ -34,19 +34,22 @@
         </div>
       </div>
 
-
-    <div class="map">
-      <h4>Les centres</h4>
-      <iframe
-        src="https://www.google.com/maps/d/u/0/embed?mid=10B3EB07xHA2NsGIkl3oS4JymcHtICPx6"
-        width="640"
-        height="480"
-      ></iframe>
+      <div class="map">
+          <h4> Les centres </h4>
+          <div id="map-wrap" style="height: 100vh">
+             <l-map :zoom=13 :center="[45.8188956,1.2521794]">
+               <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
+                  <div class="marker" v-for="centre in filteredList" v-bind:key="centre">
+                       <l-marker :lat-lng="[centre.latitude, centre.longitude]" >
+                       <l-popup :content="centre.association.nom + ' | ' + centre.adresse"/> </l-marker>
+                     </div>
+             </l-map>
+          </div>
+      </div>
     </div>
         </div>
 </body>
 </template>
-
 
 <script>
 import centresQuery from '~/apollo/queries/centre/centres'
