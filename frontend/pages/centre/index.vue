@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import centreQuery from '~/apollo/queries/centre/centres'
+import centresQuery from '~/apollo/queries/centre/centres'
 
 export default {
   data() {
