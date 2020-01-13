@@ -12,7 +12,7 @@
           <p>Après-midi : {{centre.heureOuvertureSoir}} - {{centre.heureFermetureSoir}}</p>
         </div>
       </div>
-    </div>
+
 
     <div class="map">
       <h4>Les centres</h4>
@@ -22,7 +22,7 @@
         height="480"
       ></iframe>
     </div>
-  </div>
+        </div>
 </body>
 </template>
 
