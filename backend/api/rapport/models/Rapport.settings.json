@@ -11,41 +11,8 @@
     "comment": ""
   },
   "attributes": {
-    "lieuRencontre": {
-      "type": "string"
-    },
-    "nombrePersonneFamille": {
-      "type": "integer"
-    },
-    "nomFamille": {
-      "type": "string"
-    },
-    "nombreAnimaux": {
-      "type": "integer"
-    },
-    "typeAnimaux": {
-      "type": "string"
-    },
-    "nationalite": {
-      "type": "string"
-    },
-    "enceinte": {
-      "type": "boolean"
-    },
-    "problemeSante": {
-      "type": "boolean"
-    },
-    "descriptionProblemeSante": {
-      "type": "string"
-    },
-    "situation": {
-      "type": "string"
-    },
-    "demandeHebergement": {
-      "type": "boolean"
-    },
-    "date": {
-      "type": "string"
+    "lignerapports": {
+      "collection": "lignerapport"
     }
   }
 }

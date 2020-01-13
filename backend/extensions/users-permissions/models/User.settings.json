@@ -60,9 +60,6 @@
       "model": "association",
       "via": "users"
     },
-    "maraudes": {
-      "collection": "maraude"
-    },
     "Nom": {
       "type": "string"
     },
@@ -71,6 +68,9 @@
     },
     "Telephone": {
       "type": "integer"
+    },
+    "maraudes": {
+      "collection": "maraude"
     }
   }
 }

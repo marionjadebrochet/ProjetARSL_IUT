@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lignerapports",
+      "handler": "Lignerapport.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lignerapports/count",
+      "handler": "Lignerapport.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lignerapports/:id",
+      "handler": "Lignerapport.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lignerapports",
+      "handler": "Lignerapport.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lignerapports/:id",
+      "handler": "Lignerapport.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lignerapports/:id",
+      "handler": "Lignerapport.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
