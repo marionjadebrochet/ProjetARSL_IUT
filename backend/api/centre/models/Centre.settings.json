@@ -36,7 +36,10 @@
       "model": "association",
       "via": "centres"
     },
-    "coordonnees": {
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
       "type": "string"
     }
   }
