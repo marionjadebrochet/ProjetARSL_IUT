@@ -4,7 +4,7 @@
       <div v-if="username">
         <router-link tag="a" to="/intra" exact>
         <h1>
-          SIAO 115
+           SIAO 115
           <br />Haute-Vienne
         </h1>
       </router-link>
@@ -89,7 +89,8 @@
     </div>
     <div v-else>
       <h2>Signaler quelque chose ?</h2>
-      <button class="call">115</button>
+      <button class="call"><a href="tel:+33115">115</a>
+</button>
     </div>
 
   </div>
