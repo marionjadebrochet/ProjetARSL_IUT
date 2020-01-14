@@ -64,20 +64,7 @@ form {
   display:flex;
   justify-content:center;
 }
-fieldset > .row > label {
-  font-size:26px;
-  width:50%;
-  text-align:left;
-}
-fieldset > .row > input {
-  width:60%;
-  font-size:26px;
-}
-fieldset > .row {
-  width:100%;
-  display:flex;
-  padding:20px;
-}
+
 fieldset > legend {
   font-size:30px;
   font-weight:500;

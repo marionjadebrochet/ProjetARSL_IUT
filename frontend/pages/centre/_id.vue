@@ -152,28 +152,12 @@ export default {
   flex-direction:column;
   align-items:center;
 }
-.cart {
-  width:50%;
-  text-align:center;
-  background-color:#EEEEEE;
-  padding:20px 20px;
-  border-radius:20px;
-  box-shadow:5px 5px 10px #CCCCCC;
-  margin-bottom:20px;
-}
+
 .column h3 {
   padding-bottom:10px;
 }
 h2 {
   margin-bottom:10px;
-}
-td, th {
-  padding:10px 20px;
-  border:1px solid black
-}
-table {
-  text-align:center;
-  margin:10px auto;
 }
 p {
   padding:10px 0px;

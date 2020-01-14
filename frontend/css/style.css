@@ -10,7 +10,11 @@ a {
 button a:hover{
   color: #f26340;
 }
-
+.greybutton {
+  font-size:24px;
+  background-color:#EEEEEE;
+  margin-top:20px;
+}
 h1 {
   color: white;
   font-size: 48px;
@@ -61,6 +65,8 @@ header {
   color:black;
   padding:15px;
   font-weight: bold;
+  font-size:22px;
+  text-align:center;
 }
 .plusinfo:hover {
   color: #f26340;
@@ -122,6 +128,7 @@ nav {
 
 nav > ul li:hover .sous {
   display: block;
+  transition:0.5s;
 }
 
 .sous li {
@@ -194,7 +201,12 @@ section {
 
 button {
   border:3px solid black;
-  background-color: white;
+  background-color:white;
+}
+.radio {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
 }
 
 
@@ -224,14 +236,9 @@ body {
   }
 
   .deroulant:hover {
-    background-color: #f13d0e;
     transition: 0.5s;
   }
 
-  .sousligne:hover {
-    background-color: #f13d0e;
-    padding-left: 0px;
-  }
   button:hover {
     color:#f26340;
     transition: 0.5s;
@@ -276,7 +283,7 @@ body {
   #deco {
     heigth:200px;
     width:50px;
-    background-color: #f26340;
+    background-color: #f26340
   }
 
   .choixLangue > div {
@@ -292,6 +299,8 @@ body {
   }
   .row {
     display: flex;
+    padding:20px;
+    width:100%;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -299,5 +308,50 @@ body {
   .row div {
     width:50%;
   }
+  .row label{
+    font-size:26px;
+    width:50%;
+    text-align:left;
+  }
+  .row input {
+    width:50%;
+    font-size:26px;
+  }
+
+  input[type="file"] {
+    padding-top:5px;
+  }
+  .center {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  td, th {
+    padding:10px 20px;
+    border:1px solid black
+  }
+  table {
+    text-align:center;
+    margin:10px auto;
+  }
+  .cart {
+    text-align:center;
+    background-color:#EEEEEE;
+    padding:20px 20px;
+    border-radius:20px;
+    box-shadow:5px 5px 10px #CCCCCC;
+    margin-bottom:20px;
+  }
+
+  .mesCentres {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    margin-top:20px;
+  }
+  .mesCentres .cart h3 {
+    padding:10px 0px;
+  }
+
 
 }

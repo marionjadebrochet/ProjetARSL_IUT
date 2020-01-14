@@ -1,15 +1,27 @@
 <template>
     <div>
-        <h1>Commencer une maraude</h1>
-        <form @submit.stop.prevent="ajouterMaraude">
-            <label for="heureDepart">Début de la maraude :</label>
-            <input type="text" v-model="heureDepart"><p>Heure</p>
-            <label for="lieuDepart">Lieu de Depart de la maraude :</label>
-            <input type="text" v-model="lieuDepart">
-            <label for="lieuArrive">Lieu d'arrivée :</label>
-            <input type="text" v-model="lieuArrive">
-            <button type="submit">Commencer</button>
-        </form>
+      <h3>Commencer une maraude</h3>
+      <div class="center">
+          <form @submit.stop.prevent="ajouterMaraude">
+            <fieldset>
+              <div class="row">
+                <label for="heureDepart">Début de la maraude :</label>
+                <input type="text" v-model="heureDepart">
+              </div>
+              <div class="row">
+                <label for="lieuDepart">Lieu de départ :</label>
+                <input type="text" v-model="lieuDepart">
+              </div>
+              <div class="row">
+                <label for="lieuArrive">Lieu d'arrivée :</label>
+                <input type="text" v-model="lieuArrive">
+              </div>
+              <div class="center">
+                <button class="plusinfo" type="submit">Commencer</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
     </div>
 </template>
 
@@ -17,7 +29,7 @@
 export default {
     methods: {
         ajouterMaraude() {
-            
+
         }
     }
 }

@@ -2,11 +2,13 @@
   <div>
     <client-only>
 
-      <h3 style="padding-top:20px;"> Suppression de centres existants </h3>
-      <img :src="'http://localhost:1337/' + associationUser.logo.url">
-      <div class="infoAssociation">
-        <h2> Centre de l'association : {{association.nom}}</h2>
-        <div class="centre" v-for="centre in association.centres" v-bind:key="association.centres.id">
+      <h3> Suppression de centres existants </h3>
+      <div class="mesCentres">
+        <div>
+          <h2>{{association.nom}}</h2>
+          <img :src="'http://localhost:1337/' + associationUser.logo.url">
+        </div>
+        <div class="cart" v-for="centre in association.centres" v-bind:key="association.centres.id">
           <h3>Adresse : </h3>
           <p>{{centre.adresse}}</p>
           <h3>Horaires d'ouverture :</h3>
@@ -47,9 +49,8 @@
               <td>{{centre.jourshoraires.dimancheApresMidi}}</td>
             </tr>
           </table>
-
+          <button class="plusinfo greybutton" @onclique="SupprimerCentre">Supprimer</button>
         </div>
-        <button @onclique="SupprimerCentre">Supprimer</button>
       </div>
     </client-only>
   </div>
