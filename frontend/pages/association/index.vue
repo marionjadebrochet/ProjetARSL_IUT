@@ -38,6 +38,6 @@ export default {
         return association.nom.toLowerCase().includes(this.query.toLowerCase())
       })
     },
-  }
+  },
 }
 </script>
