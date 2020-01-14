@@ -8,6 +8,7 @@
           <h4>{{association.nom}}</h4>
           <section>{{association.description}}</section>
        </div>
+        <router-link :to="{ name: 'association-id', params: { id: association.id }}" tag="a" > Plus d'informations </router-link>
     </div>
 
   </div>

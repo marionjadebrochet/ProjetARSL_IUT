@@ -7,6 +7,10 @@ a {
   color: black;
 }
 
+button a:hover{
+  color: #f26340;
+}
+
 h1 {
   color: white;
   font-size: 48px;
@@ -81,6 +85,19 @@ nav {
   background-color: #f26340;
   width:100%;
 }
+
+.connexion{
+  font-size: 20px;
+  color: white;
+}
+
+.connexion:hover{
+  color: #f26340;
+  font-size:30px;
+  background-color: black;
+  transition: 0.5s;
+}
+
 
 /* POUR NAV DE L'INTRA */
 

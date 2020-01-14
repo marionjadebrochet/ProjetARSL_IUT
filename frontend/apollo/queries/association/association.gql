@@ -1,5 +1,5 @@
-query Associations{
-  associations {
+query Association($id: ID!) {
+  association(id: $id) {
     id
     nom
     description
