@@ -27,7 +27,7 @@
           <a href="/" @click="logout">Déconnexion</a>
         </div>
         <div v-else>
-          <router-link tag="a" to="/connexion" exact>Connexion</router-link>
+          <router-link class="connexion" tag="a" to="/connexion" exact>Connexion</router-link>
         </div>
       </div>
     </header>
@@ -41,7 +41,6 @@
             <router-link tag="a" to="/intra/MesCentres" exact>Mes Centres</router-link>
             <ul class="sous">
               <li class="sousligne"><router-link tag="a" to="/intra/MesCentres/AjouterCentre" exact>Ajouter Centre</router-link></li>
-              <li class="sousligne"><router-link tag="a" to="/intra/MesCentres/ModifierCentre" exact>Modifier Centre</router-link></li>
               <li class="sousligne"><router-link tag="a" to="/intra/MesCentres/SupprimerCentre" exact>Supprimer Centre</router-link></li>
             </ul>
           </li>
@@ -49,7 +48,6 @@
             <router-link tag="a" to="/intra/MesServices" exact>Mes Services</router-link>
             <ul class="sous">
               <li class="sousligne"><router-link tag="a" to="/intra/MesServices/AjouterService" exact>Ajouter Service</router-link></li>
-              <li class="sousligne"><router-link tag="a" to="/intra/MesServices/ModifierService" exact>Modifier Service</router-link></li>
               <li class="sousligne"><router-link tag="a" to="/intra/MesServices/SupprimerService" exact>Supprimer Service</router-link></li>
             </ul>
           </li>
@@ -57,7 +55,6 @@
             <router-link tag="a" to="/intra/Maraudes" exact>Maraudes</router-link>
             <ul class="sous">
               <li class="sousligne"><router-link tag="a" to="/intra/Maraudes/AjouterMaraude" exact>Ajouter Maraude</router-link></li>
-              <li class="sousligne"><router-link tag="a" to="/intra/Maraudes/ModifierMaraude" exact>Modifier Maraude</router-link></li>
               <li class="sousligne"><router-link tag="a" to="/intra/Maraudes/SupprimerMaraude" exact>Supprimer Maraude</router-link></li>
               <li class="sousligne"><router-link tag="a" to="/intra/Maraudes/Rapport" exact>Rapport</router-link></li>
             </ul>
@@ -66,7 +63,6 @@
             <router-link tag="a" to="/intra/MesMembres" exact>Mes membres</router-link>
             <ul class="sous">
               <li class="sousligne"><router-link tag="a" to="/intra/MesMembres/AjouterMembre" exact>Ajouter Membre</router-link></li>
-              <li class="sousligne"><router-link tag="a" to="/intra/MesMembres/ModifierMembre" exact>Modifier Membre</router-link></li>
               <li class="sousligne"><router-link tag="a" to="/intra/MesMembres/SupprimerMembre" exact>Supprimer Membre</router-link></li>
             </ul>
           </li>

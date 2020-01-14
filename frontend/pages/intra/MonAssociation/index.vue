@@ -23,18 +23,10 @@ export default {
     }
   },
   apollo: {
-    associations: {
+    association: {
       prefetch: true,
-      query: associationsQuery
+      query: associationQuery
     }
   },
-  computed: {
-    // Search system
-    filteredList() {
-      return this.associations.filter(association => {
-        return association.nom.toLowerCase().includes(this.query.toLowerCase())
-      })
-    },
-  }
 }
 </script>
