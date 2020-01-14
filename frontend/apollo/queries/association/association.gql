@@ -13,6 +13,22 @@ query Association($id: ID!) {
         id
         nom
         description
+        jourshoraires{
+          lundiMatin
+          lundiApresMidi
+          mardiMatin
+          mardinApresMidi
+          mercrediMatin
+          mercrediApresMidi
+          jeudiMatin
+          jeudiApresMidi
+          vendrediMatin
+          vendrediApresMidi
+          samediMatin
+          samediApresMidi
+          dimancheMatin
+          dimancheApresMidi
+          }
       }
       jourshoraires{
         lundiMatin

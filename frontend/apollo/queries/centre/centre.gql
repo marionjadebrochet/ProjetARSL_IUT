@@ -7,6 +7,7 @@ query Centre($id: ID!) {
     services {
       id
       nom
+      description
       jourshoraires {
         lundiMatin
         lundiApresMidi
