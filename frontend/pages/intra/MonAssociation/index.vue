@@ -2,7 +2,7 @@
   <div>
     <h3> Mon association </h3>
 
-    <div class="association" v-for="association in filteredList" v-bind:key="association">
+    <div class="association" v-bind:key="association">
        <img :src="'http://localhost:1337/' + association.logo.url">
        <div class="infoAssociation">
           <h4>{{association.nom}}</h4>
@@ -13,19 +13,17 @@
 </template>
 
 <script>
-import associationsQuery from '~/apollo/queries/association/associations'
 
 export default {
   data() {
     return {
-      associations: [],
       query: ''
     }
   },
-  apollo: {
-    association: {
-      prefetch: true,
-      query: associationQuery
+  computed: {
+    // Get your association thanks to your getter
+    association() {
+      return this.$store.getters["auth/association"];
     }
   },
 }

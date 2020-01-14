@@ -16,8 +16,14 @@ export const mutations = {
 }
 
 // Define a getter in order to get your current username from your state
-export const getters = {  
+export const getters = {
   username: state => {
     return state.user && state.user.username
+  },
+  user: state => {
+    return state.user
+  },
+  association: state => {
+    return state.user && state.user.association
   }
 }
