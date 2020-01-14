@@ -1,22 +1,12 @@
 <template>
   <div>
     <header>
-      <div v-if="username">
-        <router-link tag="a" to="/intra" exact>
-        <h1>
-           SIAO 115
-          <br />Haute-Vienne
-        </h1>
-      </router-link>
-      </div>
-      <div v-else>
         <router-link tag="a" to="/" exact>
         <h1>
           SIAO 115
           <br />Haute-Vienne
         </h1>
       </router-link>
-      </div>
       <div class="choixLangue">
           <div v-show="!username">
             <h2 style="padding-right:10px;">Langue</h2>
