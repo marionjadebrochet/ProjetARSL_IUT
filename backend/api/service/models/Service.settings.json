@@ -22,6 +22,10 @@
     },
     "jourshoraires": {
       "model": "jourshoraires"
+    },
+    "centre": {
+      "model": "centre",
+      "via": "services"
     }
   }
 }

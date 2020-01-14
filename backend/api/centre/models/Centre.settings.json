@@ -40,7 +40,8 @@
       "type": "string"
     },
     "services": {
-      "collection": "service"
+      "collection": "service",
+      "via": "centre"
     }
   }
 }

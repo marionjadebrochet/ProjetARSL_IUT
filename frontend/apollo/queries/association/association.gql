@@ -9,6 +9,27 @@ query Association($id: ID!) {
     centres{
       id
       adresse
+      services{
+        id
+        nom
+        description
+      }
+      jourshoraires{
+        lundiMatin
+        lundiApresMidi
+        mardiMatin
+        mardinApresMidi
+        mercrediMatin
+        mercrediApresMidi
+        jeudiMatin
+        jeudiApresMidi
+        vendrediMatin
+        vendrediApresMidi
+        samediMatin
+        samediApresMidi
+        dimancheMatin
+        dimancheApresMidi
+        }
     }
   }
 }
