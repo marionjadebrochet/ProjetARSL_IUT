@@ -1,0 +1,19 @@
+query Association($id: ID!) {
+  association(id: $id) {
+    id
+    nom
+    description
+    logo {
+      url
+    }
+    partenaires {
+      id
+      nom
+      telephone
+      email
+      logo {
+        url
+      }
+    }
+  }
+}

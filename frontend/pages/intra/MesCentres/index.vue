@@ -47,9 +47,7 @@
               <td>{{centre.jourshoraires.dimancheApresMidi}}</td>
             </tr>
           </table>
-
         </div>
-
       </div>
     </client-only>
   </div>
