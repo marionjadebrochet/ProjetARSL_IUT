@@ -6,7 +6,6 @@
             <input type="text" v-model="adresse"><br /><br />
             <label for="telephone">Téléphone du centre :</label>
             <input type="tel" v-model="telephone"><br /><br />
-            <!--check box pour animaux autorsé ou non-->
             <label for="animaux"> Animaux :</label>
             <input type="radio" v-model="accepte" checked> Autorisés
   	        <input type="radio" v-model="refuse"> Interdits<br /><br />
