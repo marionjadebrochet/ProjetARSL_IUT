@@ -25,5 +25,8 @@ export const getters = {
   },
   association: state => {
     return state.user && state.user.association
+  },
+  maraudes: state => {
+    return state.user && state.user.maraudes
   }
 }
