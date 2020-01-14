@@ -29,9 +29,6 @@
     "jourshoraires": {
       "model": "jourshoraires"
     },
-    "services": {
-      "collection": "service"
-    },
     "association": {
       "model": "association",
       "via": "centres"
@@ -41,6 +38,9 @@
     },
     "longitude": {
       "type": "string"
+    },
+    "services": {
+      "collection": "service"
     }
   }
 }
