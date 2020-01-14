@@ -31,7 +31,7 @@
           <div v-if="getDay == 0">
             <p>{{centre.jourshoraires.dimancheMatin}} {{centre.jourshoraires.dimancheApresMidi}}</p>
           </div>
-          <router-link :to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>
+          <router-link class="plusinfo":to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>
         </div>
       </div>
 

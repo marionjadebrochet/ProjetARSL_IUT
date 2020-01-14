@@ -4,6 +4,26 @@ query Centre($id: ID!) {
     association {
       nom
     }
+    services {
+      id
+      nom
+      jourshoraires {
+        lundiMatin
+        lundiApresMidi
+        mardiMatin
+        mardinApresMidi
+        mercrediMatin
+        mercrediApresMidi
+        jeudiMatin
+        jeudiApresMidi
+        vendrediMatin
+        vendrediApresMidi
+        samediMatin
+        samediApresMidi
+        dimancheMatin
+        dimancheApresMidi
+      }
+    }
     adresse
     jourshoraires {
       lundiMatin

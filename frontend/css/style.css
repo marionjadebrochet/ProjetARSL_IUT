@@ -56,6 +56,11 @@ header {
   align-items: center;
   margin: 10px 10px 0px 10px;
 }
+.plusinfo {
+  background-color: black;
+  color:#f26340;
+  padding:10px;
+}
 
 .choixLangue > div{
   display:flex;
