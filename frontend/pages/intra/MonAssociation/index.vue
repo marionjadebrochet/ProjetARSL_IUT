@@ -11,6 +11,7 @@
     </div>
 
     <h3 style="padding-top:20px;"> Mes partenaires </h3><br>
+    <router-link tag="a" to="/intra/MonAssociation/AjouterPartenaire" exact>Ajouter Partenaire</router-link>
     <div class="allpartenaires">
       <div class="partenaires" v-for="partenaire in association.partenaires" :key="association.partenaires.id">
         <img :src="'http://localhost:1337/' + partenaire.logo.url">
@@ -18,12 +19,9 @@
           <h2>{{partenaire.nom}}</h2>
           <p> Téléphone du partenaire : <b>{{partenaire.telephone}}</b></p>
           <p> Email du partenaire : <b>{{partenaire.email}}</b> </p>
+          <button @onclique="SupprimerPartenaire">Supprimer</button>
         </div>
       </div>
-    </div>
-    <div>
-      <router-link tag="a" to="/intra/MonAssociation/AjouterPartenaire" exact>Ajouter Partenaire</router-link>
-      <router-link tag="a" to="/intra/MonAssociation/SupprimerPartenaire" exact>Supprimer Partenaire</router-link>
     </div>
   </div>
 </template>
@@ -52,6 +50,11 @@ export default {
       variables () {
         return { id: this.associationUser.id }
       }
+    }
+  },
+  methods : {
+    SupprimerPartenaire() {
+      //contenu....
     }
   }
 }
