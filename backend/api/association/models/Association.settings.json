@@ -31,10 +31,6 @@
     "Email": {
       "type": "email"
     },
-    "partenaires": {
-      "collection": "partenaire",
-      "via": "association"
-    },
     "telephone": {
       "type": "integer"
     },
@@ -45,6 +41,10 @@
     },
     "centres": {
       "collection": "centre",
+      "via": "association"
+    },
+    "partenaires": {
+      "collection": "partenaire",
       "via": "association"
     }
   }

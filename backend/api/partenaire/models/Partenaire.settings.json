@@ -7,7 +7,10 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
     "comment": ""
   },
   "attributes": {
@@ -23,6 +26,11 @@
     "association": {
       "model": "association",
       "via": "partenaires"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
     }
   }
 }
