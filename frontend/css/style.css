@@ -57,8 +57,15 @@ header {
   margin: 10px 10px 0px 10px;
 }
 .plusinfo {
+  border:3px solid black;
+  color:black;
+  padding:15px;
+  font-weight: bold;
+}
+.plusinfo:hover {
+  color: #f26340;
   background-color: black;
-  color:#f26340;
+  transition: 0.5s;
 }
 
 .choixLangue > div{
@@ -93,12 +100,15 @@ nav {
 .connexion{
   font-size: 20px;
   color: white;
+  padding:10px;
+  border:3px solid white;
+  font-weight: bold;
+  margin-right:10px;
 }
 
 .connexion:hover{
   color: #f26340;
-  font-size:30px;
-  background-color: black;
+  background-color: white;
   transition: 0.5s;
 }
 
@@ -122,9 +132,6 @@ nav > ul li:hover .sous {
 .deroulant {
   width: 50%;
 }
-label {
-  font-size:30px;
-}
 
 select {
   size:40px;
@@ -142,6 +149,7 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding:10px;
 }
 
 .centre {
@@ -210,10 +218,6 @@ body {
   header {
     height: 200px;
   }
-  label{
-    font-size: 50px;
-    margin: 0 15px;
-  }
   li {
     width: 15%;
     font-size: 30px;
@@ -229,13 +233,8 @@ body {
     padding-left: 0px;
   }
   button:hover {
-    font-size:30px;
     color:#f26340;
-    background-color: black;
     transition: 0.5s;
-  }
-  .call:hover {
-    font-size: 50px;
   }
 
   .association {
@@ -283,6 +282,22 @@ body {
   .choixLangue > div {
     flex-direction: row;
     align-items: baseline;
+    align-self: center;
+  }
+
+  .deco p {
+    margin-right:20px;
+    font-size:30px;
+    font-weight: 400;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .row div {
+    width:50%;
   }
 
 }

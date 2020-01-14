@@ -3,21 +3,25 @@
     <form @submit.stop.prevent="handleSubmit">
       <fieldset>
         <legend>Connectez-vous avec vos identifiants</legend>
-        <label for="username">Identifiant</label>
-        <input v-model="username" type="text">
-        <label for="motdepasse">Mot de passe</label>
-        <input v-model="password" type="password">
-        <button :disabled="loading" type="submit">Se connecter</button>
+        <div class="row">
+          <label for="username">Identifiant</label>
+          <input v-model="username" type="text">
+        </div>
+        <div class="row">
+          <label for="motdepasse">Mot de passe</label>
+          <input v-model="password" type="password">
+        </div>
+        <button class="plusinfo" :disabled="loading" type="submit">Se connecter</button>
       </fieldset>
     </form>
   </div>
 </template>
 
-<script>  
-import { mapMutations } from 'vuex'  
+<script>
+import { mapMutations } from 'vuex'
 import strapi from '~/utils/Strapi'
 
-export default {  
+export default {
   data() {
     return {
       username: '',
@@ -46,4 +50,41 @@ export default {
     })
   }
 }
-</script>  
+</script>
+
+<style>
+fieldset {
+  width:30%;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  align-items:center;
+}
+form {
+  display:flex;
+  justify-content:center;
+}
+fieldset > .row > label {
+  font-size:26px;
+  width:50%;
+  text-align:left;
+}
+fieldset > .row > input {
+  width:60%;
+  font-size:26px;
+}
+fieldset > .row {
+  width:100%;
+  display:flex;
+  padding:20px;
+}
+fieldset > legend {
+  font-size:30px;
+  font-weight:500;
+}
+fieldset > button {
+  width:50%;
+  font-size: 26px;
+}
+
+</style>

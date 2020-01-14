@@ -1,37 +1,42 @@
 <template>
   <body>
-
+    <h2>Signaler quelque chose ?</h2>
+    <button class="plusinfo call"><a href="tel:+33115">115</a></button>
     <h3> Centres ouverts </h3>
 
     <div class="accueilDeJour">
       <div class="listeCentre">
         <div class="centre" v-for="centre in filteredList" v-bind:key="centre.id">
-          <h4>{{centre.association.nom}}</h4>
-          <h5>Adresse : </h5>
-          <p>{{centre.adresse}}</p>
-          <h5>Horaire d'ouverture : </h5>
-          <div v-if="getDay == 1">
-            <p>{{centre.jourshoraires.lundiMatin}} {{centre.jourshoraires.lundiApresMidi}}</p>
+          <div class="row">
+            <div>
+              <h4>{{centre.association.nom}}</h4>
+              <h5>Adresse : </h5>
+              <p>{{centre.adresse}}</p>
+              <h5>Horaire d'ouverture : </h5>
+              <div v-if="getDay == 1">
+                <p>{{centre.jourshoraires.lundiMatin}} {{centre.jourshoraires.lundiApresMidi}}</p>
+              </div>
+              <div v-if="getDay == 2">
+                <p>{{centre.jourshoraires.mardiMatin}} {{centre.jourshoraires.mardinApresMidi}}</p>
+              </div>
+              <div v-if="getDay == 3">
+                <p>{{centre.jourshoraires.mercrediMatin}} {{centre.jourshoraires.mercrediApresMidi}}</p>
+              </div>
+              <div v-if="getDay == 4">
+                <p>{{centre.jourshoraires.jeudiMatin}} {{centre.jourshoraires.jeudiApresMidi}}</p>
+              </div>
+              <div v-if="getDay == 5">
+                <p>{{centre.jourshoraires.vendrediMatin}} {{centre.jourshoraires.vendrediApresMidi}}</p>
+              </div>
+              <div v-if="getDay == 6">
+                <p>{{centre.jourshoraires.samediMatin}} {{centre.jourshoraires.samediApresMidi}}</p>
+              </div>
+              <div v-if="getDay == 0">
+                <p>{{centre.jourshoraires.dimancheMatin}} {{centre.jourshoraires.dimancheApresMidi}}</p>
+              </div>
+            </div>
+            <router-link class="plusinfo" :to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>
           </div>
-          <div v-if="getDay == 2">
-            <p>{{centre.jourshoraires.mardiMatin}} {{centre.jourshoraires.mardinApresMidi}}</p>
-          </div>
-          <div v-if="getDay == 3">
-            <p>{{centre.jourshoraires.mercrediMatin}} {{centre.jourshoraires.mercrediApresMidi}}</p>
-          </div>
-          <div v-if="getDay == 4">
-            <p>{{centre.jourshoraires.jeudiMatin}} {{centre.jourshoraires.jeudiApresMidi}}</p>
-          </div>
-          <div v-if="getDay == 5">
-            <p>{{centre.jourshoraires.vendrediMatin}} {{centre.jourshoraires.vendrediApresMidi}}</p>
-          </div>
-          <div v-if="getDay == 6">
-            <p>{{centre.jourshoraires.samediMatin}} {{centre.jourshoraires.samediApresMidi}}</p>
-          </div>
-          <div v-if="getDay == 0">
-            <p>{{centre.jourshoraires.dimancheMatin}} {{centre.jourshoraires.dimancheApresMidi}}</p>
-          </div>
-          <router-link class="plusinfo":to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>
         </div>
       </div>
 

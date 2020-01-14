@@ -18,14 +18,19 @@
       </router-link>
       </div>
       <div class="choixLangue">
-        <div>
-          <label for="langue">Langue</label>
-          <div id="google_translate_element"></div>
-        </div>
-        <div v-if="username">
-          <p>Vous êtes connecté en tant que {{ username }}</p>
-          <a href="/" @click="logout">Déconnexion</a>
-        </div>
+          <div v-show="!username">
+            <h2 style="padding-right:10px;">Langue</h2>
+            <div id="google_translate_element"></div>
+          </div>
+          <div v-if="username" class="deco">
+            <style>
+            .choixLangue {
+              justify-content:flex-end;
+            }
+            </style>
+            <p>{{ username }}</p>
+            <a class="connexion" href="/" @click="logout">Déconnexion</a>
+          </div>
         <div v-else>
           <router-link class="connexion" tag="a" to="/connexion" exact>Connexion</router-link>
         </div>
@@ -78,14 +83,6 @@
         </ul>
       </nav>
     </div>
-    <div v-if="username">
-    </div>
-    <div v-else>
-      <h2>Signaler quelque chose ?</h2>
-      <button class="call"><a href="tel:+33115">115</a>
-</button>
-    </div>
-
   </div>
 </template>
 
@@ -132,6 +129,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>
