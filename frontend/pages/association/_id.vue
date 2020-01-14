@@ -2,10 +2,12 @@
 
 <div>
   <client-only>
-    <img :src="'http://localhost:1337/' + association.logo.url">
-    <h2>{{association.nom}}</h2>
-    <section>{{association.description}}</section>
-    <h3> Centres : </h3>
+    <h3>{{association.nom}}</h3>
+    <div class="association">
+      <img :src="'http://localhost:1337/' + association.logo.url">
+      <section>{{association.description}}</section>
+    </div>
+    <h3 style="padding-top:20px;"> Centres </h3>
       <div class="association" v-for="centres in association.centres" v-bind:key="association.centres.id">
           <h3>{{centres.adresse}}</h3>
           <p> Services proposés par le centre : </p>

@@ -59,7 +59,6 @@ header {
 .plusinfo {
   background-color: black;
   color:#f26340;
-  padding:10px;
 }
 
 .choixLangue > div{
@@ -244,7 +243,10 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid black;
+    background-color:#EEEEEE;
+    padding:20px 20px;
+    border-radius:20px;
+    box-shadow:5px 5px 10px #CCCCCC;
   }
   .association > img{
     width: 30%;
@@ -261,7 +263,11 @@ body {
     align-items: baseline;
     justify-content: space-around;
     margin-top: 20px;
-    background-color: #EEE;
+    background-color:#EEEEEE;
+    padding:20px 20px;
+    border-radius:20px;
+    box-shadow:5px 5px 10px #CCCCCC;
+    margin-bottom:50px;
   }
 
   .listeCentre, .map {

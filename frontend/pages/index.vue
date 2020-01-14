@@ -36,9 +36,9 @@
       </div>
 
       <div class="map">
-          <h4> Les centres </h4>
-          <div id="map-wrap" style="height: 100vh">
-             <l-map :zoom=13 :center="[45.8188956,1.2521794]">
+          <h4> Les Centres </h4>
+          <div id="map-wrap" style="height: 600px; ">
+             <l-map :zoom=12 :center="[45.835425,1.2644847]">
                <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
                   <div class="marker" v-for="centre in filteredList" v-bind:key="centre.id">
                        <l-marker :lat-lng="[centre.latitude, centre.longitude]" >

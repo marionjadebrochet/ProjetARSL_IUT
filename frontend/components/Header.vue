@@ -73,9 +73,6 @@
       <nav>
         <ul>
           <li>
-            <router-link tag="a" to="/centre" exact>Accueil de jour</router-link>
-          </li>
-          <li>
             <router-link tag="a" to="/association" exact>Associations</router-link>
           </li>
         </ul>
