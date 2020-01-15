@@ -28,7 +28,7 @@
     </header>
     <div v-if="username">
       <nav>
-        <ul>
+        <ul id="menu-deroulant">
           <li class="deroulant">
             <router-link tag="a" to="/intra/MonAssociation" exact>Mon Association</router-link>
           </li>
@@ -69,6 +69,9 @@
         <ul>
           <li>
             <router-link tag="a" to="/association" exact>Associations</router-link>
+          </li>
+          <li>
+              <router-link tag="a" to="/maraudes" exact>Maraudes</router-link>
           </li>
         </ul>
       </nav>
