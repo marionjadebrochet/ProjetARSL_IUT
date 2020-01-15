@@ -397,5 +397,9 @@ body {
       text-align: left;
       width: 80%;
     }
-
+    header .logo {
+      height:150px;
+      width:auto;
+      position:absolute;
+    }
 }

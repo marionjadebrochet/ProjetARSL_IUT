@@ -1,6 +1,7 @@
 <template>
   <div>
     <header>
+        <img class="logo" src="~/assets/image/logo.png">
         <router-link tag="a" to="/" exact>
         <h1>
           SIAO 115
