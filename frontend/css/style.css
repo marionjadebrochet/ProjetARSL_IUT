@@ -300,7 +300,7 @@ body {
   .row div {
     width:50%;
   }
-  .row label{
+  .row label, .row p, .row h3{
     font-size:26px;
     width:50%;
     text-align:left;
