@@ -46,9 +46,6 @@
     },
     "demandeHebergement": {
       "type": "boolean"
-    },
-    "date": {
-      "type": "string"
     }
   }
 }

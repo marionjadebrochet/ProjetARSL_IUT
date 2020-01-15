@@ -34,18 +34,18 @@
     "telephone": {
       "type": "integer"
     },
-    "users": {
-      "collection": "user",
-      "via": "association",
-      "plugin": "users-permissions"
+    "partenaires": {
+      "collection": "partenaire",
+      "via": "association"
     },
     "centres": {
       "collection": "centre",
       "via": "association"
     },
-    "partenaires": {
-      "collection": "partenaire",
-      "via": "association"
+    "users": {
+      "collection": "user",
+      "via": "association",
+      "plugin": "users-permissions"
     }
   }
 }

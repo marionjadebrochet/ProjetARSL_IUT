@@ -1,7 +1,19 @@
 query Maraudes {
   maraudes {
-  id
-  lieuDepart
-  lieuArrive
+    id
+    lieuDepart
+    lieuArrive
+    dateDepart
+    heureDepart
+    enPrevisions
+    fini
+    user {
+      username
+      Nom
+      Prenom
+      association{
+        nom
+      }
+    }
   }
 }

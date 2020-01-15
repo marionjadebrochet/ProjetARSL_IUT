@@ -70,7 +70,8 @@
       "type": "integer"
     },
     "maraudes": {
-      "collection": "maraude"
+      "collection": "maraude",
+      "via": "user"
     }
   }
 }
