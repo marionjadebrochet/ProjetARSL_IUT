@@ -74,6 +74,9 @@
           <li>
               <router-link tag="a" to="/maraudes" exact>Maraudes</router-link>
           </li>
+          <li>
+              <router-link tag="a" to="/services" exact>Services</router-link>
+          </li>
         </ul>
       </nav>
     </div>
