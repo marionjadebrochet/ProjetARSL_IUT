@@ -39,7 +39,7 @@ export default {
         )
         this.loading = false
         this.setUser(response.user)
-        this.$router.push('/intra')
+        this.$router.push('/')
       } catch (err) {
         this.loading = false
         alert('Mauvais identifiant ou mot de passe')
