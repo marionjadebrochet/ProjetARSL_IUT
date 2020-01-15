@@ -5,7 +5,7 @@
 
       <div v-for="centre in association.centres" v-bind:key="association.centres.id">
         <div class="services">
-          <div class="services" v-for="service in centre.services" :key="centre.services.id">
+          <div v-for="service in centre.services" :key="centre.services.id">
             <div class="cart">
               <h3>{{service.nom}}</h3>
               <h3>{{service.description}}</h3>
