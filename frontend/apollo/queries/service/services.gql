@@ -1,0 +1,9 @@
+query Services {
+  services {
+    nom
+    description
+    centre{
+        adresse
+    }
+  }
+}
