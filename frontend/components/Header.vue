@@ -1,31 +1,32 @@
 <template>
   <div>
     <header>
-        <img class="logo" src="~/assets/image/logo.png">
-        <router-link tag="a" to="/" exact>
-        <h1>
-          SIAO 115
-          <br />Haute-Vienne
-        </h1>
-      </router-link>
-      <div class="choixLangue">
-          <div v-show="!username">
-            <h2 style="padding-right:10px;">Langue</h2>
-            <div id="google_translate_element"></div>
-          </div>
-          <div v-if="username" class="deco">
-            <style>
-            .choixLangue {
-              justify-content:flex-end;
-            }
-            </style>
-            <p>{{ username }}</p>
-            <a class="connexion" href="/" @click="logout">Déconnexion</a>
-          </div>
-        <div v-else>
-          <router-link class="connexion" tag="a" to="/connexion" exact>Connexion</router-link>
+          <div class="space-between">
+            <div class="choixLangue">
+              <div v-show="!username">
+                <h2 style="padding-right:10px;">Langue</h2>
+                <div id="google_translate_element"></div>
+              </div>
+            </div>
+            <div v-if="username" class="deco">
+                <style>
+                .choixLangue {
+                  justify-content:flex-end;
+                }
+                </style>
+                <p>{{ username }}</p>
+                <a class="bouton" href="/" @click="logout">Déconnexion</a>
+            </div>
+            <div v-else>
+                <router-link class="bouton" tag="a" to="/connexion" exact>Connexion</router-link>
+            </div>
         </div>
-      </div>
+        <div class="center">
+          <div class="mid">
+              <img style="width:30%;height:auto;" class="logo" src="~/assets/image/logo.png">
+              <router-link tag="a" to="/" exact><h1>SIAO 115 <br> Haute-Vienne</h1></router-link>
+          </div>
+        </div>
     </header>
     <div v-if="username">
       <nav>
