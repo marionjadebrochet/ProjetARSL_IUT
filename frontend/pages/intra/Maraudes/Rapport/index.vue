@@ -1,23 +1,26 @@
 <template>
     <div>
         <h3>Maraudes dont le rapport n'est pas terminé</h3>
+        <div class="center">
         <div v-for="maraude in this.maraudes" :key="maraude.id">
-            <div v-show="!maraude.fini">
+            <div style="margin-top:10px;" class="cart" v-show="!maraude.fini">
                 <p>Date de départ : {{maraude.dateDepart}}</p>
                 <p>Lieu de départ : {{maraude.lieuDepart}}</p>
                 <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
                 <p>Heure de départ : {{maraude.heureDepart}}</p>
             </div>
         </div>
-
+      </div>
         <h3>Maraudes terminées</h3>
-        <div v-for="maraude in this.maraudes" :key="maraude.id">
-            <div v-show="maraude.fini">
+        <div class="center">
+          <div v-for="maraude in this.maraudes" :key="maraude.id">
+              <div style="margin-top:10px;" class="cart" v-show="maraude.fini">
                 <p>Date de départ : {{maraude.dateDepart}}</p>
                 <p>Lieu de départ : {{maraude.lieuDepart}}</p>
                 <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
                 <p>Heure de départ : {{maraude.heureDepart}}</p>
             </div>
+          </div>
         </div>
     </div>
 </template>

@@ -1,19 +1,35 @@
 <template>
     <div>
-        <h2>Ajouter une maraude</h2>
+        <h3>Ajouter une maraude</h3>
+        <div class="center">
         <form @submit.stop.prevent="ajouterMaraude">
-            <label for="nom">Veuillez donner un nom à la maraude :</label>
-            <input type="text" v-model="nom">
-            <label for="heureDepart">Début de la maraude :</label>
-            <input type="text" v-model="heureDepart">
-            <label for="lieuDepart">Lieu de Depart de la maraude :</label>
-            <input type="text" v-model="lieuDepart">
-            <label for="lieuArrive">Lieu d'arrivée :</label>
-            <input type="text" v-model="lieuArrive">
-            <label for="dateDepart">Date de Départ prévue :</label>
-            <input type="date" v-model="dateDepart">
-            <button :disabled="loading" type="submit">Commencer</button>
-        </form>
+          <fieldset>
+            <div class="row">
+              <label for="nom">Veuillez donner un nom à la maraude :</label>
+              <input type="text" v-model="nom">
+            </div>
+            <div class="row">
+              <label for="heureDepart">Début de la maraude :</label>
+              <input type="text" v-model="heureDepart">
+            </div>
+            <div class="row">
+              <label for="lieuDepart">Lieu de Depart de la maraude :</label>
+              <input type="text" v-model="lieuDepart">
+            </div>
+            <div class="row">
+              <label for="lieuArrive">Lieu d'arrivée :</label>
+              <input type="text" v-model="lieuArrive">
+            </div>
+            <div class="row">
+              <label for="dateDepart">Date de Départ prévue :</label>
+              <input type="date" v-model="dateDepart">
+            </div>
+            <div class="center">
+              <button class="plusinfo":disabled="loading" type="submit">Commencer</button>
+            </div>
+          </fieldset>
+          </form>
+        </div>
     </div>
 </template>
 
