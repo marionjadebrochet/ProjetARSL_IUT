@@ -1,15 +1,14 @@
 <template>
-  <div>
-    <h3> Maraudes </h3>
-    <div class="maraudes">
-        <div class="maraudesEnPrevisions">
-          <h3> Maraudes en previsions </h3>
-          <div class="maraude" v-for="maraude in filteredList" v-bind:key="maraude.id">
-            <p>  {{maraude.lieuDepart}} </p>
-          </div>
+    <div>
+        <h2>Maraudes en prévisions</h2>
+        <div v-for="maraude in filteredList" v-bind:key="maraude.id">
+            <div v-show="maraude.enPrevisions">
+                <p>Lieu de départ : {{maraude.lieuDepart}}</p>
+                <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
+                <p>Heure de Départ : {{maraude.heureDepart}}</p>
+            </div>
         </div>
     </div>
-  </div>
 </template>
 
 <script>

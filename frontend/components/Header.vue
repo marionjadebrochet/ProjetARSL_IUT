@@ -47,7 +47,7 @@
             </ul>
           </li>
           <li class="deroulant">
-            <router-link tag="a" to="/intra/Maraudes" exact>Maraudes</router-link>
+            <router-link tag="a" to="/maraudes" exact>Maraudes</router-link>
             <ul class="sous">
               <li class="sousligne"><router-link tag="a" to="/intra/Maraudes/AjouterMaraude" exact>Ajouter Maraude</router-link></li>
               <li class="sousligne"><router-link tag="a" to="/intra/Maraudes/SupprimerMaraude" exact>Supprimer Maraude</router-link></li>
