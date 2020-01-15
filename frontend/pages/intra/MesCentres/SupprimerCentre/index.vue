@@ -2,7 +2,7 @@
   <div>
     <client-only>
 
-      <h3> Suppression de centres existants </h3>
+      <h3 style="padding-top:20px;"> Suppression de centres existants </h3>
       <div class="mesCentres">
         <div>
           <h2>{{association.nom}}</h2>
@@ -13,6 +13,11 @@
           <p>{{centre.adresse}}</p>
           <h3>Horaires d'ouverture :</h3>
           <table>
+            <tr>
+              <th>Jour</th>
+              <th>Matin</th>
+              <th>Après-midi</th>
+            </tr>
             <tr>
               <td>Lundi </td>
               <td>{{centre.jourshoraires.lundiMatin}} </td>
