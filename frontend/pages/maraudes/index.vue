@@ -30,11 +30,17 @@
 
         <div class="map">
             <div id="map-wrap" style="height: 600px; ">
-               <l-map :zoom=12 :center="[45.835425,1.2644847]">
+               <l-map :zoom=14 :center="[45.835425,1.2644847]">
                  <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
-                    <div class="marker" v-for="centre in filteredList" v-bind:key="centre.id">
-
-                       </div>
+                    <div class="marker" v-for="maraude in filteredList" v-bind:key="maraude.id">
+                      <!-- marqueurs temporaires -->
+                      <l-marker :lat-lng="[45.84,1.2726]" >
+                            <l-popup :content="'Gare des Bénédictins | ' + maraude.heureDepart"  />
+                      </l-marker>
+                      <l-marker :lat-lng="[45.8318,1.2532]" >
+                          <l-popup :content="'Place Winston Churchill'"/>
+                      </l-marker>
+                    </div>
                </l-map>
             </div>
         </div>
