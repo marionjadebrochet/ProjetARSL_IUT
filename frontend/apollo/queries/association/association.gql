@@ -46,6 +46,16 @@ query Association($id: ID!) {
         dimancheMatin
         dimancheApresMidi
         }
-    }
-  }
+   }
+  users {
+     username
+     email
+     Nom
+     Prenom
+     Telephone
+     role {
+       name
+     }
+   }
+ }
 }
