@@ -5,4 +5,29 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+    create: async ctx => {
+        const {
+            lieuDepart,
+            lieuArrive,
+            heureDepart
+        } = ctx.request.body;
+
+        try {
+            const maraude = await strapi.services.maraude.create({
+                user: ctx.state.user.id,
+                nom,
+                lieuDepart,
+                lieuArrive,
+                heureDepart,
+                dateDepart,
+                enPrevisions,
+                fini
+            });
+
+            return order;
+        } catch (error) {
+            alert('erreur depuis apiControlleurMaraude')
+        }
+    },
+};
