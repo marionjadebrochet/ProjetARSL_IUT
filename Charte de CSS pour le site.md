@@ -4,7 +4,8 @@
 
 HTML
 
-```<div class=« center »>
+```
+    <div class=« center »>
 		<div>…</div>
 		ou <un élément>
 	</div>
@@ -12,7 +13,8 @@ HTML
 
 CSS 
 
-```.center {
+```
+    .center {
 		display:flex;
 		flex-direction:column;
 		align-items:center;
@@ -23,7 +25,8 @@ CSS
 
 HTML
 
-```<div class=« row »>
+```
+    <div class=« row »>
 		<div>…</div>
 		<div>…</div>
 	</div>
@@ -31,7 +34,8 @@ HTML
 
 CSS 
 
-```.row {
+```
+    .row {
 		display:flex;
 		flex-direction:row;
 		justify-content:space-around;
@@ -45,7 +49,8 @@ CSS
 
 HTML
 
-```<div class=« justify-content »>
+```
+    <div class=« justify-content »>
 		<div>…</div>
 		<div>…</div>
 		<div>…</div>
@@ -55,7 +60,8 @@ HTML
 
 CSS 
 
-```.justify-content {
+```
+    .justify-content {
 		display:flex;
 		flex-direction:row;
 		justify-content:space-around;
@@ -72,7 +78,8 @@ HTML
 
 CSS 
 
-```.bouton {
+```
+.bouton {
   border:3px solid black;
   color:black;
   padding:15px;
@@ -101,15 +108,16 @@ HTML
 HTML
 
 ```
-	<div class=« cadre »>
-		<div>…</div>
-		ou <un élément>
-	</div
+<div class=« cadre »>
+    <div>…</div>
+    ou <un élément>
+</div
 ```
 
 CSS 
 
-```.cadre {
+```
+.cadre {
   border:3px solid black;
   padding:15px;
   font-size:22px;
@@ -126,7 +134,8 @@ HTML
 
 CSS 
 
-```.justify {
+```
+.justify {
   text-align:justify;
 }
 	
