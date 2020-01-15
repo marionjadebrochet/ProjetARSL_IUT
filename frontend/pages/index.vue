@@ -8,7 +8,7 @@
         <div class="accueilDeJour">
           <div class="listeCentre">
             <div class="centre" v-for="centre in filteredList" v-bind:key="centre.id">
-              <div class="row">
+              <div class="rowCentre">
                 <div>
                   <h4>{{centre.association.nom}}</h4>
                   <h5>Adresse : </h5>
@@ -96,3 +96,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.rowCentre {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+}
+</style>
