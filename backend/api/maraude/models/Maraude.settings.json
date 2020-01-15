@@ -23,8 +23,22 @@
     "heureDepart": {
       "type": "string"
     },
-    "rapport": {
-      "model": "rapport"
+    "enPrevisions": {
+      "type": "boolean"
+    },
+    "user": {
+      "model": "user",
+      "via": "maraudes",
+      "plugin": "users-permissions"
+    },
+    "dateDepart": {
+      "type": "date"
+    },
+    "lignerapports": {
+      "collection": "lignerapport"
+    },
+    "fini": {
+      "type": "boolean"
     }
   }
 }
