@@ -388,5 +388,14 @@ body {
     max-height:15em;
     }
 
+    .ligne {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .ligne :nth-child(1) {
+      text-align: left;
+      width: 80%;
+    }
 
 }
