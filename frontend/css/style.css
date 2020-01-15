@@ -4,19 +4,14 @@ html {
 }
 a {
   text-decoration: none;
-  color: black;
+  color:black;
 }
 
 button a:hover{
   color: #f26340;
 }
-.greybutton {
-  font-size:24px;
-  background-color:#EEEEEE;
-  margin-top:20px;
-}
+
 h1 {
-  color: white;
   font-size: 48px;
   text-align: center;
   font-weight: bold;
@@ -41,12 +36,6 @@ h4 {
 h5 {
   padding: 5px 0px;
   font-size: 20px;
-}
-
-header {
-  background-color:#2b303a;
-  color: white;
-  align-items: center;
 }
 
 .choixLangue > button {
@@ -79,6 +68,12 @@ header {
   flex-direction: column;
 }
 
+.center {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
 li{
   font-size: 24px;
   padding: 10px;
@@ -99,23 +94,12 @@ p {
   font-size:18px;
 }
 nav {
-  background-color: #f26340;
+  background-color: #2b303a;
   width:100%;
 }
-
-.connexion{
-  font-size: 20px;
-  color: white;
-  padding:10px;
-  border:3px solid white;
-  font-weight: bold;
-  margin-right:10px;
-}
-
-.connexion:hover{
-  color: #f26340;
-  background-color: white;
-  transition: 0.5s;
+nav ul li a {
+  color:white;
+  font-weight:300;
 }
 
 
@@ -205,6 +189,59 @@ button {
   align-items:center;
 }
 
+.row {
+		display:flex;
+		flex-direction:row;
+    padding:10px 0px;
+    align-items:baseline;
+	}
+.row :nth-child(1), .row :nth-child(2) {
+		width:40%;
+}
+.space-around {
+		display:flex;
+		flex-direction:row;
+		justify-content:space-around;
+}
+.space-between {
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+    align-items:baseline;
+    padding:0px 10px;
+}
+
+  .bouton {
+  border:3px solid black;
+  color:black;
+  padding:15px;
+  font-weight: bold;
+  font-size:22px;
+  text-align:center;
+}
+.bouton:hover {
+  color: #f26340;
+  background-color: black;
+  transition: 0.5s;
+}
+.mid {
+  width:50%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+/* A modifier */
+
+.cadre {
+  border:3px solid black;
+  padding:15px;
+  font-size:22px;
+}
+
+.justify {
+  text-align:justify;
+}
 
 #goog-gt-tt {display:none;heigth:0px;}
 .goog-te-banner-frame.skiptranslate {
@@ -216,15 +253,12 @@ body {
 
 @media screen and (min-width: 786px) {
   h1 {
-    font-size: 60px;
+    font-size: 40px;
     padding-top:10px;
   }
   h4 {
     width:90%;
     padding:10px 0px;
-  }
-  header {
-    height: 200px;
   }
   li {
     width: 15%;
@@ -289,35 +323,11 @@ body {
     font-size:30px;
     font-weight: 400;
   }
-  .row {
-    display: flex;
-    padding:20px;
-    width:100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .row div {
-    width:50%;
-  }
-  .row label, .row p, .row h3{
-    font-size:26px;
-    width:50%;
-    text-align:left;
-  }
-  .row input {
-    width:50%;
-    font-size:26px;
-  }
 
   input[type="file"] {
     padding-top:5px;
   }
-  .center {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-  }
+
   td, th {
     padding:10px 20px;
     border:1px solid black
@@ -344,6 +354,7 @@ body {
   .mesCentres .cart h3 {
     padding:10px 0px;
   }
+
   #menu-deroulant {
     display: flex;
     justify-content: space-around;
@@ -396,10 +407,5 @@ body {
     .ligne :nth-child(1) {
       text-align: left;
       width: 80%;
-    }
-    header .logo {
-      height:150px;
-      width:auto;
-      position:absolute;
     }
 }
