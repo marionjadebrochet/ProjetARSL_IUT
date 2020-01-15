@@ -39,6 +39,9 @@
     },
     "fini": {
       "type": "boolean"
+    },
+    "nom": {
+      "type": "string"
     }
   }
 }
