@@ -1,25 +1,31 @@
 <template>
     <div>
-        <h2>Maraudes en prévisions</h2>
-        <div v-for="maraude in filteredList" v-bind:key="maraude.id">
-            <div v-show="maraude.enPrevisions">
-                <p>Date de départ : {{maraude.dateDepart}}</p>
-                <p>Lieu de départ : {{maraude.lieuDepart}}</p>
-                <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
-                <p>Heure de Départ : {{maraude.heureDepart}}</p>
-                <p>Personne en charge : {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
-            </div>
+      <h3> Maraudes </h3>
+      <div class="maraude">
+        <div class="cart">
+          <h3>Maraudes en cours</h3>
+          <div v-for="maraude in filteredList" v-bind:key="maraude.id">
+              <div class="infomaraude" v-show="!maraude.enPrevisions">
+                  <p>Date de départ : {{maraude.dateDepart}}</p>
+                  <p>Lieu de départ : {{maraude.lieuDepart}}</p>
+                  <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
+                  <p>Heure de Départ : {{maraude.heureDepart}}</p>
+                  <p>Personne en charge : {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
+              </div>
+          </div>
         </div>
 
-        <h2>Maraudes en cours</h2>
-        <div v-for="maraude in filteredList" v-bind:key="maraude.id">
-            <div v-show="!maraude.enPrevisions">
-                <p>Date de départ : {{maraude.dateDepart}}</p>
-                <p>Lieu de départ : {{maraude.lieuDepart}}</p>
-                <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
-                <p>Heure de Départ : {{maraude.heureDepart}}</p>
-                <p>Personne en charge : {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
-            </div>s
+        <div class="cart">
+          <h3>Maraudes en prévisions</h3>
+          <div v-for="maraude in filteredList" v-bind:key="maraude.id">
+              <div class="infomaraude" v-show="maraude.enPrevisions">
+                  <p>Date de départ : {{maraude.dateDepart}}</p>
+                  <p>Lieu de départ : {{maraude.lieuDepart}}</p>
+                  <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
+                  <p>Heure de Départ : {{maraude.heureDepart}}</p>
+                  <p>Personne en charge : {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
+              </div>
+          </div>
         </div>
 
         <div class="map">
@@ -32,6 +38,7 @@
                </l-map>
             </div>
         </div>
+      </div>
     </div>
 </template>
 
@@ -62,3 +69,24 @@ export default {
 }
 
 </script>
+
+<style>
+
+.maraude {
+  display:flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom:50px;
+}
+
+.maraude h3 {
+  padding:10px 0px;
+}
+
+.infomaraude {
+  padding:10px 0px;
+}
+
+</style>

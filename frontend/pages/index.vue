@@ -49,7 +49,7 @@
                       <div class="marker" v-for="centre in filteredList" v-bind:key="centre.id">
                            <l-marker :lat-lng="[centre.latitude, centre.longitude]" >
                            <l-popup :content="centre.association.nom + ' | ' + centre.adresse"/> </l-marker>
-                         </div>
+                      </div>
                  </l-map>
               </div>
           </div>
