@@ -9,7 +9,7 @@
     </div>
     <h3 style="padding-top:20px;"> Centres </h3>
       <div class="association" v-for="centres in association.centres" v-bind:key="association.centres.id">
-          <h3>{{centres.adresse}}</h3>
+          <h3>{{centres.lieu.adresse}}</h3>
           <p> Services proposés par le centre : </p>
           <div class="services" v-for="services in centres.services" v-bind:key="centres.services.id">
             <p> {{services.nom}} </p>

@@ -25,7 +25,12 @@ query Centre($id: ID!) {
         dimancheApresMidi
       }
     }
-    adresse
+    lieu{
+      libelle
+      adresse
+      latitude
+      longitude
+    }
     jourshoraires {
       lundiMatin
       lundiApresMidi

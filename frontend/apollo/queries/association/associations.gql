@@ -8,7 +8,12 @@ query Associations{
     }
     centres{
       id
-      adresse
+      lieu{
+        libelle
+        adresse
+        latitude
+        longitude
+      }
     }
   }
 }

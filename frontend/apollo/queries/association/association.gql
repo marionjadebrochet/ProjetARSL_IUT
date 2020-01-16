@@ -8,7 +8,12 @@ query Association($id: ID!) {
     }
     centres{
       id
-      adresse
+      lieu{
+        libelle
+        adresse
+        latitude
+        longitude
+      }
       services{
         id
         nom

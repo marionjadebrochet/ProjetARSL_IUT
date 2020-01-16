@@ -1,15 +1,18 @@
 query Centres {
   centres {
     id
-    latitude
-    longitude
     association {
       nom
       logo {
         url
       }
     }
-    adresse
+    lieu{
+      libelle
+      adresse
+      latitude
+      longitude
+    }
     jourshoraires {
       lundiMatin
       lundiApresMidi
