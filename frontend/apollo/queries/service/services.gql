@@ -3,7 +3,13 @@ query Services {
     nom
     description
     centre{
+        id
         adresse
+        latitude
+        longitude 
+        association{
+        nom
+        }
     }
   }
 }
