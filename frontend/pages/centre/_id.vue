@@ -8,7 +8,7 @@
         <h4>{{centre.association.nom}}</h4>
         <div class="cart">
           <h5>Adresse </h5>
-          <p>{{centre.adresse}}</p>
+          <p>{{centre.lieu.adresse}}</p>
           <h5>Horaires d'ouverture </h5>
           <table>
             <tr>
