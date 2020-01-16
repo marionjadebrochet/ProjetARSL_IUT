@@ -12,7 +12,7 @@
                 <div>
                   <h4>{{centre.association.nom}}</h4>
                   <h5>Adresse : </h5>
-                  <p>adresse</p>
+                  <p>{{centre.lieu.libelle}}</p>
                   <h5>Horaire d'ouverture : </h5>
                   <div v-if="getDay == 1">
                     <p>{{centre.jourshoraires.lundiMatin}} {{centre.jourshoraires.lundiApresMidi}}</p>
@@ -42,7 +42,7 @@
             </div>
           </div>
 
-          <!--  <div class="map">
+          <div class="map">
               <h4> Les Centres </h4>
               <div id="map-wrap" style="height: 600px; ">
                  <l-map :zoom=12 :center="[45.835425,1.2644847]">
@@ -53,7 +53,7 @@
                       </div>
                  </l-map>
               </div>
-          </div> -->
+          </div>
         </div>
       </div>
       <div v-else>

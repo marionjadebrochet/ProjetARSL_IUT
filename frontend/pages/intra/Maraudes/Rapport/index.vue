@@ -5,8 +5,8 @@
         <div v-for="maraude in this.maraudes" :key="maraude.id">
             <div style="margin-top:10px;" class="cart" v-show="!maraude.fini">
                 <p>Date de départ : {{maraude.dateDepart}}</p>
-                <p>Lieu de départ : {{maraude.lieuDepart}}</p>
-                <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
+                <p>Lieu de départ : {{maraude.lieuDepart.libelle}}</p>
+                <p>Lieu d'arrivé : {{maraude.lieuArrive.libelle}}</p>
                 <p>Heure de départ : {{maraude.heureDepart}}</p>
             </div>
         </div>
@@ -16,8 +16,8 @@
           <div v-for="maraude in this.maraudes" :key="maraude.id">
               <div style="margin-top:10px;" class="cart" v-show="maraude.fini">
                 <p>Date de départ : {{maraude.dateDepart}}</p>
-                <p>Lieu de départ : {{maraude.lieuDepart}}</p>
-                <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
+                <p>Lieu de départ : {{maraude.lieuDepart.libelle}}</p>
+                <p>Lieu d'arrivé : {{maraude.lieuArrive.libelle}}</p>
                 <p>Heure de départ : {{maraude.heureDepart}}</p>
             </div>
           </div>

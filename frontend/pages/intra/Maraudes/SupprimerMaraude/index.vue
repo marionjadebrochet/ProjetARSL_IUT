@@ -5,8 +5,8 @@
           <div v-for="maraude in this.maraudes" :key="maraude.id">
               <div style="margin-top:10px;" class="cart" v-show="maraude.fini">
                   <p>Date de départ : {{maraude.dateDepart}}</p>
-                  <p>Lieu de départ : {{maraude.lieuDepart}}</p>
-                  <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
+                  <p>Lieu de départ : {{maraude.lieuDepart.adresse}}</p>
+                  <p>Lieu d'arrivé : {{maraude.lieuArrive.libelle}}</p>
                   <p>Heure de départ : {{maraude.heureDepart}}</p>
                   <button class="plusinfo greybutton" @onclique="SupprimerMaraude">Supprimer</button>
               </div>

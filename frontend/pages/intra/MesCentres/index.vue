@@ -11,7 +11,7 @@
           <div class="cart">
             <div class="centre" v-for="centre in association.centres" v-bind:key="association.centres.id">
               <h3>Adresse : </h3>
-              <p>{{centre.adresse}}</p>
+              <p>{{centre.lieu.adresse}}</p>
               <h3>Horaires d'ouverture :</h3>
               <table>
                 <tr>
