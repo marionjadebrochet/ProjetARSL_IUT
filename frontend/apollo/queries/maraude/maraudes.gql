@@ -1,11 +1,26 @@
 query Maraudes {
   maraudes {
     id
-    lieuDepart
-    lieuArrive
+    lieuDepart{
+      libelle
+      adresse
+      latitude
+      longitude
+    }
+    lieuArrive{
+      libelle
+      adresse
+      latitude
+      longitude
+    }
+    lieuRdv{
+      libelle
+      adresse
+      latitude
+      longitude
+    }
     dateDepart
     heureDepart
-    lieuRdv
     heureRdv
     enPrevisions
     fini

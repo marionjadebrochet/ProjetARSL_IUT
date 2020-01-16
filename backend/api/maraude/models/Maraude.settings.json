@@ -14,12 +14,6 @@
     "comment": ""
   },
   "attributes": {
-    "lieuDepart": {
-      "type": "string"
-    },
-    "lieuArrive": {
-      "type": "string"
-    },
     "heureDepart": {
       "type": "string"
     },
@@ -46,8 +40,14 @@
     "heureRdv": {
       "type": "string"
     },
+    "lieuDepart": {
+      "model": "lieu"
+    },
     "lieuRdv": {
-      "type": "string"
+      "model": "lieu"
+    },
+    "lieuArrive": {
+      "model": "lieu"
     }
   }
 }

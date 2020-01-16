@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "lieus",
+  "info": {
+    "name": "lieu",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "libelle": {
+      "type": "string"
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    }
+  }
+}

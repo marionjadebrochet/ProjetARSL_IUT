@@ -7,11 +7,11 @@
           <div v-for="maraude in filteredList" v-bind:key="maraude.id">
               <div class="infomaraude" v-show="!maraude.enPrevisions">
                   <p>Date de départ : {{maraude.dateDepart}}</p>
-                  <p>Lieu de départ : {{maraude.lieuDepart}}</p>
+                  <p>Lieu de départ : {{maraude.lieuDepart.libelle}}</p>
                   <p>Heure de Départ : {{maraude.heureDepart}}</p>
-                  <p>Point de Rendez-vous: {{maraude.lieuRdv}}</p>
+                  <p>Point de Rendez-vous: {{maraude.lieuRdv.libelle}}</p>
                   <p>Heure de Rendez-vous : {{maraude.heureRdv}}</p>
-                  <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
+                  <p>Lieu d'arrivé : {{maraude.lieuArrive.libelle}}</p>
                   <p>Personne en charge : {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
               </div>
           </div>
@@ -22,8 +22,8 @@
           <div v-for="maraude in filteredList" v-bind:key="maraude.id">
               <div class="infomaraude" v-show="maraude.enPrevisions">
                   <p>Date de départ : {{maraude.dateDepart}}</p>
-                  <p>Lieu de départ : {{maraude.lieuDepart}}</p>
-                  <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
+                  <p>Lieu de départ : {{maraude.lieuDepart.libelle}}</p>
+                  <p>Lieu d'arrivé : {{maraude.lieuArrive.libelle}}</p>
                   <p>Heure de Départ : {{maraude.heureDepart}}</p>
                   <p>Personne en charge : {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
               </div>
@@ -36,14 +36,14 @@
                  <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
                     <div class="marker" v-for="maraude in filteredList" v-bind:key="maraude.id">
                       <!-- marqueurs temporaires -->
-                      <l-marker :lat-lng="[45.8268024,1.2592301]" >
-                            <l-popup :content="'Mairie | ' + maraude.heureDepart"  />
+                      <l-marker :lat-lng="[maraude.lieuDepart.latitude, maraude.lieuDepart.longitude]" >
+                            <l-popup :content="maraude.lieuDepart.libelle + ' | ' + maraude.heureDepart"  />
                       </l-marker>
-                      <l-marker :lat-lng="[45.84,1.2726]" >
-                            <l-popup :content="'Gare des Bénédictins | ' + maraude.heureRdv"  />
+                      <l-marker :lat-lng="[maraude.lieuRdv.latitude, maraude.lieuRdv.longitude]" >
+                            <l-popup :content="maraude.lieuRdv.libelle +' | ' + maraude.heureRdv"  />
                       </l-marker>
-                      <l-marker :lat-lng="[45.8318,1.2532]" >
-                          <l-popup :content="'Place Winston Churchill'"/>
+                      <l-marker :lat-lng="[maraude.lieuArrive.latitude, maraude.lieuArrive.longitude]" >
+                          <l-popup :content="maraude.lieuArrive.libelle"/>
                       </l-marker>
                     </div>
                </l-map>

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lieus",
+      "handler": "Lieu.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lieus/count",
+      "handler": "Lieu.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lieus/:id",
+      "handler": "Lieu.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lieus",
+      "handler": "Lieu.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lieus/:id",
+      "handler": "Lieu.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lieus/:id",
+      "handler": "Lieu.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
