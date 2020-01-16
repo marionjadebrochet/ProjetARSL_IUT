@@ -45,6 +45,9 @@
     "services": {
       "collection": "service",
       "via": "centre"
+    },
+    "lieu": {
+      "model": "lieu"
     }
   }
 }
