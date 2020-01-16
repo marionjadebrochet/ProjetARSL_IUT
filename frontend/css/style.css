@@ -105,21 +105,6 @@ nav ul li a {
 
 /* POUR NAV DE L'INTRA */
 
-.sous {
-  display: none;
-  background-color: #f26340;
-}
-
-nav > ul li:hover .sous {
-  display: block;
-  transition:0.5s;
-}
-
-.sous li {
-  width: 100%;
-  text-align: center;
-}
-
 select {
   size:40px;
 }
@@ -192,12 +177,9 @@ button {
 .row {
 		display:flex;
 		flex-direction:row;
-    padding:10px 0px;
-    align-items:baseline;
+    margin:20px 0px;
 	}
-.row :nth-child(1), .row :nth-child(2) {
-		width:40%;
-}
+
 .space-around {
 		display:flex;
 		flex-direction:row;
@@ -211,17 +193,19 @@ button {
     padding:0px 10px;
 }
 
-  .bouton {
-  border:3px solid black;
-  color:black;
+.bouton {
+  background-color: #92a0ad;
+  border-bottom:3px solid #778899;
+  color:white;
   padding:15px;
   font-weight: bold;
   font-size:22px;
   text-align:center;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
 }
 .bouton:hover {
-  color: #f26340;
-  background-color: black;
+  background-color: #778899;
   transition: 0.5s;
 }
 .mid {
@@ -234,13 +218,43 @@ button {
 /* A modifier */
 
 .cadre {
-  border:3px solid black;
-  padding:15px;
-  font-size:22px;
+  padding:10px;
+  overflow:hidden;
+  background-size: cover;
+  width:40%;
+  border-left:5px solid #f26340;
+  border-top:3px solid #f26340;
+  display:flex;
+  flex-direction:row;
+  height:300px;
+  border-top-left-radius:10px;
+  box-shadow: 10px 10px 10px grey;
+}
+
+.cadre div {
+  width:50%;
+}
+
+.cadre img {
+  height:300px;
+}
+.cadre .icon {
+    height:56px;
+    width:auto;
+    position: absolute;
+}
+
+.cadre p {
+  padding:10px 10px 0 0;
 }
 
 .justify {
   text-align:justify;
+}
+
+.page {
+  width:90%;
+  margin:auto;
 }
 
 #goog-gt-tt {display:none;heigth:0px;}
