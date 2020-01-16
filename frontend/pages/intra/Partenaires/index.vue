@@ -1,12 +1,14 @@
 <template>
   <div>
-    <h3 style="padding-top:20px;"> Mon association </h3><br>
-
-    <div class="association" v-bind:key="association">
-      <img :src="'http://localhost:1337/' + association.logo.url">
-      <div class="infoAssociation">
-        <h4 >{{association.nom}}</h4>
-        <section>{{association.description}}</section>
+    <h3 style="padding-top:20px;"> Mes partenaires </h3><br>
+    <div class="allpartenaires">
+      <div class="partenaires" v-for="partenaire in association.partenaires" :key="association.partenaires.id">
+        <img :src="'http://localhost:1337/' + partenaire.logo.url">
+        <div class="infoPartenaire">
+          <h2>{{partenaire.nom}}</h2>
+          <p> Téléphone du partenaire : <b>{{partenaire.telephone}}</b></p>
+          <p> Email du partenaire : <b>{{partenaire.email}}</b> </p>
+        </div>
       </div>
     </div>
   </div>
