@@ -38,29 +38,12 @@ h5 {
   font-size: 20px;
 }
 
-.choixLangue > button {
-  font-size: 20px;
-}
-
 .choixLangue {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 10px 10px 0px 10px;
-}
-.plusinfo {
-  border:3px solid black;
-  color:black;
-  padding:15px;
-  font-weight: bold;
-  font-size:22px;
-  text-align:center;
-}
-.plusinfo:hover {
-  color: #f26340;
-  background-color: black;
-  transition: 0.5s;
 }
 
 .choixLangue > div{
@@ -164,10 +147,6 @@ section {
   height: 400px;
 }
 
-button {
-  border:3px solid black;
-  background-color:white;
-}
 .radio {
   display:flex;
   flex-direction:row;
@@ -178,8 +157,13 @@ button {
 		display:flex;
 		flex-direction:row;
     align-items: center;
+    justify-content: space-between;
     margin:20px 0px;
-	}
+}
+fieldset .row {
+  width:100%;
+  font-size:26px;
+}
 
 .space-around {
 		display:flex;
@@ -294,11 +278,6 @@ body {
   li {
     width: 15%;
     font-size: 30px;
-  }
-
-  button:hover {
-    color:#f26340;
-    transition: 0.5s;
   }
 
   .association {
@@ -419,4 +398,24 @@ body {
     #menu-deroulant li:hover ul{
     max-height:15em;
     }
+    .row input {
+      width:50%;
+      font-size:26px;
+    }
+    form {
+      display:flex;
+      justify-content:center;
+    }
+    fieldset {
+      width:30%;
+      display:flex;
+      flex-direction:column;
+      text-align:center;
+      align-items:center;
+    }
+    fieldset > legend {
+      font-size:30px;
+      font-weight:500;
+    }
+
 }

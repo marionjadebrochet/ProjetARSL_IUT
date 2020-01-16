@@ -11,7 +11,7 @@
           <label for="motdepasse">Mot de passe</label>
           <input v-model="password" type="password">
         </div>
-        <button class="plusinfo" :disabled="loading" type="submit">Se connecter</button>
+        <button class="bouton" :disabled="loading" type="submit">Se connecter</button>
       </fieldset>
     </form>
   </div>
@@ -51,27 +51,3 @@ export default {
   }
 }
 </script>
-
-<style>
-fieldset {
-  width:30%;
-  display:flex;
-  flex-direction:column;
-  text-align:center;
-  align-items:center;
-}
-form {
-  display:flex;
-  justify-content:center;
-}
-
-fieldset > legend {
-  font-size:30px;
-  font-weight:500;
-}
-fieldset > button {
-  width:50%;
-  font-size: 26px;
-}
-
-</style>
