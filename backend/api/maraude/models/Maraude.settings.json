@@ -42,6 +42,12 @@
     },
     "nom": {
       "type": "string"
+    },
+    "heureRdv": {
+      "type": "string"
+    },
+    "lieuRdv": {
+      "type": "string"
     }
   }
 }

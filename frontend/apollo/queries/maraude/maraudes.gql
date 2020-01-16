@@ -5,6 +5,8 @@ query Maraudes {
     lieuArrive
     dateDepart
     heureDepart
+    lieuRdv
+    heureRdv
     enPrevisions
     fini
     user {

@@ -8,8 +8,10 @@
               <div class="infomaraude" v-show="!maraude.enPrevisions">
                   <p>Date de départ : {{maraude.dateDepart}}</p>
                   <p>Lieu de départ : {{maraude.lieuDepart}}</p>
-                  <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
                   <p>Heure de Départ : {{maraude.heureDepart}}</p>
+                  <p>Point de Rendez-vous: {{maraude.lieuRdv}}</p>
+                  <p>Heure de Rendez-vous : {{maraude.heureRdv}}</p>
+                  <p>Lieu d'arrivé : {{maraude.lieuArrive}}</p>
                   <p>Personne en charge : {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
               </div>
           </div>
@@ -34,8 +36,11 @@
                  <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
                     <div class="marker" v-for="maraude in filteredList" v-bind:key="maraude.id">
                       <!-- marqueurs temporaires -->
+                      <l-marker :lat-lng="[45.8268024,1.2592301]" >
+                            <l-popup :content="'Mairie | ' + maraude.heureDepart"  />
+                      </l-marker>
                       <l-marker :lat-lng="[45.84,1.2726]" >
-                            <l-popup :content="'Gare des Bénédictins | ' + maraude.heureDepart"  />
+                            <l-popup :content="'Gare des Bénédictins | ' + maraude.heureRdv"  />
                       </l-marker>
                       <l-marker :lat-lng="[45.8318,1.2532]" >
                           <l-popup :content="'Place Winston Churchill'"/>
