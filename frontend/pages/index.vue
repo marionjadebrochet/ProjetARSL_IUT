@@ -12,7 +12,7 @@
                 <div>
                   <h4>{{centre.association.nom}}</h4>
                   <h5>Adresse : </h5>
-                  <p>{{centre.adresse}}</p>
+                  <p>adresse</p>
                   <h5>Horaire d'ouverture : </h5>
                   <div v-if="getDay == 1">
                     <p>{{centre.jourshoraires.lundiMatin}} {{centre.jourshoraires.lundiApresMidi}}</p>
@@ -42,22 +42,73 @@
             </div>
           </div>
 
-          <div class="map">
+          <!--  <div class="map">
               <h4> Les Centres </h4>
               <div id="map-wrap" style="height: 600px; ">
                  <l-map :zoom=12 :center="[45.835425,1.2644847]">
                    <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
                       <div class="marker" v-for="centre in filteredList" v-bind:key="centre.id">
-                           <l-marker :lat-lng="[centre.latitude, centre.longitude]" >
-                           <l-popup :content="centre.association.nom + ' | ' + centre.adresse"/> </l-marker>
+                           <l-marker :lat-lng="[centre.lieu.latitude, centre.lieu.longitude]" >
+                           <l-popup :content="centre.association.nom + ' | ' + centre.lieu.adresse"/> </l-marker>
                       </div>
                  </l-map>
               </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div v-else>
         <h2>Bienvenue sur la partie gestion de votre application</h2>
+
+        <div class="carte">
+          <div class="space-around">
+          <img class="rond" src="~/assets/image/iconsIntra/association.svg"></img>
+          <h3> Association </h3>
+          </div>
+          <router-link class="boutton" tag="a" to="/intra/MonAssociation" exact>Visualiser mon association</router-link>
+        </div>
+
+        <div class="carte">
+          <div class="space-around">
+            <img class="rond" src="~/assets/image/iconsIntra/partenaire.svg"></img>
+            <h3> Partenaires </h3>
+          </div>
+          <router-link class="boutton" tag="a" to="/intra/Partenaires" exact>Visualiser mes partenaires</router-link>
+          <router-link class="boutton" tag="a" to="/intra/Partenaires/AjouterPartenaire" exact>Ajouter un partenaire</router-link>
+          <router-link class="boutton" tag="a" to="/intra/Partenaires/SupprimerPartenaire" exact>Supprimer un partenaire</router-link>
+        </div>
+
+        <div class="carte">
+          <div class="space-around">
+            <img class="rond" src="~/assets/image/iconsIntra/centres.svg"></img>
+            <h3> Centres </h3>
+          </div>
+
+        </div>
+
+        <div class="carte">
+          <div class="space-around">
+            <img class="rond" src="~/assets/image/iconsIntra/services.svg"></img>
+            <h3> Services </h3>
+          </div>
+
+        </div>
+
+        <div class="carte">
+          <div class="space-around">
+            <img class="rond" src="~/assets/image/iconsIntra/maraudes.svg"></img>
+            <h3> Maraudes </h3>
+          </div>
+
+        </div>
+
+        <div class="carte">
+          <div class="space-around">
+            <img class="rond" src="~/assets/image/iconsIntra/membres.svg"></img>
+            <h3> Membres </h3>
+          </div>
+
+        </div>
+
       </div>
     </div>
 </body>

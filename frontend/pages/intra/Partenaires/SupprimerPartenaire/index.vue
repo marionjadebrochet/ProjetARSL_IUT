@@ -9,6 +9,7 @@
           <p> Téléphone du partenaire : <b>{{partenaire.telephone}}</b></p>
           <p> Email du partenaire : <b>{{partenaire.email}}</b> </p>
         </div>
+        <button class="plusinfo greybutton" @onclique="SupprimerPartenaire">Supprimer</button>
       </div>
     </div>
   </div>
@@ -38,6 +39,11 @@ export default {
       variables () {
         return { id: this.associationUser.id }
       }
+    }
+  },
+  methods : {
+    SupprimerPartenaire() {
+      //contenu....
     }
   },
     mounted() {
