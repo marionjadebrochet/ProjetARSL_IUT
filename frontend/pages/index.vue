@@ -1,14 +1,14 @@
 <template>
   <body>
-    <div v-if="!username">
+    <div class="page">
+      <div v-if="!username">
         <h2>Signaler quelque chose ?</h2>
         <button class="plusinfo call"><a href="tel:+33115">115</a></button>
         <h3> Centres ouverts </h3>
 
         <div class="accueilDeJour">
           <div class="listeCentre">
-            <div class="centre" v-for="centre in filteredList" v-bind:key="centre.id">
-              <div class="ligne">
+            <div class="cadre" v-for="centre in filteredList" v-bind:key="centre.id">
                 <div>
                   <h4>{{centre.association.nom}}</h4>
                   <h5>Adresse : </h5>
@@ -36,8 +36,9 @@
                     <p>{{centre.jourshoraires.dimancheMatin}} {{centre.jourshoraires.dimancheApresMidi}}</p>
                   </div>
                 </div>
-                <router-link class="plusinfo" :to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>
-              </div>
+                <div class="center">
+                  <router-link class="bouton" :to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>
+                </div>
             </div>
           </div>
 
@@ -58,6 +59,7 @@
       <div v-else>
         <h2>Bienvenue sur la partie gestion de votre application</h2>
       </div>
+    </div>
 </body>
 </template>
 

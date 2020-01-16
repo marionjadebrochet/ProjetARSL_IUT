@@ -5,6 +5,9 @@ query Centres {
     longitude
     association {
       nom
+      logo {
+        url
+      }
     }
     adresse
     jourshoraires {

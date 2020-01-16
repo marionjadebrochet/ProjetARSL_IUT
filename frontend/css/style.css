@@ -144,13 +144,13 @@ section {
 
 .accueilDeJour {
   display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
+  align-items: top;
+  justify-content: space-around;
+  margin-top: 20px;
+  border-radius:20px;
+  box-shadow:5px 5px 10px #CCCCCC;
 }
-.listeCentre {
-  margin: 30px 0px;
-}
+
 .centre > h4 {
   margin-bottom: 20px;
 }
@@ -177,6 +177,7 @@ button {
 .row {
 		display:flex;
 		flex-direction:row;
+    align-items: center;
     margin:20px 0px;
 	}
 
@@ -216,22 +217,38 @@ button {
 }
 
 /* A modifier */
-
 .cadre {
   padding:10px;
   overflow:hidden;
   background-size: cover;
-  width:40%;
   border-left:5px solid #f26340;
   border-top:3px solid #f26340;
   display:flex;
   flex-direction:row;
-  height:300px;
   border-top-left-radius:10px;
   box-shadow: 10px 10px 10px grey;
 }
+.listeCentre .cadre {
+  margin:10px;
+  text-align:left;
+  width:100%;
+  display:inline-flex;
+  align-items:center;
+  justify-content: space-between;
+}
 
-.cadre div {
+.listeCentre .cadre div {
+  width:50%;
+}
+
+.row .cadre {
+  width:40%;
+  display:flex;
+  flex-direction:row;
+  height:300px;
+}
+
+.row .cadre div {
   width:50%;
 }
 
@@ -304,17 +321,7 @@ body {
     padding-right:50px;
   }
 
-  .accueilDeJour {
-    flex-direction: row;
-    align-items: top;
-    justify-content: space-around;
-    margin-top: 20px;
-    background-color:#EEEEEE;
-    padding:20px 20px;
-    border-radius:20px;
-    box-shadow:5px 5px 10px #CCCCCC;
-    margin-bottom:50px;
-  }
+
 
   .listeCentre, .map {
     width: 40%;
@@ -411,15 +418,5 @@ body {
 
     #menu-deroulant li:hover ul{
     max-height:15em;
-    }
-
-    .ligne {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .ligne :nth-child(1) {
-      text-align: left;
-      width: 80%;
     }
 }
