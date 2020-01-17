@@ -82,7 +82,9 @@
             <img class="rond" src="~/assets/image/iconsIntra/centres.svg"></img>
             <h3> Centres </h3>
           </div>
-
+          <router-link class="boutton" tag="a" to="/intra/MesCentres" exact>Visualiser mes centres</router-link>
+          <router-link class="boutton" tag="a" to="/intra/MesCentres/AjouterCentre" exact>Ajouter un centre</router-link>
+          <router-link class="boutton" tag="a" to="/intra/MesCentres/SupprimerCentre" exact>Supprimer un centre</router-link>
         </div>
 
         <div class="carte">
@@ -90,7 +92,9 @@
             <img class="rond" src="~/assets/image/iconsIntra/services.svg"></img>
             <h3> Services </h3>
           </div>
-
+          <router-link class="boutton" tag="a" to="/intra/MesServices" exact>Visualiser mes services</router-link>
+          <router-link class="boutton" tag="a" to="/intra/MesServices/AjouterService" exact>Ajouter un service</router-link>
+          <router-link class="boutton" tag="a" to="/intra/MesServices/SupprimerService" exact>Supprimer un service</router-link>
         </div>
 
         <div class="carte">
@@ -98,7 +102,9 @@
             <img class="rond" src="~/assets/image/iconsIntra/maraudes.svg"></img>
             <h3> Maraudes </h3>
           </div>
-
+          <router-link class="boutton" tag="a" to="/maraudes" exact>Visualiser les maraudes</router-link>
+          <router-link class="boutton" tag="a" to="/intra/Maraudes/AjouterMaraude" exact>Ajouter une maraude</router-link>
+          <router-link class="boutton" tag="a" to="/intra/Maraudes/SupprimerMaraude" exact>Supprimer une maraude</router-link>
         </div>
 
         <div class="carte">
@@ -106,9 +112,18 @@
             <img class="rond" src="~/assets/image/iconsIntra/membres.svg"></img>
             <h3> Membres </h3>
           </div>
-
+          <router-link class="boutton" tag="a" to="/intra/MesMembres" exact>Visualiser les membres de mon association</router-link>
+          <router-link class="boutton" tag="a" to="/intra/MesMembres/AjouterMembre" exact>Ajouter un membre</router-link>
+          <router-link class="boutton" tag="a" to="/intra/MesMembres/SupprimerMembre" exact>Supprimer un membre</router-link>
         </div>
 
+        <div class="carte">
+          <div class="space-around">
+            <img class="rond" src="~/assets/image/iconsIntra/alarme.svg"></img>
+            <h3> Alertes </h3>
+          </div>
+          <router-link class="boutton" tag="a" to="/intra/alerte" exact>Déclencher une alerte</router-link>
+        </div>
       </div>
     </div>
 </body>
