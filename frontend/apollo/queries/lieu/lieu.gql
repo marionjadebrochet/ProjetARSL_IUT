@@ -1,0 +1,6 @@
+query Lieu ($id: ID!){
+    lieu(id: $id) {
+        id
+        libelle
+    }
+}

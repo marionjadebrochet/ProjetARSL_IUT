@@ -8,21 +8,29 @@
 module.exports = {
     create: async ctx => {
         const {
+            heureDepart,
+            enPrevisions,
+            dateDepart,
+            fini,
+            nom,
+            heureRdv,
             lieuDepart,
-            lieuArrive,
-            heureDepart
+            lieuRdv,
+            lieuArrive
         } = ctx.request.body;
 
         try {
-            const maraude = await strapi.services.maraude.create({
+            const maraude = await strapi.services.Maraude.create({
                 user: ctx.state.user.id,
-                nom,
-                lieuDepart,
-                lieuArrive,
                 heureDepart,
-                dateDepart,
                 enPrevisions,
-                fini
+                dateDepart,
+                fini,
+                nom,
+                heureRdv,
+                lieuDepart,
+                lieuRdv,
+                lieuArrive
             });
 
             return order;
