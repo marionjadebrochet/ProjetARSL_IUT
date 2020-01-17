@@ -2,30 +2,32 @@
     <div>
       <h3> Maraudes </h3>
       <div class="maraude">
-        <div class="cart">
+        <div>
           <h3>Maraudes en cours</h3>
           <div v-for="maraude in filteredList" v-bind:key="maraude.id">
               <div class="infomaraude" v-show="!maraude.enPrevisions">
-                  <p>Date de départ : {{maraude.dateDepart}}</p>
-                  <p>Lieu de départ : {{maraude.lieuDepart.libelle}}</p>
-                  <p>Heure de Départ : {{maraude.heureDepart}}</p>
-                  <p>Point de Rendez-vous: {{maraude.lieuRdv.libelle}}</p>
-                  <p>Heure de Rendez-vous : {{maraude.heureRdv}}</p>
-                  <p>Lieu d'arrivé : {{maraude.lieuArrive.libelle}}</p>
-                  <p>Personne en charge : {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
+                  <p><b>Date de départ :</b> {{maraude.dateDepart}}</p>
+                  <p><b>Lieu de départ :</b> {{maraude.lieuDepart.libelle}}</p>
+                  <p><b>Heure de Départ : </b> {{maraude.heureDepart}}</p>
+                  <p><b>Point de Rendez-vous:</b> {{maraude.lieuRdv.libelle}}</p>
+                  <p><b>Heure de Rendez-vous :</b> {{maraude.heureRdv}}</p>
+                  <p><b>Lieu d'arrivé : </b>{{maraude.lieuArrive.libelle}}</p>
+                  <p><b>Personne en charge : </b> {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
               </div>
           </div>
         </div>
 
-        <div class="cart">
+        <div>
           <h3>Maraudes en prévisions</h3>
           <div v-for="maraude in filteredList" v-bind:key="maraude.id">
               <div class="infomaraude" v-show="maraude.enPrevisions">
-                  <p>Date de départ : {{maraude.dateDepart}}</p>
-                  <p>Lieu de départ : {{maraude.lieuDepart.libelle}}</p>
-                  <p>Lieu d'arrivé : {{maraude.lieuArrive.libelle}}</p>
-                  <p>Heure de Départ : {{maraude.heureDepart}}</p>
-                  <p>Personne en charge : {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
+                  <p><b>Date de départ :</b> {{maraude.dateDepart}}</p>
+                  <p><b>Lieu de départ :</b> {{maraude.lieuDepart.libelle}}</p>
+                  <p><b>Heure de Départ : </b> {{maraude.heureDepart}}</p>
+                  <p><b>Point de Rendez-vous:</b> {{maraude.lieuRdv.libelle}}</p>
+                  <p><b>Heure de Rendez-vous :</b> {{maraude.heureRdv}}</p>
+                  <p><b>Lieu d'arrivé : </b>{{maraude.lieuArrive.libelle}}</p>
+                  <p><b>Personne en charge : </b> {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
               </div>
           </div>
         </div>

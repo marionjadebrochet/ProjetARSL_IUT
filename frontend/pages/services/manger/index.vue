@@ -3,7 +3,7 @@
     <h2> Centres où manger </h2>
 
     <h3> Petit déjeuner </h3>
-    <div class="services" v-for="service in filteredList" v-bind:key="service.nom">
+    <div v-for="service in filteredList" v-bind:key="service.nom">
       <div class="space-between" v-if="service.nom=='Petit déjeuner'">
                <h3> {{service.centre.adresse}} </h3>
                <router-link class="bouton":to="{ name: 'centre-id', params: { id: service.centre.id }}" tag="a" > Plus d'informations </router-link>
@@ -11,7 +11,7 @@
     </div>
 
     <h3> Collation </h3>
-    <div class="services" v-for="service in filteredList" v-bind:key="service.nom">
+    <div class="service" v-for="service in filteredList" v-bind:key="service.nom">
       <div class="space-between" v-if="service.nom=='Collation'">
           <h3> {{service.centre.adresse}} </h3>
           <router-link class="bouton":to="{ name: 'centre-id', params: { id: service.centre.id }}" tag="a" > Plus d'informations </router-link>

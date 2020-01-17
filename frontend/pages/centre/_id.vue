@@ -1,12 +1,10 @@
 <template>
-<div>
-
-
   <client-only>
-    <div class="page">
-      <div class="column">
+
+    <div class="infoCentre space-around">
+      <div class="monCentre">
         <h4>{{centre.association.nom}}</h4>
-        <div class="cart">
+        <div>
           <h5>Adresse </h5>
           <p>{{centre.lieu.adresse}}</p>
           <h5>Horaires d'ouverture </h5>
@@ -54,9 +52,9 @@
           </table>
         </div>
       </div>
-      <div class="column">
+      <div class="wrap space-around">
         <h4>Services </h4>
-        <div class="cart" v-for="service in centre.services" v-bind:key="centre.services.id">
+        <div class="services" v-for="service in centre.services" v-bind:key="centre.services.id">
             <h5>{{service.nom}}</h5>
             <table>
               <tr>
@@ -104,7 +102,6 @@
         </div>
       </div>
     </client-only>
-  </div>
 </template>
 
 <script>
