@@ -117,6 +117,13 @@
           <router-link class="boutton" tag="a" to="/intra/MesMembres/SupprimerMembre" exact>Supprimer un membre</router-link>
         </div>
 
+        <div class="carte">
+          <div class="space-around">
+            <img class="rond" src="~/assets/image/iconsIntra/alarme.svg"></img>
+            <h3> Alertes </h3>
+          </div>
+          <router-link class="boutton" tag="a" to="/intra/alerte" exact>Déclencher une alerte</router-link>
+        </div>
       </div>
     </div>
 </body>
