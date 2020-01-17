@@ -6,7 +6,7 @@
         <div class="cadre">
           <img class="icon" src="~/assets/icon/dining-room.png">
           <div class="center">
-            <router-link class="bouton" tag="a" to="/services/manger" exact>Où manger ?</router-link>
+            <router-link class="whiteButton" tag="a" to="/services/manger" exact>Où manger ?</router-link>
             <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla </p>
           </div>
           <div>
@@ -16,7 +16,7 @@
         <div class="cadre">
           <img class="icon" src="~/assets/icon/douche.png">
           <div class="center">
-            <router-link class="bouton" tag="a" to="/services/laver" exact>Où se laver ?</router-link>
+            <router-link class="whiteButton" tag="a" to="/services/laver" exact>Où se laver ?</router-link>
             <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Blanvh jbvehir nvhfebnv hezbrvhj dnvjkre bnvzvhrz  fzeh hzhg hf ipap fp ap pih aeiph pih fhd phiefa hfa ha pa h </p>
           </div>
           <div>
@@ -28,7 +28,7 @@
         <div class="cadre">
           <img class="icon" src="~/assets/icon/dormir.png">
           <div class="center">
-            <router-link class="bouton" tag="a" to="/services/dormir" exact>Où dormir ?</router-link>
+            <router-link class="whiteButton" tag="a" to="/services/dormir" exact>Où dormir ?</router-link>
             <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla </p>
           </div>
           <div>
@@ -38,7 +38,7 @@
         <div class="cadre">
           <img class="icon" src="~/assets/icon/vetements.png">
           <div class="center">
-            <router-link class="bouton" tag="a" to="/services/vestiaire" exact>Où se changer ?</router-link>
+            <router-link class="whiteButton" tag="a" to="/services/vestiaire" exact>Où se changer ?</router-link>
             <!-- :to="{ name: '/services/vestiaire', params: { nom: services.nom }}" -->
             <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla </p>
           </div>

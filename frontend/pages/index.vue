@@ -3,51 +3,10 @@
     <div class="page">
       <div v-if="!username">
         <h2>Signaler quelque chose ?</h2>
-        <button class="plusinfo call"><a href="tel:+33115">115</a></button>
-        <h3> Centres ouverts </h3>
+        <button class="blackButton call"><a href="tel:+33115">115</a></button>
 
         <div class="accueilDeJour">
-          <div class="listeCentre">
-            <div class="cadre" v-for="centre in filteredList" v-bind:key="centre.id">
-                <div>
-                  <h4>{{centre.association.nom}}</h4>
-                  <h5>Adresse : </h5>
-                  <p>{{centre.lieu.libelle}}</p>
-                  <h5>Horaire d'ouverture : </h5>
-                  <div v-if="getDay == 1">
-                    <p>{{centre.jourshoraires.lundiMatin}} {{centre.jourshoraires.lundiApresMidi}}</p>
-                  </div>
-                  <div v-if="getDay == 2">
-                    <p>{{centre.jourshoraires.mardiMatin}} {{centre.jourshoraires.mardinApresMidi}}</p>
-                  </div>
-                  <div v-if="getDay == 3">
-                    <p>{{centre.jourshoraires.mercrediMatin}} {{centre.jourshoraires.mercrediApresMidi}}</p>
-                  </div>
-                  <div v-if="getDay == 4">
-                    <p>{{centre.jourshoraires.jeudiMatin}} {{centre.jourshoraires.jeudiApresMidi}}</p>
-                  </div>
-                  <div v-if="getDay == 5">
-                    <p>{{centre.jourshoraires.vendrediMatin}} {{centre.jourshoraires.vendrediApresMidi}}</p>
-                  </div>
-                  <div v-if="getDay == 6">
-                    <p>{{centre.jourshoraires.samediMatin}} {{centre.jourshoraires.samediApresMidi}}</p>
-                  </div>
-                  <div v-if="getDay == 0">
-                    <p>{{centre.jourshoraires.dimancheMatin}} {{centre.jourshoraires.dimancheApresMidi}}</p>
-                  </div>
-                  <h5 v-if="centre.association.nom=='Le Secours Catholique'">Lignes de bus : 20/21/D10</h5>
-                  <h5 v-if="centre.association.nom=='La Croix Rouge'">Lignes de bus : 8 </h5>
-                  <h5 v-if="centre.association.nom=='Les Restos Du Coeur'">Lignes de bus : 2/20/21/D10 </h5>
-                  <h5 v-if="centre.association.nom=='Le Secours Populaire'"> Lignes de bus : 20 </h5>
-                </div>
-                <div class="center">
-                  <router-link class="bouton" :to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>
-                </div>
-            </div>
-          </div>
-
           <div class="map">
-              <h4> Les Centres </h4>
               <div id="map-wrap" style="height: 600px; ">
                  <l-map :zoom=12 :center="[45.835425,1.2644847]">
                    <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
@@ -58,6 +17,48 @@
                  </l-map>
               </div>
           </div>
+
+          <div class="listeCentre space-around">
+            <div class="centreAccueil" v-for="centre in filteredList" v-bind:key="centre.id">
+                <div>
+                  <div class="">
+                    <h4>{{centre.association.nom}}</h4>
+                    <div class="trait"></div>
+                    <p>{{centre.lieu.adresse}}</p>
+                    <div v-if="getDay == 1">
+                      <p>Aujourd'hui :{{centre.jourshoraires.lundiMatin}} {{centre.jourshoraires.lundiApresMidi}}</p>
+                    </div>
+                    <div v-if="getDay == 2">
+                      <p>Aujourd'hui :{{centre.jourshoraires.mardiMatin}} {{centre.jourshoraires.mardinApresMidi}}</p>
+                    </div>
+                    <div v-if="getDay == 3">
+                      <p>Aujourd'hui :{{centre.jourshoraires.mercrediMatin}} {{centre.jourshoraires.mercrediApresMidi}}</p>
+                    </div>
+                    <div v-if="getDay == 4">
+                      <p>Aujourd'hui : {{centre.jourshoraires.jeudiMatin}} {{centre.jourshoraires.jeudiApresMidi}}</p>
+                    </div>
+                    <div v-if="getDay == 5">
+                      <p>Aujourd'hui : {{centre.jourshoraires.vendrediMatin}} {{centre.jourshoraires.vendrediApresMidi}}</p>
+                    </div>
+                    <div v-if="getDay == 6">
+                      <p>Aujourd'hui : {{centre.jourshoraires.samediMatin}} {{centre.jourshoraires.samediApresMidi}}</p>
+                    </div>
+                    <div v-if="getDay == 0">
+                      <p>Aujourd'hui : {{centre.jourshoraires.dimancheMatin}} {{centre.jourshoraires.dimancheApresMidi}}</p>
+                    </div>
+                    <p v-if="centre.association.nom=='Le Secours Catholique'">Lignes de bus : 20/21/D10</p>
+                    <p v-if="centre.association.nom=='La Croix Rouge'">Lignes de bus : 8 </p>
+                    <p v-if="centre.association.nom=='Les Restos Du Coeur'">Lignes de bus : 2/20/21/D10 </p>
+                    <p v-if="centre.association.nom=='Le Secours Populaire'"> Lignes de bus : 20 </p>
+                  </div>
+                  <div class="center">
+                    <router-link class="whiteButton" :to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
       <div v-else>

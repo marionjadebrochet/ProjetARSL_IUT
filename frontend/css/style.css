@@ -1,9 +1,9 @@
 html {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Slabo 27px', serif;
   font-weight: 300;
 }
 header {
-  background-color:#d4d9de;
+  background-color:#F2F2F2;
 }
 a {
   text-decoration: none;
@@ -76,11 +76,11 @@ p {
   font-size:18px;
 }
 nav {
-  background-color: #2b303a;
+  background-color: #9BBDF9;
   width:100%;
 }
 nav ul li a {
-  color:white;
+  color:black;
   font-weight:300;
 }
 
@@ -97,7 +97,7 @@ section {
 }
 
 .call {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
   margin: 10px 0px;
   display: block;
@@ -110,29 +110,24 @@ section {
   margin-top: 20px;
 }
 
-
-.accueilDeJour {
-  display: flex;
-  align-items: top;
-  justify-content: space-around;
-  margin-top: 20px;
-  border-radius:20px;
-  box-shadow:5px 5px 10px #CCCCCC;
-}
-
 .centre > h4 {
   margin-bottom: 20px;
 }
-
-.map > h4{
-  margin-bottom: 20px;
+.accueilDeJour {
+  display:flex;
+  flex-direction:column;
 }
-
-.map > iframe {
-  width: 100%;
-  height: 400px;
+.listeCentre {
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  width:100%;
+  margin-top:100px;
 }
-
+#map-wrap {
+  height: 600px;
+  width:100%;
+}
 .radio {
   width:50%;
   display:flex;
@@ -152,8 +147,8 @@ section {
 fieldset .row {
   width:100%;
   font-size:26px;
-  
 }
+
 
 .space-around {
 		display:flex;
@@ -168,21 +163,6 @@ fieldset .row {
     padding:0px 10px;
 }
 
-.bouton {
-  background-color: #92a0ad;
-  border-bottom:3px solid #778899;
-  color:white;
-  padding:15px;
-  font-weight: bold;
-  font-size:22px;
-  text-align:center;
-  border-top-left-radius:20px;
-  border-top-right-radius:20px;
-}
-.bouton:hover {
-  background-color: #778899;
-  transition: 0.5s;
-}
 .mid {
   width:50%;
   display:flex;
@@ -191,30 +171,6 @@ fieldset .row {
 }
 
 /* A modifier */
-.cadre {
-  background-color:#EEEEEE;
-  padding:10px;
-  overflow:hidden;
-  background-size: cover;
-  border-left:5px solid #f26340;
-  border-top:3px solid #f26340;
-  display:flex;
-  flex-direction:row;
-  border-top-left-radius:10px;
-  box-shadow: 10px 10px 10px grey;
-}
-.listeCentre .cadre {
-  margin:10px;
-  text-align:left;
-  width:100%;
-  display:inline-flex;
-  align-items:center;
-  justify-content: space-between;
-}
-
-.listeCentre .cadre div {
-  width:50%;
-}
 
 .row .cadre {
   width:40%;
@@ -272,9 +228,11 @@ fieldset .row {
 .goog-te-banner-frame.skiptranslate {
     display: none !important;
     }
+
 body {
     top: 0px !important;
-    }
+    background-color: #F2F2F2;
+}
 
 @media screen and (min-width: 786px) {
   h1 {
@@ -295,16 +253,18 @@ body {
     padding-right:50px;
   }
 
+  .map {
+    width: 80%;
+    margin:auto;
+    padding:20px;
+    background-color:white;
+    -webkit-transition: padding 0.5s;
 
-
-  .listeCentre, .map {
-    width: 40%;
   }
-
-  #deco {
-    heigth:200px;
-    width:50px;
-    background-color: #f26340
+  .map:hover {
+    padding:20px 80px;
+    transition:0.5s;
+    -webkit-transition: padding 0.5s;
   }
 
   .choixLangue > div {
@@ -330,14 +290,6 @@ body {
   table {
     text-align:center;
     margin:10px auto;
-  }
-  .cart {
-    text-align:center;
-    background-color:#EEEEEE;
-    padding:20px 20px;
-    border-radius:20px;
-    box-shadow:5px 5px 10px #CCCCCC;
-    margin-bottom:20px;
   }
 
   .mesCentres {
@@ -449,5 +401,67 @@ body {
     }
     .infomaraude p {
       padding:5px;
+    }
+    .centreAccueil {
+      color:black;
+      width:100%;
+      background-color:#9BBDF9;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      height:300px;
+      margin-bottom:100px;
+      -webkit-transition: padding 1s;
+
+    }
+    .centreAccueil:hover {
+      padding:30px 0px;
+      -webkit-transition: padding 0.5s;
+    }
+    .centreAccueil h4 {
+      font-size:26px;
+      text-align:center;
+    }
+    .centreAccueil .whiteButton {
+      margin-top:20px;
+    }
+
+    .centreAccueil p {
+      text-align:center;
+      padding-bottom:10px;
+    }
+
+    .whiteButton, .blackButton {
+      padding:15px;
+      font-weight: bold;
+      font-size:22px;
+      text-align:center;
+      border-radius:20px;
+      -webkit-transition: padding 0.5s;
+    }
+
+    .whiteButton:hover, .blackButton:hover {
+      padding:20px;
+      -webkit-transition: padding 0.5s;
+    }
+
+    .whiteButton {
+      border:3px solid #F2F2F2;
+      color:white;
+    }
+
+    .blackButton {
+      border:3px solid black;
+      color:black;
+    }
+
+    .trait {
+      border-bottom: 3px solid #F2F2F2;
+      margin:20px auto;
+      width:50%;
+    }
+
+    .cadre {
+      background-color:#9BBDF9;
     }
 }

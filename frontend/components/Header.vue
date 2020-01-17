@@ -15,10 +15,10 @@
                 }
                 </style>
                 <p>{{ username }}</p>
-                <a class="bouton" href="/" @click="logout">Déconnexion</a>
+                <a class="blackButton" href="/" @click="logout">Déconnexion</a>
             </div>
             <div v-else>
-                <router-link class="bouton" tag="a" to="/connexion" exact>Connexion</router-link>
+                <router-link class="blackButton" tag="a" to="/connexion" exact>Connexion</router-link>
             </div>
         </div>
         <div class="center">
