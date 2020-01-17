@@ -259,6 +259,10 @@ fieldset .row {
 .align-center {
   align-items:center;
 }
+.rond {
+  width:56px;
+  height:auto;
+}
 
 #goog-gt-tt {display:none;heigth:0px;}
 .goog-te-banner-frame.skiptranslate {
@@ -403,5 +407,22 @@ body {
     fieldset > legend {
       font-size:30px;
       font-weight:500;
+    }
+    .gestion {
+      border:1px solid black;
+      display:flex;
+      width:50%;
+    }
+    .gestion .rond {
+      padding:10px;
+    }
+    .gestion div {
+      padding:20px 0px;
+      display:flex;
+      justify-content: space-around;
+      flex-wrap:wrap;
+    }
+    .gestion div .bouton {
+      margin:0px 20px;
     }
 }

@@ -28,45 +28,7 @@
           </div>
         </div>
     </header>
-    <div v-if="username">
-      <nav>
-        <ul id="menu-deroulant">
-          <li class="deroulant">
-            <router-link tag="a" to="/intra/MonAssociation" exact>Mon Association</router-link>
-          </li>
-          <li class="deroulant">
-            <router-link tag="a" to="/intra/MesCentres" exact>Mes Centres</router-link>
-            <ul class="sous">
-              <li class="sousligne"><router-link tag="a" to="/intra/MesCentres/AjouterCentre" exact>Ajouter Centre</router-link></li>
-              <li class="sousligne"><router-link tag="a" to="/intra/MesCentres/SupprimerCentre" exact>Supprimer Centre</router-link></li>
-            </ul>
-          </li>
-          <li class="deroulant">
-            <router-link tag="a" to="/intra/MesServices" exact>Mes Services</router-link>
-            <ul class="sous">
-              <li class="sousligne"><router-link tag="a" to="/intra/MesServices/AjouterService" exact>Ajouter Service</router-link></li>
-              <li class="sousligne"><router-link tag="a" to="/intra/MesServices/SupprimerService" exact>Supprimer Service</router-link></li>
-            </ul>
-          </li>
-          <li class="deroulant">
-            <router-link tag="a" to="/maraudes" exact>Maraudes</router-link>
-            <ul class="sous">
-              <li class="sousligne"><router-link tag="a" to="/intra/Maraudes/AjouterMaraude" exact>Commencer une Maraude</router-link></li>
-              <li class="sousligne"><router-link tag="a" to="/intra/Maraudes/SupprimerMaraude" exact>Supprimer une Maraude</router-link></li>
-              <li class="sousligne"><router-link tag="a" to="/intra/Maraudes/Rapport" exact>Faire vos rapports</router-link></li>
-            </ul>
-          </li>
-          <li class="deroulant">
-            <router-link tag="a" to="/intra/MesMembres" exact>Mes membres</router-link>
-            <ul class="sous">
-              <li class="sousligne"><router-link tag="a" to="/intra/MesMembres/AjouterMembre" exact>Ajouter Membre</router-link></li>
-              <li class="sousligne"><router-link tag="a" to="/intra/MesMembres/SupprimerMembre" exact>Supprimer Membre</router-link></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div v-else>
+    <div v-if="!username">
       <nav>
         <ul>
           <li>
