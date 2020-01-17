@@ -104,6 +104,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   padding:10px;
+  background-color: #F2F2F2;
 }
 
 .centre {
@@ -205,16 +206,14 @@ fieldset .row {
   margin:auto;
 }
 
-.association .cadre {
+.association {
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
   align-items:center;
   margin: 20px;
 }
 
-.association .cadre .image {
-  width: 30%;
-}
+
 
 .align-center {
   align-items:center;
@@ -422,7 +421,8 @@ body {
       font-size:26px;
       text-align:center;
     }
-    .centreAccueil .whiteButton {
+
+    .whiteButton {
       margin-top:20px;
     }
 
@@ -463,5 +463,21 @@ body {
 
     .cadre {
       background-color:#9BBDF9;
+    }
+    .listeAssociation {
+      width:100%;
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+    }
+    .listeAssociation .association {
+      flex:auto;
+    }
+    .listeAssociation .association h4 {
+      margin-top:20px;
+    }
+
+    .listeAssociation .association .whiteButton {
+      margin-bottom: 30px;
     }
 }

@@ -1,18 +1,15 @@
 <template>
   <div>
     <h3> Les associations </h3>
-    <div class="page">
-      <div class="association">
-        <div class="cadre space-around" v-for="association in filteredList" v-bind:key="association">
+    <div class="listeAssociation">
+        <div class="cadre association" v-for="association in filteredList" v-bind:key="association">
+            <h4>{{association.nom}}</h4>
+            <div class="trait"></div>
             <div class="image">
               <img :src="'http://localhost:1337/' + association.logo.url">
             </div>
-           <div class="infoAssociation">
-              <h4>{{association.nom}}</h4>
-              <section>{{association.description}}</section>
-           </div>
-           <router-link class="bouton" :to="{ name: 'association-id', params: { id: association.id }}" tag="a" > Plus d'informations </router-link>
-        </div>
+           <router-link class="whiteButton" :to="{ name: 'association-id', params: { id: association.id }}" tag="a" > Plus d'informations </router-link>
+         </div>
       </div>
     </div>
 
