@@ -256,8 +256,9 @@ fieldset .row {
   width: 30%;
 }
 
-
-
+.align-center {
+  align-items:center;
+}
 
 #goog-gt-tt {display:none;heigth:0px;}
 .goog-te-banner-frame.skiptranslate {
