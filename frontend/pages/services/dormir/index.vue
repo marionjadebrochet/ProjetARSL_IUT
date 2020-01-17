@@ -1,9 +1,9 @@
 <template>
   <div>
     <h2> Centres où dormir</h2>
-    <h3> demander les infos aux clients pour savoir dans quels centres on peut dormir </h3>
+
     <div class="services" v-for="service in filteredList" v-bind:key="service.nom">
-      <div v-if="service.nom=='Dormir'">
+      <div class="space-between" v-if="service.nom=='Dormir'">
                <h3> {{service.centre.adresse}} </h3>
                <router-link class="plusinfo":to="{ name: 'centre-id', params: { id: service.centre.id }}" tag="a" > Plus d'informations </router-link>
       </div>

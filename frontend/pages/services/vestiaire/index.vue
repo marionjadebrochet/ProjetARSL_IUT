@@ -2,9 +2,9 @@
   <div>
     <h2> Centres où se changer </h2>
     <div class="services" v-for="service in filteredList" v-bind:key="service.nom">
-      <div v-if="service.nom=='Vestiaire'">
+      <div class="space-between" v-if="service.nom=='Vestiaire'">
                <h3> {{service.centre.adresse}} </h3>
-               <router-link class="plusinfo":to="{ name: 'centre-id', params: { id: service.centre.id }}" tag="a" > Plus d'informations </router-link>
+               <router-link class="bouton":to="{ name: 'centre-id', params: { id: service.centre.id }}" tag="a" > Plus d'informations </router-link>
       </div>
     </div>
 
