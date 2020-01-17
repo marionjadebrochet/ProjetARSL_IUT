@@ -1,18 +1,50 @@
 <template>
   <div>
-      <div class="titre">
-        <img src="~/assets/image/alerte/bell(1).svg"></img>
-        <h3 style="padding-top:20px;"> Mes Alertes </h3>
-      </div>
+      <img class="rond" src="~/assets/image/iconsIntra/alarme.svg"></img>
+      <h3> Déclencher une alerte </h3>
       <div class="mesAlertes">
-        <router-link class="bouton" tag="a" to="/intra/alerte/DeclencherAlerte" exact><h3>Déclencher une alerte</h3><p>Cliquez ici pour déclencher une alerte</p><p>Grand Froid, Canicule ou Épidémie</p></router-link>
-        <p> Y'a un bouton au dessus mais on le voit pas a cause du css </p>
+        <button class="bouton"onclick="declencherCanicule">Déclencher une Alerte Canicule</button>
+        <button class="bouton" onclick="declencherGrandFroid">Déclencher une Alerte Grand Froid</button>
+        <button class="bouton" onclick="declencherEpidemie">Déclencher une Alerte Epidémie</button>
+        <p id="demo"></p>
       </div>
   </div>
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 
+export default {
+  data() {
+    return  {
+      typeAlerte: ''
+    }
+  },
+  methods: {
+    async declencherCanicule() {
+      this.setType("canicule")
+    },
+    async declencherEpidemie() {
+      this.setType("epidemie")
+    },
+    async declencherGrandFroid() {
+      this.setType("grandFroid")
+    },
+    ...mapMutations({
+      setType: 'typeAlerte/setType'
+    })
+  }
+}
+
+function declencherCanicule() {
+  document.getElementById("demo").innerHTML = "Alerte Canicule";
+}
+function declencherGrandFroid() {
+  document.getElementById("demo").innerHTML = "Alerte Grand Froid";
+}
+function declencherEpidemie() {
+  document.getElementById("demo").innerHTML = "Alerte Epidemie";
+}
 </script>
 
 <style>

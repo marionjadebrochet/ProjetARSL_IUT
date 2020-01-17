@@ -1,7 +1,6 @@
 <template>
     <div>
         <h3>Ajouter un service</h3>
-        <div class="center">
           <form @submit.stop.prevent="ajouterService">
             <fieldset>
               <div class="row">
@@ -12,12 +11,11 @@
                 <label for="description">Description du centre :</label>
                 <input type="text" v-model="description"><br /><br />
               </div>
-            <div class=center>
-              <button class="plusinfo" type="submit">Ajouter</button>
-            </div>
+              <div class="center">
+                <button class="bouton" type="submit">Ajouter</button>
+              </div>
           </fieldset>
-          </form>
-        </div>
+        </form>
     </div>
 </template>
 

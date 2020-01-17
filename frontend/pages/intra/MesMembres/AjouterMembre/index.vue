@@ -1,7 +1,6 @@
 <template>
     <div>
         <h3>Ajouter un membre à votre association</h3>
-        <div class="center">
           <form @submit.stop.prevent="ajouterMembre">
             <fieldset>
               <div class="row">
@@ -33,11 +32,10 @@
                 <input id="name" name="name" type="text" size="30" placeholder="Tapez votre rôle" required>
               </div>
               <div class="center">
-                <button class="plusinfo" type="submit">Ajouter</button>
+                <button class="bouton" type="submit">Ajouter</button>
               </div>
             </fieldset>
           </form>
-      </div>
     </div>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
   <div>
     <h3>Ajouter un partenaire</h3>
-    <div class="center">
-      <form style="width:50%"@submit.stop.prevent="ajouterPartenaire">
+      <form @submit.stop.prevent="ajouterPartenaire">
+        <fieldset>
         <div class="row">
           <label for="nom">Nom du partenaire :</label>
           <input type="text" v-model="nom">
@@ -20,10 +20,10 @@
           <input type="file" name="nom_du_fichier">
         </div>
         <div class="center">
-          <button class="plusinfo"type="submit">Ajouter</button>
+          <button class="bouton"type="submit">Ajouter</button>
         </div>
+      </fieldset>
       </form>
-    </div>
   </div>
 </template>
 

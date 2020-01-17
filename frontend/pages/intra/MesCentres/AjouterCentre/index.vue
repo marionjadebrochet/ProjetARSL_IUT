@@ -1,7 +1,6 @@
 <template>
     <div>
         <h3>Ajouter un centre</h3>
-        <div class="center">
         <form @submit.stop.prevent="ajouterCentre">
           <fieldset>
             <div class="row">
@@ -26,11 +25,10 @@
               <input type="text" v-model="public">
             </div>
             <div class="center">
-              <button class="plusinfo" type="submit">Ajouter</button>
+              <button class="bouton" type="submit">Ajouter</button>
             </div>
           </fieldset>
         </form>
-      </div>
     </div>
 </template>
 
