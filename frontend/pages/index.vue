@@ -35,6 +35,10 @@
                   <div v-if="getDay == 0">
                     <p>{{centre.jourshoraires.dimancheMatin}} {{centre.jourshoraires.dimancheApresMidi}}</p>
                   </div>
+                  <h5 v-if="centre.association.nom=='Le Secours Catholique'">Lignes de bus : 20/21/D10</h5>
+                  <h5 v-if="centre.association.nom=='La Croix Rouge'">Lignes de bus : 8 </h5>
+                  <h5 v-if="centre.association.nom=='Les Restos Du Coeur'">Lignes de bus : 2/20/21/D10 </h5>
+                  <h5 v-if="centre.association.nom=='Le Secours Populaire'"> Lignes de bus : 20 </h5>
                 </div>
                 <div class="center">
                   <router-link class="bouton" :to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>

@@ -7,6 +7,10 @@
         <div>
           <h5>Adresse </h5>
           <p>{{centre.lieu.adresse}}</p>
+          <h5 v-if="centre.association.nom=='Le Secours Catholique'">Lignes de bus : 20/21/D10</h5>
+          <h5 v-if="centre.association.nom=='La Croix Rouge'">Lignes de bus : 8 </h5>
+          <h5 v-if="centre.association.nom=='Les Restos Du Coeur'">Lignes de bus : 2/20/21/D10 </h5>
+          <h5 v-if="centre.association.nom=='Le Secours Populaire'"> Lignes de bus : 20 </h5>
           <h5>Horaires d'ouverture </h5>
           <table>
             <tr>
