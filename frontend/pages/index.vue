@@ -1,27 +1,26 @@
 <template>
   <body>
-    <div class="page">
       <div v-if="!username">
-        <h2>Signaler quelque chose ?</h2>
-        <button class="blackButton call"><a href="tel:+33115">115</a></button>
+        <div class="row" style="margin-bottom:50px;">
+          <div class="explication">
+            <h1>Service d’Intégrité d’Accueil et d’Orientation de la <br> Haute-Vienne</h1>
+            <section>Notre objectif ? Faciliter la prise en charge des personnes sans-abris ou des personnes qui sont menacées de l’être en améliorant
+              l’offre et la demande des hébergements sur le territoire.</section>
+              <section style="margin-top:20px;"><a class="orangeButton" href="tel:+33115">Besoin d'aide ? Appelez le <b>115</b></a></section>
+          </div>
+          <div>
+            <img src="~/assets/image/image-accueil.jpg">
+          </div>
+        </div>
 
         <div class="accueilDeJour">
-          <div class="map">
-              <div id="map-wrap" style="height: 600px; ">
-                 <l-map :zoom=12 :center="[45.835425,1.2644847]">
-                   <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
-                      <div class="marker" v-for="centre in filteredList" v-bind:key="centre.id">
-                         <l-marker :lat-lng="[centre.lieu.latitude, centre.lieu.longitude]" >
-                           <l-popup :content="centre.association.nom + ' | ' + centre.lieu.adresse"/> </l-marker>
-                      </div>
-                 </l-map>
-              </div>
-          </div>
+
+          <h2>Les centres de Limoges</h2>
 
           <div class="listeCentre space-around">
             <div class="centreAccueil" v-for="centre in filteredList" v-bind:key="centre.id">
-                <div>
-                  <div class="">
+              <div style="width:100%">
+                  <div>
                     <h4>{{centre.association.nom}}</h4>
                     <div class="trait"></div>
                     <p>{{centre.lieu.adresse}}</p>
@@ -52,106 +51,122 @@
                     <p v-if="centre.association.nom=='Le Secours Populaire'"> Lignes de bus : 20 </p>
                   </div>
                   <div class="center">
-                    <router-link class="whiteButton" :to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>
+                    <router-link class="orangeBorderButton" :to="{ name: 'centre-id', params: { id: centre.id }}" tag="a" > Plus d'informations </router-link>
                   </div>
-                </div>
+              </div>
             </div>
           </div>
-
-
+          <h2>Trouvez les centres près de vous</h2>
+          <div class="map">
+              <div id="map-wrap" style="height: 600px; ">
+                 <l-map :zoom=12 :center="[45.835425,1.2644847]">
+                   <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
+                      <div class="marker" v-for="centre in filteredList" v-bind:key="centre.id">
+                         <l-marker :lat-lng="[centre.lieu.latitude, centre.lieu.longitude]" >
+                           <l-popup :content="centre.association.nom + ' | ' + centre.lieu.adresse"/> </l-marker>
+                      </div>
+                 </l-map>
+              </div>
+          </div>
         </div>
       </div>
+
+
+
+
+
+
+
       <div v-else>
         <h2>Bienvenue sur la partie gestion de votre application</h2>
-        <div class="row">
-          <div class="gestion center">
-            <div class="space-between align-center">
+        <div class="row space-around">
+          <div class="gestion">
+            <div class="align-center">
               <img class="rond" src="~/assets/image/iconsIntra/association.svg"></img>
               <h3> Association </h3>
             </div>
             <div>
-              <router-link class="bouton" tag="a" to="/intra/MonAssociation" exact>Visualiser mon association</router-link>
+              <router-link class="orangeBorderButton" tag="a" to="/intra/MonAssociation" exact>Visualiser</router-link>
             </div>
           </div>
 
-          <div class="gestion center">
-            <div class="space-between align-center">
+          <div class="gestion">
+            <div class="align-center">
               <img class="rond" src="~/assets/image/iconsIntra/partenaire.svg"></img>
               <h3> Partenaires </h3>
             </div>
             <div>
-              <router-link class="bouton" tag="a" to="/intra/Partenaires" exact>Visualiser mes partenaires</router-link>
-              <router-link class="bouton" tag="a" to="/intra/Partenaires/AjouterPartenaire" exact>Ajouter un partenaire</router-link>
-              <router-link class="bouton" tag="a" to="/intra/Partenaires/SupprimerPartenaire" exact>Supprimer un partenaire</router-link>
+              <router-link class="orangeBorderButton" tag="a" to="/intra/Partenaires" exact>Visualiser</router-link>
+              <router-link class="orangeBorderButton" tag="a" to="/intra/Partenaires/AjouterPartenaire" exact>Ajouter </router-link>
+              <router-link class="orangeBorderButton" tag="a" to="/intra/Partenaires/SupprimerPartenaire" exact>Supprimer</router-link>
             </div>
           </div>
         </div>
 
-        <div class="row">
-        <div class="gestion center">
-          <div class="space-between align-center">
+        <div class="row space-around">
+        <div class="gestion">
+          <div class="align-center">
             <img class="rond" src="~/assets/image/iconsIntra/centres.svg"></img>
             <h3> Centres </h3>
           </div>
           <div>
-            <router-link class="bouton" tag="a" to="/intra/MesCentres" exact>Visualiser mes centres</router-link>
-            <router-link class="bouton" tag="a" to="/intra/MesCentres/AjouterCentre" exact>Ajouter un centre</router-link>
-            <router-link class="bouton" tag="a" to="/intra/MesCentres/SupprimerCentre" exact>Supprimer un centre</router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/MesCentres" exact>Visualiser</router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/MesCentres/AjouterCentre" exact>Ajouter</router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/MesCentres/SupprimerCentre" exact>Supprimer</router-link>
           </div>
         </div>
 
-        <div class="gestion center">
-          <div class="space-between align-center">
+        <div class="gestion">
+          <div class="align-center">
             <img class="rond" src="~/assets/image/iconsIntra/services.svg"></img>
             <h3> Services </h3>
           </div>
           <div>
-            <router-link class="bouton" tag="a" to="/intra/MesServices" exact>Visualiser mes services</router-link>
-            <router-link class="bouton" tag="a" to="/intra/MesServices/AjouterService" exact>Ajouter un service</router-link>
-            <router-link class="bouton" tag="a" to="/intra/MesServices/SupprimerService" exact>Supprimer un service</router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/MesServices" exact>Visualiser</router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/MesServices/AjouterService" exact>Ajouter </router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/MesServices/SupprimerService" exact>Supprimer </router-link>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="gestion center">
-          <div class="space-between align-center">
+      <div class="row space-around">
+        <div class="gestion">
+          <div class="align-center">
             <img class="rond" src="~/assets/image/iconsIntra/maraudes.svg"></img>
             <h3> Maraudes </h3>
           </div>
           <div>
-            <router-link class="bouton" tag="a" to="/maraudes" exact>Visualiser les maraudes</router-link>
-            <router-link class="bouton" tag="a" to="/intra/Maraudes/AjouterMaraude" exact>Ajouter une maraude</router-link>
-            <router-link class="bouton" tag="a" to="/intra/Maraudes/SupprimerMaraude" exact>Supprimer une maraude</router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/maraudes" exact>Visualiser </router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/Maraudes/AjouterMaraude" exact>Ajouter </router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/Maraudes/SupprimerMaraude" exact>Supprimer </router-link>
           </div>
         </div>
 
-        <div class="gestion center">
-          <div class="space-between align-center">
+        <div class="gestion">
+          <div class="align-center">
             <img class="rond" src="~/assets/image/iconsIntra/membres.svg"></img>
             <h3> Membres </h3>
           </div>
           <div>
-            <router-link class="bouton" tag="a" to="/intra/MesMembres" exact>Visualiser les membres de mon association</router-link>
-            <router-link class="bouton" tag="a" to="/intra/MesMembres/AjouterMembre" exact>Ajouter un membre</router-link>
-            <router-link class="bouton" tag="a" to="/intra/MesMembres/SupprimerMembre" exact>Supprimer un membre</router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/MesMembres" exact>Visualiser </router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/MesMembres/AjouterMembre" exact>Ajouter </router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/MesMembres/SupprimerMembre" exact>Supprimer </router-link>
           </div>
         </div>
       </div>
 
       <div class="center">
-        <div class="gestion center">
-          <div class="space-between align-center">
+        <div class="gestion">
+          <div class="align-center">
             <img class="rond" src="~/assets/image/iconsIntra/alarme.svg"></img>
             <h3> Alertes </h3>
           </div>
           <div>
-            <router-link class="bouton" tag="a" to="/intra/alerte" exact>Déclencher une alerte</router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/intra/alerte" exact>Déclencher </router-link>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </body>
 </template>
 

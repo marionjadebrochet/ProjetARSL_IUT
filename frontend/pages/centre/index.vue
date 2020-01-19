@@ -5,7 +5,6 @@
     <div class="accueilDeJour">
 
         <div class="listeCentre">
-
           <div class="centre" v-for="centre in filteredList" v-bind:key="centre.id">
             <h4>{{centre.association.nom}}</h4>
             <h5>Adresse : </h5>

@@ -1,48 +1,31 @@
 <template>
   <div>
     <header>
-          <div class="space-between">
-            <div class="choixLangue">
-              <div v-show="!username">
-                <h2 style="padding-right:10px;">Langue</h2>
-                <div id="google_translate_element"></div>
-              </div>
-            </div>
-            <div v-if="username" class="deco">
-                <style>
-                .choixLangue {
-                  justify-content:flex-end;
-                }
-                </style>
-                <p>{{ username }}</p>
-                <a class="blackButton" href="/" @click="logout">Déconnexion</a>
-            </div>
-            <div v-else>
-                <router-link class="blackButton" tag="a" to="/connexion" exact>Connexion</router-link>
-            </div>
+        <router-link tag="a" to="/" exact><img class="logo" src="~/assets/image/logo.png"></router-link>
+        <div v-show="!username">
+          <div id="google_translate_element"></div>
         </div>
-        <div class="center">
-          <div class="mid">
-              <img style="width:30%;height:auto;" class="logo" src="~/assets/image/logo.png">
-              <router-link tag="a" to="/" exact><h1>SIAO 115 <br> Haute-Vienne</h1></router-link>
+        <nav>
+          <ul v-if="!username">
+            <li>
+              <router-link tag="a" to="/association" exact>Associations</router-link>
+            </li>
+            <li>
+                <router-link tag="a" to="/maraudes" exact>Maraudes</router-link>
+            </li>
+            <li>
+                <router-link tag="a" to="/services" exact>Services</router-link>
+            </li>
+          </ul>
+          <div v-if="username" class="deco">
+              <p>{{ username }}</p>
+              <a class="orangeButton" href="/" @click="logout">Déconnexion</a>
           </div>
-        </div>
+          <div v-else>
+              <router-link class="orangeButton" tag="a" to="/connexion" exact>Connexion</router-link>
+          </div>
+        </nav>
     </header>
-    <div v-if="!username">
-      <nav>
-        <ul>
-          <li>
-            <router-link tag="a" to="/association" exact>Associations</router-link>
-          </li>
-          <li>
-              <router-link tag="a" to="/maraudes" exact>Maraudes</router-link>
-          </li>
-          <li>
-              <router-link tag="a" to="/services" exact>Services</router-link>
-          </li>
-        </ul>
-      </nav>
-    </div>
   </div>
 </template>
 

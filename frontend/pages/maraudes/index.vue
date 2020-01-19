@@ -1,8 +1,8 @@
 <template>
     <div>
-      <h3> Maraudes </h3>
+      <h2> Maraudes </h2>
       <div class="maraude">
-        <div>
+        <div class="cadre">
           <h3>Maraudes en cours</h3>
           <div v-for="maraude in filteredList" v-bind:key="maraude.id">
               <div class="infomaraude" v-show="!maraude.enPrevisions">
@@ -17,7 +17,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="cadre">
           <h3>Maraudes en prévisions</h3>
           <div v-for="maraude in filteredList" v-bind:key="maraude.id">
               <div class="infomaraude" v-show="maraude.enPrevisions">
@@ -31,6 +31,7 @@
               </div>
           </div>
         </div>
+      </div>
 
         <div class="map">
             <div id="map-wrap" style="height: 600px; ">
@@ -51,7 +52,6 @@
                </l-map>
             </div>
         </div>
-      </div>
     </div>
 </template>
 
@@ -85,21 +85,6 @@ export default {
 
 <style>
 
-.maraude {
-  display:flex;
-  flex-direction: row;
-  align-items: top;
-  justify-content: space-around;
-  margin-top: 20px;
-  margin-bottom:50px;
-}
 
-.maraude h3 {
-  padding:10px 0px;
-}
-
-.infomaraude {
-  padding:10px 0px;
-}
 
 </style>

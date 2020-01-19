@@ -11,7 +11,7 @@
           <label for="motdepasse">Mot de passe</label>
           <input v-model="password" type="password">
         </div>
-        <button class="bouton" :disabled="loading" type="submit">Se connecter</button>
+        <button class="orangeButton" :disabled="loading" type="submit">Se connecter</button>
       </fieldset>
     </form>
   </div>
