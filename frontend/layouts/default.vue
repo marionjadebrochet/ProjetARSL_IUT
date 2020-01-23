@@ -1,12 +1,12 @@
 <template>
   <div>
     <Header />
-    <div class="page">
+    <main>
       <nuxt />
       <div v-if="!username">
         <Footer />
       </div>
-    </div>
+    </main>
   </div>
 </template>
 

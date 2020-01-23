@@ -3,10 +3,10 @@
       <div v-if="!username">
         <div class="row" style="margin-bottom:50px;">
           <div class="explication">
-            <h1>Service d’Intégrité d’Accueil et d’Orientation de la <br> Haute-Vienne</h1>
+            <h1>Service d’Intégrité d’Accueil et d’Orientation de la Haute-Vienne</h1>
             <section>Notre objectif ? Faciliter la prise en charge des personnes sans-abris ou des personnes qui sont menacées de l’être en améliorant
               l’offre et la demande des hébergements sur le territoire.</section>
-              <section style="margin-top:20px;"><a class="orangeButton" href="tel:+33115">Besoin d'aide ? Appelez le <b>115</b></a></section>
+            <section style="margin-top:20px;"><a class="orangeButton" href="tel:+33115">Besoin d'aide ? Appelez le <b>115</b></a></section>
           </div>
           <div>
             <img src="~/assets/image/image-accueil.jpg">

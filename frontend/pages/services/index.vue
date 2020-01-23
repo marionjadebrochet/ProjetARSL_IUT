@@ -1,12 +1,13 @@
 <template>
   <div>
-    <h3> Les services </h3>
-    <div class="page">
+    <h2> Les services </h2>
       <div class="row space-around">
         <div class="cadre">
-          <img class="icon" src="~/assets/icon/dining-room.png">
-          <div class="center">
-            <router-link class="whiteButton" tag="a" to="/services/manger" exact>Où manger ?</router-link>
+          <div>
+            <div style="width:100%" class="space-around align-center">
+              <img class="icon" src="~/assets/icon/dining-room.png">
+              <router-link class="orangeBorderButton" tag="a" to="/services/manger" exact>Où manger ?</router-link>
+            </div>
             <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla </p>
           </div>
           <div>
@@ -14,9 +15,11 @@
           </div>
         </div>
         <div class="cadre">
-          <img class="icon" src="~/assets/icon/douche.png">
-          <div class="center">
-            <router-link class="whiteButton" tag="a" to="/services/laver" exact>Où se laver ?</router-link>
+          <div>
+            <div style="width:100%" class="space-around align-center">
+              <img class="icon" src="~/assets/icon/douche.png">
+              <router-link class="orangeBorderButton" tag="a" to="/services/laver" exact>Où se laver ?</router-link>
+            </div>
             <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Blanvh jbvehir nvhfebnv hezbrvhj dnvjkre bnvzvhrz  fzeh hzhg hf ipap fp ap pih aeiph pih fhd phiefa hfa ha pa h </p>
           </div>
           <div>
@@ -26,9 +29,11 @@
    	  </div>
       <div class="row space-around">
         <div class="cadre">
-          <img class="icon" src="~/assets/icon/dormir.png">
-          <div class="center">
-            <router-link class="whiteButton" tag="a" to="/services/dormir" exact>Où dormir ?</router-link>
+          <div>
+            <div style="width:100%" class="space-around align-center">
+              <img class="icon" src="~/assets/icon/dormir.png">
+              <router-link class="orangeBorderButton" tag="a" to="/services/dormir" exact>Où dormir ?</router-link>
+            </div>
             <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla </p>
           </div>
           <div>
@@ -36,10 +41,11 @@
           </div>
         </div>
         <div class="cadre">
-          <img class="icon" src="~/assets/icon/vetements.png">
-          <div class="center">
-            <router-link class="whiteButton" tag="a" to="/services/vestiaire" exact>Où se changer ?</router-link>
-            <!-- :to="{ name: '/services/vestiaire', params: { nom: services.nom }}" -->
+          <div>
+            <div style="width:100%" class="space-around align-center">
+              <img class="icon" src="~/assets/icon/vetements.png">
+              <router-link class="orangeBorderButton" tag="a" to="/services/vestiaire" exact>Où se changer ?</router-link>
+            </div>
             <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla </p>
           </div>
           <div>
@@ -47,7 +53,6 @@
           </div>
         </div>
    	  </div>
-    </div>
   </div>
 </template>
 
