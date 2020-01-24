@@ -79,7 +79,7 @@
 
       <div v-else>
         <h2>Bienvenue sur la partie gestion de votre application</h2>
-        <div class="row space-around">
+        <div class="listeAction">
           <div class="gestion">
             <div class="align-center">
               <img class="rond" src="~/assets/image/iconsIntra/association.svg"></img>
@@ -101,9 +101,7 @@
               <router-link class="orangeBorderButton" tag="a" to="/intra/Partenaires/SupprimerPartenaire" exact>Supprimer</router-link>
             </div>
           </div>
-        </div>
 
-        <div class="row space-around">
         <div class="gestion">
           <div class="align-center">
             <img class="rond" src="~/assets/image/iconsIntra/centres.svg"></img>
@@ -127,9 +125,7 @@
             <router-link class="orangeBorderButton" tag="a" to="/intra/MesServices/SupprimerService" exact>Supprimer </router-link>
           </div>
         </div>
-      </div>
 
-      <div class="row space-around">
         <div class="gestion">
           <div class="align-center">
             <img class="rond" src="~/assets/image/iconsIntra/maraudes.svg"></img>
@@ -153,9 +149,7 @@
             <router-link class="orangeBorderButton" tag="a" to="/intra/MesMembres/SupprimerMembre" exact>Supprimer </router-link>
           </div>
         </div>
-      </div>
 
-      <div class="center">
         <div class="gestion">
           <div class="align-center">
             <img class="rond" src="~/assets/image/iconsIntra/alarme.svg"></img>
@@ -165,8 +159,8 @@
             <router-link class="orangeBorderButton" tag="a" to="/intra/alerte" exact>Déclencher </router-link>
           </div>
         </div>
-      </div>
     </div>
+  </div>
 </body>
 </template>
 

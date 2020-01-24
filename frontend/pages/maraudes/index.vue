@@ -1,9 +1,9 @@
 <template>
     <div>
-      <h2> Maraudes </h2>
+      <h2> Les Maraudes </h2>
       <div class="maraude">
         <div class="cadre">
-          <h3>Maraudes en cours</h3>
+          <h3>Aujourd'hui</h3>
           <div v-for="maraude in filteredList" v-bind:key="maraude.id">
               <div class="infomaraude" v-show="!maraude.enPrevisions">
                   <p><b>Date de départ :</b> {{maraude.dateDepart}}</p>
@@ -18,7 +18,7 @@
         </div>
 
         <div class="cadre">
-          <h3>Maraudes en prévisions</h3>
+          <h3>En prévision</h3>
           <div v-for="maraude in filteredList" v-bind:key="maraude.id">
               <div class="infomaraude" v-show="maraude.enPrevisions">
                   <p><b>Date de départ :</b> {{maraude.dateDepart}}</p>

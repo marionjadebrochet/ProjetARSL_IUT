@@ -1,30 +1,22 @@
 <template>
-
-<div class="page">
-  <client-only>
+  <div>
     <h3>{{association.nom}}</h3>
-    <div class="association">
-      <div class="cadre">
+    <div class="row cadre">
         <div class="image">
           <img :src="'http://localhost:1337/' + association.logo.url">
         </div>
-        <section>{{association.description}}</section>
+        <section class="justify">{{association.description}}</section>
+    </div>
+    <h3> Les Centres </h3>
+    <div>
+      <div class="cadre space-around align-center" v-for="centres in association.centres" v-bind:key="association.centres.id">
+        <p>{{centres.lieu.adresse}}</p>
+        <p> Services du centre : </p>
+        <p v-for="services in centres.services" v-bind:key="centres.services.id"> {{services.nom}} </p>
+        <router-link class="orangeBorderButton" :to="{ name: 'centre-id', params: { id: centres.id }}" tag="a" > Plus d'informations </router-link>
       </div>
     </div>
-    <h3> Centres </h3>
-    <div class="association">
-      <div class="cadre space-around" v-for="centres in association.centres" v-bind:key="association.centres.id">
-          <h3>{{centres.lieu.adresse}}</h3>
-          <p> Services proposés par le centre : </p>
-          <div class="services" v-for="services in centres.services" v-bind:key="centres.services.id">
-            <p> {{services.nom}} </p>
-          </div>
-        <br>
-        <router-link class="bouton" :to="{ name: 'centre-id', params: { id: centres.id }}" tag="a" > Plus d'informations </router-link>
-      </div>
-    </div>
-  </client-only>
-</div>
+  </div>
 </template>
 
 <script>
