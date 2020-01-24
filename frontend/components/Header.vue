@@ -3,7 +3,6 @@
     <header>
         <router-link tag="a" to="/" exact><img class="logo" src="~/assets/image/logo.png"></router-link>
         <router-link tag="a" to="/" exact><h1>SIAO 115 Haute-Vienne</h1></router-link>
-        <div v-if="!username" id="google_translate_element"></div>
         <nav>
           <label>
             <input type="checkbox" id="check">
@@ -11,6 +10,8 @@
               <span class="hamburger"></span>
             </span>
             <ul>
+              <li v-if="!username">Langue</li>
+              <li><div v-if="!username" id="google_translate_element"></div></li>
               <li v-on:click="uncheck"><router-link tag="a" to="/" exact>Accueil</router-link></li>
               <li v-if="!username" v-on:click="uncheck"><router-link tag="a" to="/association" exact>Associations</router-link></li>
               <li v-if="!username" v-on:click="uncheck"><router-link tag="a" to="/maraudes" exact>Maraudes</router-link></li>
@@ -60,12 +61,11 @@ export default {
 
     googleTranslateElement: function(id) {
       new google.translate.TranslateElement(
-        { pageLanguage: "fr", includedLanguages: "fr,en,ru,ar" },
+        { pageLanguage: "fr", includedLanguages: "fr,en,ru,ar",layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
         id
       );
     },
     uncheck: function() {
-        console.log("ca marche")
         var item = document.getElementById('check');
         item.checked = false;
     },
@@ -102,6 +102,7 @@ label .hamburger {
   background-color: white;
   display: block;
   transform-origin: center;
+  transition:0.5s;
 }
 
 label .hamburger:after, label .hamburger:before {
@@ -153,12 +154,12 @@ label ul {
   z-index: 100;
   position: absolute;
   right:50%;
-  transform: translate(50%, 50%);
+  transform: translate(50%, 20%);
   transition: 0.4s 0s ease-in-out;
 }
 
-label a {
-  width:200px;
+label li {
+  width:400px;
   margin-bottom:10px;
   font-size:18px;
   display: block;
@@ -166,15 +167,19 @@ label a {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  padding:24px 36px;
+  padding:24px 48px;
   transition: 0.1s ease-in;
   letter-spacing:2px;
 }
-label a:hover {
+label li:hover {
   font-size:24px;
 }
 label .orangeButton {
   margin:auto;
 }
+li #google_translate_element {
+  letter-spacing:0px;
+}
+
 
 </style>
