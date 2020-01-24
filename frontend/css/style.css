@@ -16,7 +16,6 @@
     padding:15px 0px;
     width: 100%;
     display:inline-flex;
-    justify-content: space-between;
     align-items: center;
     border-bottom:1px solid black;
     position: fixed;
@@ -27,26 +26,8 @@
     width: 120px;
     height:auto;
   }
-
-  nav {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    width:60%;
-    margin-right: 10%;
-    font-size:24px;
-  }
-  nav ul {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-around;
-    align-items: center;
-    width:80%;
-    font-weight: 300;
-  }
-  nav ul li {
-    text-align: center;
-    width: 33%;
+  header h1 {
+    display: none;
   }
 
   h1 {
@@ -347,6 +328,10 @@
   .explication {
     padding:20px 20px 30px 20px ;
   }
+  .explication img {
+    width:100%;
+    height:auto;
+  }
 
   .map {
     width: 80%;
@@ -377,10 +362,6 @@
   }
 
 @media screen and (min-width: 786px) {
-
-  nav ul li a:hover {
-    border-bottom:3px solid #E95133;
-  }
 
   h1 {
     font-weight: 600;
@@ -553,5 +534,14 @@
     .gestion {
       width:40%;
       margin-bottom:30px;
+    }
+
+    header h1 {
+      font-size:60px;
+      display:block;
+      margin-left:70px;
+      border-left:5px solid #E95133;
+      padding:10px;
+      font-weight:500;
     }
 }
