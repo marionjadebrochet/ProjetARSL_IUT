@@ -133,8 +133,8 @@
           </div>
           <div>
             <router-link class="orangeBorderButton" tag="a" to="/maraudes" exact>Visualiser </router-link>
-            <router-link class="orangeBorderButton" tag="a" to="/intra/Maraudes/AjouterMaraude" exact>Ajouter </router-link>
-            <router-link class="orangeBorderButton" tag="a" to="/intra/Maraudes/SupprimerMaraude" exact>Supprimer </router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/maraudes/commencerMaraude" exact>Commencer une maraude </router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/maraudes/supprimerMaraude" exact>Supprimer </router-link>
           </div>
         </div>
 
