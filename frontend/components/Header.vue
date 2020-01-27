@@ -175,9 +175,6 @@ label li:hover {
   font-size:24px;
 }
 
-label a:hover {
-  color:#E95133;
-}
 label .orangeButton {
   margin:auto;
 }

@@ -16,7 +16,7 @@
                 <p>{{service.nom}}</p>
                 <h3>Description : </h3>
                 <p>{{service.description}}</p>
-                <button class="plusinfo greybutton" @onclique="SupprimerService">Supprimer</button>
+                <button class="orangeButton" @onclique="SupprimerService">Supprimer</button>
               </div>
             </div>
           </div>

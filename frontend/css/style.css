@@ -81,6 +81,7 @@
     align-items:center;
   }
   .cadre {
+    border: 2px solid #F0F0B8;
     background-color:#F7F7CE;
     padding:20px;
   }
@@ -338,7 +339,7 @@
     margin-top: 40px;
   }
   .gestion {
-    border:1px solid black;
+    border: 2px solid #F0F0B8;
     background-color:#F7F7CE;
     display:flex;
     flex-direction:column;
@@ -440,8 +441,6 @@
       font-weight:500;
     }
     .gestion {
-      border:1px solid black;
-      background-color:#F7F7CE;
       display:flex;
       flex-direction:column;
       width:40%;

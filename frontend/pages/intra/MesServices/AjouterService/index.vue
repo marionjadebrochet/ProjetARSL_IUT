@@ -4,15 +4,15 @@
           <form @submit.stop.prevent="ajouterService">
             <fieldset>
               <div class="row">
-                <label for="nom">Nom du service:</label>
+                <label>Nom du service:</label>
                 <input type="text" v-model="nom">
               </div>
               <div class="row">
-                <label for="description">Description du centre :</label>
+                <label>Description du centre :</label>
                 <input type="text" v-model="description"><br /><br />
               </div>
               <div class="center">
-                <button class="bouton" type="submit">Ajouter</button>
+                <button class="orangeButton" type="submit">Ajouter</button>
               </div>
           </fieldset>
         </form>

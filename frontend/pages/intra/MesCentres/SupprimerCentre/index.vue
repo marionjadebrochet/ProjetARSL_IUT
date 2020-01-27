@@ -54,7 +54,7 @@
               <td>{{centre.jourshoraires.dimancheApresMidi}}</td>
             </tr>
           </table>
-          <button class="plusinfo greybutton" @onclique="SupprimerCentre">Supprimer</button>
+          <button class="orangeButton" @onclique="SupprimerCentre">Supprimer</button>
         </div>
       </div>
     </client-only>

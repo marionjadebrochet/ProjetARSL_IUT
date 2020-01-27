@@ -35,7 +35,7 @@
             </select>
           </div>
           <div class="center">
-            <button :disabled="loading" type="submit">Commencer</button>
+            <button class="orangeButton" :disabled="loading" type="submit">Commencer</button>
           </div>
         </fieldset>
       </form>
@@ -60,7 +60,7 @@ export default {
       heureRdv: "",
       idLieuDepart: '',
       idLieuRdv: '',
-      idLieuArrive: '', 
+      idLieuArrive: '',
       lieuDepart: Object,
       lieuRdv: Object,
       lieuArrive: Object,

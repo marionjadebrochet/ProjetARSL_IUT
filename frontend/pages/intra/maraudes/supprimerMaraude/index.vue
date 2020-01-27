@@ -8,7 +8,7 @@
                   <p>Lieu de départ : {{maraude.lieuDepart.adresse}}</p>
                   <p>Lieu d'arrivé : {{maraude.lieuArrive.libelle}}</p>
                   <p>Heure de départ : {{maraude.heureDepart}}</p>
-                  <button class="plusinfo greybutton" @onclique="SupprimerMaraude">Supprimer</button>
+                  <button class="orangeButton" @onclique="SupprimerMaraude">Supprimer</button>
               </div>
           </div>
         </div>

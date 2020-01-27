@@ -3,9 +3,9 @@
       <img class="rond" src="~/assets/image/iconsIntra/alarme.svg"></img>
       <h3> Déclencher une alerte </h3>
       <div class="mesAlertes">
-        <button class="bouton"onclick="declencherCanicule">Déclencher une Alerte Canicule</button>
-        <button class="bouton" onclick="declencherGrandFroid">Déclencher une Alerte Grand Froid</button>
-        <button class="bouton" onclick="declencherEpidemie">Déclencher une Alerte Epidémie</button>
+        <button class="orangeButton"onclick="declencherCanicule">Déclencher une Alerte Canicule</button>
+        <button class="orangeButton" onclick="declencherGrandFroid">Déclencher une Alerte Grand Froid</button>
+        <button class="orangeButton" onclick="declencherEpidemie">Déclencher une Alerte Epidémie</button>
         <p id="demo"></p>
       </div>
   </div>
