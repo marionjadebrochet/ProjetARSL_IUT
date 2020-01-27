@@ -1,7 +1,8 @@
 <template>
   <footer>
     <div class="bandeau-orange">
-      <h2>Signaler quelque chose ? Besoin d'aide ? Appelez le 115</h2>
+      <h2>Signaler quelque chose ? Besoin d'aide ? Appelez le <a style="color: white" href="tel:+33115"><b>115</b></a></h2>
+
     </div>
     <div class="bandeau-blanc">
       <p>Copyright 2020</p>
