@@ -5,8 +5,8 @@
 
       <div v-for="centre in association.centres" v-bind:key="association.centres.id">
         <div class="services">
-          <div v-for="service in centre.services" :key="centre.services.id">
-            <div class="cart">
+          <div class="cadre" v-for="service in centre.services" :key="centre.services.id">
+            <div>
               <h3>{{service.nom}}</h3>
               <h3>{{service.description}}</h3>
               <h5>Horaires d'ouverture :</h5>
@@ -90,14 +90,3 @@ export default {
 }
 </script>
 
-<style>
-
-.services {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  width:100%;
-}
-
-
-</style>

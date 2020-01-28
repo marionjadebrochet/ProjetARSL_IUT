@@ -3,13 +3,12 @@
     <client-only>
 
       <h3 style="padding-top:20px;"> Mes centres </h3>
-      <div class="mesCentres">
+      <div class="mesCentres cadre">
         <div>
           <h2>{{association.nom}}</h2>
           <img :src="'http://localhost:1337/' + associationUser.logo.url">
         </div>
-          <div class="cart">
-            <div class="centre" v-for="centre in association.centres" v-bind:key="association.centres.id">
+            <div v-for="centre in association.centres" v-bind:key="association.centres.id">
               <h3>Adresse : </h3>
               <p>{{centre.lieu.adresse}}</p>
               <h3>Horaires d'ouverture :</h3>
@@ -56,7 +55,6 @@
                 </tr>
               </table>
             </div>
-          </div>
         </div>
     </client-only>
   </div>
