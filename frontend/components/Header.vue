@@ -17,7 +17,7 @@
               <li v-if="!username" v-on:click="uncheck"><router-link tag="a" to="/maraudes" exact>Maraudes</router-link></li>
               <li v-if="!username" v-on:click="uncheck"><router-link tag="a" to="/services" exact>Services</router-link></li>
               <div v-if="username" class="deco">
-                  <p>{{ username }}</p>
+                  <li>{{ username }}</li>
                   <a v-on:click="uncheck" class="orangeButton" href="/" @click="logout">Déconnexion</a>
               </div>
               <div v-else>
@@ -174,6 +174,7 @@ label li {
 label li:hover {
   font-size:24px;
 }
+
 label .orangeButton {
   margin:auto;
 }

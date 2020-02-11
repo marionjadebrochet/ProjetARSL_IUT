@@ -30,7 +30,7 @@
               <p>{{user.role.name}}</p>
             </div>
             <div class="center">
-              <button class="plusinfo greybutton" @onclique="SupprimerCentre">Supprimer</button>
+              <button class="orangeButton" @onclique="SupprimerCentre">Supprimer</button>
             </div>
           </div>
         </div>

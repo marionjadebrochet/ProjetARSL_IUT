@@ -25,13 +25,13 @@
                     <div class="trait"></div>
                     <p>{{centre.lieu.adresse}}</p>
                     <div v-if="getDay == 1">
-                      <p>Aujourd'hui :{{centre.jourshoraires.lundiMatin}} {{centre.jourshoraires.lundiApresMidi}}</p>
+                      <p>Aujourd'hui : {{centre.jourshoraires.lundiMatin}} {{centre.jourshoraires.lundiApresMidi}}</p>
                     </div>
                     <div v-if="getDay == 2">
-                      <p>Aujourd'hui :{{centre.jourshoraires.mardiMatin}} {{centre.jourshoraires.mardinApresMidi}}</p>
+                      <p>Aujourd'hui : {{centre.jourshoraires.mardiMatin}} {{centre.jourshoraires.mardinApresMidi}}</p>
                     </div>
                     <div v-if="getDay == 3">
-                      <p>Aujourd'hui :{{centre.jourshoraires.mercrediMatin}} {{centre.jourshoraires.mercrediApresMidi}}</p>
+                      <p>Aujourd'hui : {{centre.jourshoraires.mercrediMatin}} {{centre.jourshoraires.mercrediApresMidi}}</p>
                     </div>
                     <div v-if="getDay == 4">
                       <p>Aujourd'hui : {{centre.jourshoraires.jeudiMatin}} {{centre.jourshoraires.jeudiApresMidi}}</p>

@@ -26,7 +26,7 @@
         </div>
         
         <div class="center">
-          <button class="bouton" type="submit">Ajouter</button>
+          <button class="orangeButton" type="submit">Ajouter</button>
         </div>
 
       </fieldset>

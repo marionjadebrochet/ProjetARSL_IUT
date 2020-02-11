@@ -2,21 +2,21 @@
   <div>
     <client-only>
       <h3 style="padding-top:20px;"> Suppression de services existants </h3>
-      <div class="mesCentres">
-        <div>
+      <div >
+        <div class="cadre">
           <h2>{{association.nom}}</h2>
           <img :src="'http://localhost:1337/' + associationUser.logo.url">
         </div>
-        <div class="centre" v-for="centre in association.centres" v-bind:key="association.centres.id">
-          <div class="cart">
-            <h3>{{centre.adresse}}</h3>
+        <div v-for="centre in association.centres" v-bind:key="association.centres.id">
+          <div class="cadre">
+            <h4>{{centre.adresse}}</h4>
             <div class="service" v-for="service in centre.services" v-bind:key="centre.services.id">
               <div class="infoServices">
-                <h3>Nom : </h3>
+                <h4>Nom : </h4>
                 <p>{{service.nom}}</p>
-                <h3>Description : </h3>
+                <h4>Description : </h4>
                 <p>{{service.description}}</p>
-                <button class="plusinfo greybutton" @onclique="SupprimerService">Supprimer</button>
+                <button class="orangeButton" @onclique="SupprimerService">Supprimer</button>
               </div>
             </div>
           </div>

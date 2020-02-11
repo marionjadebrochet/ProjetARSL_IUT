@@ -4,15 +4,15 @@
         <form @submit.stop.prevent="ajouterCentre">
           <fieldset>
             <div class="row">
-              <label for="adresse">Adresse du centre :</label>
+              <label>Adresse du centre :</label>
               <input type="text" v-model="adresse">
             </div>
             <div class="row">
-              <label for="telephone">Téléphone du centre :</label>
+              <label >Téléphone du centre :</label>
               <input type="tel" v-model="telephone">
             </div>
             <div class="row">
-              <label for="animaux"> Animaux :</label>
+              <label> Animaux :</label>
               <div class="radio">
                 <label>Acceptés</label>
                 <input type="radio" v-model="accepte" name="animaux" checked>
@@ -21,11 +21,11 @@
               </div>
             </div>
             <div class="row">
-              <label for="public">public concerné par le centre :</label>
+              <label>public concerné par le centre :</label>
               <input type="text" v-model="public">
             </div>
             <div class="center">
-              <button class="bouton" type="submit">Ajouter</button>
+              <button class="orangeButton" type="submit">Ajouter</button>
             </div>
           </fieldset>
         </form>

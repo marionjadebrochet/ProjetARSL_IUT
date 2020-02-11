@@ -56,7 +56,6 @@
   }
 
   h5 {
-    padding: 5px 0px;
     font-size: 20px;
   }
   footer {
@@ -82,6 +81,7 @@
     align-items:center;
   }
   .cadre {
+    border: 2px solid #F0F0B8;
     background-color:#F7F7CE;
     padding:20px;
   }
@@ -179,8 +179,6 @@
     align-items:center;
   }
 
-  /* A modifier */
-
   .row .cadre {
     width:100%;
     display:flex;
@@ -228,8 +226,6 @@
     align-items:center;
     margin: 20px;
   }
-
-
 
   .align-center {
     align-items:center;
@@ -343,7 +339,7 @@
     margin-top: 40px;
   }
   .gestion {
-    border:1px solid black;
+    border: 2px solid #F0F0B8;
     background-color:#F7F7CE;
     display:flex;
     flex-direction:column;
@@ -360,6 +356,35 @@
     display:flex;
     justify-content: space-around;
     flex-wrap:wrap;
+  }
+  fieldset {
+    margin: auto;
+    width:80%;
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+  }
+  .row input {
+    width:100%;
+    font-size:26px;
+    margin-top: 10px;
+  }
+  td, th {
+    padding:10px 10px;
+    font-size: 20px;
+    border:1px solid black
+  }
+  table {
+    text-align:center;
+    margin:10px auto;
+  }
+  .services {
+    text-align: center;
+    width: 100%;
+    margin:0 5%;
+    display: grid;
+    grid-template-columns:90%;
+    grid-row-gap: 50px;
   }
 
 @media screen and (min-width: 786px) {
@@ -406,24 +431,18 @@
     padding-top:5px;
   }
 
-  td, th {
-    padding:10px 20px;
-    border:1px solid black
-  }
-  table {
-    text-align:center;
-    margin:10px auto;
-  }
-
   .mesCentres {
     display:flex;
     flex-direction:row;
     justify-content:space-around;
     margin-top:20px;
+    width: 100%;
   }
-  .mesCentres .cart h3 {
-    padding:10px 0px;
+  .mesCentres img {
+    width: 60%;
+    height:auto;
   }
+
     .row input {
       width:50%;
       font-size:26px;
@@ -444,8 +463,6 @@
       font-weight:500;
     }
     .gestion {
-      border:1px solid black;
-      background-color:#F7F7CE;
       display:flex;
       flex-direction:column;
       width:40%;
@@ -462,24 +479,12 @@
       flex-wrap:wrap;
     }
 
-    .infoCentre {
-      width:100%;
-      display:flex;
-      flex-direction:row;
-    }
-    .infoCentre .monCentre {
-      width:30%;
-    }
     .wrap {
       display:flex;
       flex-direction:row;
       flex-wrap:wrap;
     }
-    .services {
-      width:45%;
-      padding:10px;
-      text-align:center;
-    }
+
     .infomaraude p {
       padding:5px;
     }
@@ -544,5 +549,30 @@
       border-left:5px solid #E95133;
       padding:10px;
       font-weight:500;
+    }
+    .infoCentre {
+      width: 90%;
+      margin:auto;
+      display: grid;
+      grid-template-columns:30% 30% 30%;
+      grid-column-gap: 5%;
+      grid-row-gap: 50px ;
+    }
+    .monCentre {
+      grid-row: 1 / 3;
+      text-align: center;
+    }
+    .monCentre p {
+      margin-bottom:10px;
+    }
+    .padding10 {
+      padding: 10px;
+    }
+    .mesCentres img {
+      width: auto;
+    }
+    .services {
+      grid-template-columns: 40% 40%;
+      grid-column-gap: 10%;
     }
 }

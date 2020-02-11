@@ -1,16 +1,18 @@
 <template>
   <client-only>
 
-    <div class="infoCentre space-around">
-      <div class="monCentre">
+    <div class="infoCentre">
+      <div class="monCentre cadre">
         <h4>{{centre.association.nom}}</h4>
+        <div class="trait"></div>
         <div>
           <h5>Adresse </h5>
           <p>{{centre.lieu.adresse}}</p>
-          <h5 v-if="centre.association.nom=='Le Secours Catholique'">Lignes de bus : 20/21/D10</h5>
-          <h5 v-if="centre.association.nom=='La Croix Rouge'">Lignes de bus : 8 </h5>
-          <h5 v-if="centre.association.nom=='Les Restos Du Coeur'">Lignes de bus : 2/20/21/D10 </h5>
-          <h5 v-if="centre.association.nom=='Le Secours Populaire'"> Lignes de bus : 20 </h5>
+          <h5>Lignes de bus</h5>
+          <p v-if="centre.association.nom=='Le Secours Catholique'">20/21/D10</p>
+          <p v-if="centre.association.nom=='La Croix Rouge'"> 8 </p>
+          <p v-if="centre.association.nom=='Les Restos Du Coeur'">2/20/21/D10 </p>
+          <p v-if="centre.association.nom=='Le Secours Populaire'">  20 </p>
           <h5>Horaires d'ouverture </h5>
           <table>
             <tr>
@@ -56,10 +58,9 @@
           </table>
         </div>
       </div>
-      <div class="wrap space-around">
-        <h4>Services </h4>
-        <div class="services" v-for="service in centre.services" v-bind:key="centre.services.id">
-            <h5>{{service.nom}}</h5>
+        <div class="cadre" v-for="service in centre.services" v-bind:key="centre.services.id">
+            <h4>{{service.nom}}</h4>
+            <div class="trait"></div>
             <table>
               <tr>
                 <th>Jour</th>
@@ -104,7 +105,6 @@
             </table>
           </div>
         </div>
-      </div>
     </client-only>
 </template>
 
@@ -141,27 +141,3 @@ export default {
 }
 </script>
 
-<style>
-.page {
-  display:flex;
-  flex-direction:row;
-  justify-content:space-around;
-}
-.column {
-  width:50%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-.column h3 {
-  padding-bottom:10px;
-}
-h2 {
-  margin-bottom:10px;
-}
-p {
-  padding:10px 0px;
-}
-
-</style>

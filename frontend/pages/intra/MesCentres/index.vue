@@ -3,7 +3,7 @@
     <client-only>
 
       <h3 style="padding-top:20px;"> Mes centres </h3>
-      <div class="mesCentres">
+      <div class="mesCentres cadre">
         <div>
           <h2>{{association.nom}}</h2>
           <img :src="'http://localhost:1337/' + associationUser.logo.url">
@@ -56,7 +56,6 @@
                 </tr>
               </table>
             </div>
-          </div>
         </div>
     </client-only>
   </div>
