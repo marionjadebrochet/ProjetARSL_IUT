@@ -57,6 +57,7 @@
               </table>
             </div>
         </div>
+      </div>
     </client-only>
   </div>
 
