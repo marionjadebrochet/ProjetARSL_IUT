@@ -3,9 +3,9 @@
     <client-only>
       <h3 style="padding-top:20px;"> Mes Services </h3><br>
 
-      <div v-for="centre in association.centres" v-bind:key="association.centres.id">
+      <div v-for="centre in association.centres" v-bind:key="centre.id">
         <div class="services">
-          <div v-for="service in centre.services" :key="centre.services.id">
+          <div v-for="service in centre.services" :key="service.id">
             <div class="cart">
               <h3>{{service.nom}}</h3>
               <h3>{{service.description}}</h3>

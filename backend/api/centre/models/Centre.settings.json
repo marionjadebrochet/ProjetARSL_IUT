@@ -14,7 +14,7 @@
     "comment": ""
   },
   "attributes": {
-    "Nom": {
+    "libelle": {
       "type": "string"
     },
     "tel": {

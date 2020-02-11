@@ -9,7 +9,7 @@
           <img :src="'http://localhost:1337/' + associationUser.logo.url">
         </div>
           <div class="cart">
-            <div class="centre" v-for="centre in association.centres" v-bind:key="association.centres.id">
+            <div class="centre" v-for="centre in association.centres" v-bind:key="centre.id">
               <h3>Adresse : </h3>
               <p>{{centre.lieu.adresse}}</p>
               <h3>Horaires d'ouverture :</h3>

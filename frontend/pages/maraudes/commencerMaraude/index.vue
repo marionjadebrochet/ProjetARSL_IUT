@@ -37,6 +37,7 @@
 
 <script>
 import lieusQuery from '~/apollo/queries/lieu/lieus'
+import strapi from '~/utils/Strapi'
 
 export default {
   data () {
@@ -49,7 +50,7 @@ export default {
       nom: '',
       idLieuDepart: 0,
       idLieuRdv: 0,
-      idLieuArrive: 0
+      idLieuArrive: 0 
     }
   },
 
@@ -70,7 +71,7 @@ export default {
 
   methods: {
     ajouterUneMaraude() {
-      return null
+      console.log(this.idLieuDepart, this.idLieuRdv, this.idLieuArrive)
     }
   }
 }
