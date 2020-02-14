@@ -3,16 +3,19 @@
     <h3>Ajouter un service</h3>
     <form @submit.stop.prevent="ajouterService">
       <fieldset>
+        
         <div class="row">
           <label for="nom">Nom du service:</label>
           <input type="text" v-model="nom" />
         </div>
+
         <div class="row">
           <label for="description">Description du centre :</label>
           <input type="text" v-model="description" />
           <br />
           <br />
         </div>
+
         <div class="row">
           <label for="centre">Choississez le centre qui lui est rattaché : </label>
           <select v-model="centre">
@@ -20,7 +23,6 @@
           </select>
         </div>
         
-        <p>Veuillez rentrez les horaires : </p>
         <div class="row">
           <label for="lundiMatin"></label>
         </div>
@@ -42,6 +44,7 @@ export default {
   data() {
     return {
       association: Object,
+      service: Object,
       centres: [],
       centre: Object,
       nom: '',
@@ -76,11 +79,18 @@ export default {
     async ajouterService() {
       this.loading = true;
       try {
-        await strapi.createEntry("services", {
+        //on ajoute le service dans la db
+        this.service = await strapi.createEntry("services", {
           nom: this.nom,
           description: this.description,
           centre: this.centre
         });
+        
+        //on (essaye) de mettre a jour le centre associe
+        await strapi.updateEntry("centres", this.centre.id, {
+          service: this.service
+        });
+        
         alert("Le service a bien été enregistré.");
         this.$router.push("/");
       } catch (err) {

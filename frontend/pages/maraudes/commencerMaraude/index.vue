@@ -15,19 +15,19 @@
       <label for="heureArrive">Heure d'arrivée prévue : </label>
       <input type="text" v-model="heureArrive">
 
-      <label for="idLieuDepart">Lieu de départ : </label>
-      <select v-model="idLieuDepart">
-        <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu.id">{{lieu.libelle}}</option>
+      <label for="lieuDepart">Lieu de départ : </label>
+      <select v-model="lieuDepart">
+        <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
       </select>
 
       <label for="idLieuRdv">Lieu de rendez-vous au cours de la maraude : </label>
-      <select v-model="idLieuRdv">
-        <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu.id">{{lieu.libelle}}</option>
+      <select v-model="lieuRdv">
+        <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
       </select>
 
       <label for="idLieuArrive">Lieu d'arrivé : </label>
-      <select v-model="idLieuArrive">
-        <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu.id">{{lieu.libelle}}</option>
+      <select v-model="lieuArrive">
+        <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
       </select>
 
       <button type="submit">Commencer</button>
@@ -48,9 +48,9 @@ export default {
       heureRdv: '',
       heureArrive: '',
       nom: '',
-      idLieuDepart: 0,
-      idLieuRdv: 0,
-      idLieuArrive: 0 
+      lieuDepart: 0,
+      lieuRdv: 0,
+      lieuArrive: 0 
     }
   },
 

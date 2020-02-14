@@ -5,4 +5,22 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+    update: async ctx => {
+        const {
+            service
+        } = ctx.request.body;
+
+        console.log(service);
+        
+        try {
+            const centre = await strapi.services.centre.update({
+                service
+            });
+    
+            return centre;
+        } catch (error) {
+            //silent
+        }
+    }
+};
