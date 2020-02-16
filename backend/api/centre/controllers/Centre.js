@@ -8,14 +8,16 @@
 module.exports = {
     update: async ctx => {
         const {
-            service
+            service,
+            centreInfos
         } = ctx.request.body;
 
-        console.log(service);
         
         try {
-            const centre = await strapi.services.centre.update({
-                service
+            const centre = await strapi.query('centre').update(
+            {id: ctx.params.id},
+            {
+                services: [centreInfos.services.id, service.id]
             });
     
             return centre;

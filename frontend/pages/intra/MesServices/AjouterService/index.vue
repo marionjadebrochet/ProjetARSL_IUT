@@ -88,7 +88,8 @@ export default {
         
         //on (essaye) de mettre a jour le centre associe
         await strapi.updateEntry("centres", this.centre.id, {
-          service: this.service
+          service: this.service,
+          centreInfos: this.centre
         });
         
         alert("Le service a bien été enregistré.");
