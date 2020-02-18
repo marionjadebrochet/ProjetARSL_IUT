@@ -575,4 +575,8 @@
       grid-template-columns: 40% 40%;
       grid-column-gap: 10%;
     }
+    .imgAccueil {
+      width:800px;
+      height:auto;
+    }
 }

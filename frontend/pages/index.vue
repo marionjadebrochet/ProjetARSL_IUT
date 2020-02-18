@@ -9,7 +9,7 @@
             <section style="margin-top:20px;"><a class="orangeButton" href="tel:+33115">Besoin d'aide ? Appelez le <b>115</b></a></section>
           </div>
           <div>
-            <img src="~/assets/image/image-accueil.jpg">
+            <img class="imgAccueil" src="~/assets/image/image-accueil.jpg">
           </div>
         </div>
 
