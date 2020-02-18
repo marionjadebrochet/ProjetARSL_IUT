@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-        <router-link tag="a" to="/" exact><img class="logo" src="~/assets/image/logo.png"></router-link>
+        <router-link tag="a" to="/" exact><img class="logo" src="~/assets/image/logoSiao.png"></router-link>
         <router-link tag="a" to="/" exact><h1>SIAO 115 Haute-Vienne</h1></router-link>
         <nav>
           <label>
