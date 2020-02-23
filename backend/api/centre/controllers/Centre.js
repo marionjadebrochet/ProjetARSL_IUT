@@ -12,7 +12,6 @@ module.exports = {
             centreInfos
         } = ctx.request.body;
 
-        
         try {
             const centre = await strapi.query('centre').update(
             {id: ctx.params.id},

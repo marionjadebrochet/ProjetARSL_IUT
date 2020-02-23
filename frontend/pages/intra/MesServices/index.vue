@@ -5,6 +5,7 @@
       <br />
 
       <div v-for="centre in association.centres" v-bind:key="centre.id">
+        <div>{{centre.lieu.adresse}}</div>
         <div class="services">
           <div v-for="service in centre.services" :key="service.id">
             <div class="cart">

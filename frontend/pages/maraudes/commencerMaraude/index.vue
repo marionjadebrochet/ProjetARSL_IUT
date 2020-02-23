@@ -20,12 +20,12 @@
         <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
       </select>
 
-      <label for="idLieuRdv">Lieu de rendez-vous au cours de la maraude : </label>
+      <label for="lieuRdv">Lieu de rendez-vous au cours de la maraude : </label>
       <select v-model="lieuRdv">
         <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
       </select>
 
-      <label for="idLieuArrive">Lieu d'arrivé : </label>
+      <label for="lieuArrive">Lieu d'arrivé : </label>
       <select v-model="lieuArrive">
         <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
       </select>
