@@ -1,9 +1,11 @@
 <template>
   <div>
     <client-only>
-      <h3 style="padding-top:20px;"> Mes Services </h3><br>
+      <h3 style="padding-top:20px;">Mes Services</h3>
+      <br />
 
       <div v-for="centre in association.centres" v-bind:key="centre.id">
+        <div>{{centre.lieu.adresse}}</div>
         <div class="services">
           <div v-for="service in centre.services" :key="service.id">
             <div class="cart">
@@ -17,38 +19,38 @@
                   <th>Après-midi</th>
                 </tr>
                 <tr>
-                  <td>Lundi </td>
-                  <td>{{service.jourshoraires.lundiMatin}} </td>
+                  <td>Lundi</td>
+                  <td>{{service.jourshoraires.lundiMatin}}</td>
                   <td>{{service.jourshoraires.lundiApresMidi}}</td>
                 </tr>
                 <tr>
-                  <td>Mardi </td>
-                  <td>{{service.jourshoraires.mardiMatin}} </td>
+                  <td>Mardi</td>
+                  <td>{{service.jourshoraires.mardiMatin}}</td>
                   <td>{{service.jourshoraires.mardinApresMidi}}</td>
                 </tr>
                 <tr>
-                  <td>Mercredi </td>
-                  <td>{{service.jourshoraires.mercrediMatin}} </td>
+                  <td>Mercredi</td>
+                  <td>{{service.jourshoraires.mercrediMatin}}</td>
                   <td>{{service.jourshoraires.mercrediApresMidi}}</td>
                 </tr>
                 <tr>
-                  <td>Jeudi </td>
-                  <td>{{service.jourshoraires.jeudiMatin}} </td>
+                  <td>Jeudi</td>
+                  <td>{{service.jourshoraires.jeudiMatin}}</td>
                   <td>{{service.jourshoraires.jeudiApresMidi}}</td>
                 </tr>
                 <tr>
-                  <td>Vendredi </td>
-                  <td>{{service.jourshoraires.vendrediMatin}} </td>
+                  <td>Vendredi</td>
+                  <td>{{service.jourshoraires.vendrediMatin}}</td>
                   <td>{{service.jourshoraires.vendrediApresMidi}}</td>
                 </tr>
                 <tr>
-                  <td>Samedi </td>
-                  <td>{{service.jourshoraires.samediMatin}} </td>
+                  <td>Samedi</td>
+                  <td>{{service.jourshoraires.samediMatin}}</td>
                   <td>{{service.jourshoraires.samediApresMidi}}</td>
                 </tr>
                 <tr>
-                  <td>Dimanche </td>
-                  <td>{{service.jourshoraires.dimancheMatin}} </td>
+                  <td>Dimanche</td>
+                  <td>{{service.jourshoraires.dimancheMatin}}</td>
                   <td>{{service.jourshoraires.dimancheApresMidi}}</td>
                 </tr>
               </table>
@@ -61,7 +63,7 @@
 </template>
 
 <script>
-import associationQuery from '~/apollo/queries/association/association'
+import associationQuery from "~/apollo/queries/association/association";
 
 export default {
   data() {
@@ -69,8 +71,8 @@ export default {
       association: Object,
       centre: Object,
       services: [],
-      query: '',
-    }
+      query: ""
+    };
   },
   computed: {
     // Get your association thanks to your getter
@@ -82,11 +84,10 @@ export default {
     association: {
       prefetch: true,
       query: associationQuery,
-      variables () {
-        return { id: this.associationUser.id }
+      variables() {
+        return { id: this.associationUser.id };
       }
     }
   }
-}
+};
 </script>
-

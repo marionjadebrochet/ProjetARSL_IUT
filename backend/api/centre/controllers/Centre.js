@@ -5,4 +5,23 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+    update: async ctx => {
+        const {
+            service,
+            centreInfos
+        } = ctx.request.body;
+
+        try {
+            const centre = await strapi.query('centre').update(
+            {id: ctx.params.id},
+            {
+                services: [centreInfos.services.id, service.id]
+            });
+    
+            return centre;
+        } catch (error) {
+            //silent
+        }
+    }
+};

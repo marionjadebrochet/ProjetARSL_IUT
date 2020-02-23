@@ -10,7 +10,8 @@ module.exports = {
         const {
             nom,
             description,
-            centre
+            centre,
+            jourshoraires
         } = ctx.request.body;
 
         // Register the service in the database
@@ -18,7 +19,8 @@ module.exports = {
             const service = await strapi.services.service.create({
                 nom,
                 description,
-                centre
+                centre,
+                jourshoraires
             });
 
             return service;
