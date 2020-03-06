@@ -5,4 +5,42 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+    create: async ctx => {
+        const {
+            pseudo,
+            nom,
+            lieuRencontre,
+            nombrePersonneFamille,
+            nombreAnimaux,
+            typeAnimaux,
+            nationalite,
+            enceinte,
+            problemeSante,
+            descriptionProblemeSante,
+            demandeHebergement,
+            situation
+        } = ctx.request.body;
+
+        try {
+            const lignerapport = await strapi.services.lignerapport.create({
+                pseudo,
+                nom,
+                lieuRencontre,
+                nombrePersonneFamille,
+                nombreAnimaux,
+                typeAnimaux,
+                nationalite,
+                enceinte,
+                problemeSante,
+                descriptionProblemeSante,
+                demandeHebergement,
+                situation
+            });
+
+            return lignerapport;
+        } catch (error) {
+            //Silent
+        }
+    },
+};

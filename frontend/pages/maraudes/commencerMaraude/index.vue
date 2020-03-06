@@ -12,8 +12,10 @@
       <label for="heureRdv">Heure du rendez-vous au cours de la maraude</label>
       <input type="text" v-model="heureRdv">
 
+      <!-- a remettre si besoin
       <label for="heureArrive">Heure d'arrivée prévue : </label>
       <input type="text" v-model="heureArrive">
+      -->
 
       <label for="lieuDepart">Lieu de départ : </label>
       <select v-model="lieuDepart">
@@ -36,21 +38,23 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import lieusQuery from '~/apollo/queries/lieu/lieus'
 import strapi from '~/utils/Strapi'
 
 export default {
   data () {
     return {
+      maraude: Object,
       lieus: [],
       query: '',
       heureDepart: '',
       heureRdv: '',
-      heureArrive: '',
+      //heureArrive: '',
       nom: '',
-      lieuDepart: 0,
-      lieuRdv: 0,
-      lieuArrive: 0 
+      lieuDepart: Object,
+      lieuRdv: Object,
+      lieuArrive: Object
     }
   },
 
@@ -66,12 +70,38 @@ export default {
       return this.lieus.filter(lieu => {
         return lieu.libelle.toLowerCase().includes(this.query.toLowerCase())
       })
-    }
+    },
   },
 
   methods: {
-    ajouterUneMaraude() {
-      console.log(this.idLieuDepart, this.idLieuRdv, this.idLieuArrive)
+    async ajouterUneMaraude() {
+      try {
+
+        //creation de la maraude
+        var day = new Date();
+        this.maraude = await strapi.createEntry("maraudes", {
+          nom: this.nom,
+          heureDepart: this.heureDepart,
+          heureRdv: this.heureRdv,
+          //heureArrive: this.heureArrive,
+          lieuDepart: this.lieuDepart,
+          lieuArrive: this.lieuArrive,
+          lieuRdv: this.lieuRdv,
+          enPrevisions: false,
+          fini: false,
+          dateDepart: day
+        });
+        
+        //on commence a initialiser le rapport avec une maraude
+        this.$store.commit('rapport/initialiserRapport', this.maraude);
+
+        //redirection vers une autre page pour compléter le rapport ligne par ligne
+        //au cours de la maraude
+        alert("Veuillez maintenant completer le rapport sur la prochaine page pendant votre maraude");
+        this.$router.push("/maraudes/rapport");
+      } catch (error) {
+        alert(error)
+      }
     }
   }
 }

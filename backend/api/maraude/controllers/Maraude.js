@@ -8,34 +8,55 @@
 module.exports = {
     create: async ctx => {
         const {
-            heureDepart,
-            enPrevisions,
-            dateDepart,
-            fini,
             nom,
+            heureDepart,
             heureRdv,
+            //heureArrive,
             lieuDepart,
             lieuRdv,
-            lieuArrive
+            lieuArrive,
+            enPrevisions,
+            fini,
+            dateDepart
         } = ctx.request.body;
 
         try {
-            const maraude = await strapi.services.Maraude.create({
+            const maraude = await strapi.services.maraude.create({
                 user: ctx.state.user.id,
-                heureDepart,
-                enPrevisions,
-                dateDepart,
-                fini,
                 nom,
+                heureDepart,
                 heureRdv,
+                //heureArrive,
+                enPrevisions,
+                fini,
                 lieuDepart,
                 lieuRdv,
-                lieuArrive
+                lieuArrive,
+                dateDepart
             });
 
-            return order;
+            return maraude;
         } catch (error) {
             alert('erreur depuis apiControlleurMaraude')
         }
     },
+
+    update: async ctx => {
+        const {
+            lignerapportsInfos
+        } = ctx.request.body;
+
+        try {
+          const maraude = await strapi.query('maraude').update(
+              {id: ctx.params.id},
+              {
+                lignerapports: lignerapportsInfos,
+                fini: true
+              });
+          
+          return maraude;
+        } catch (error) {
+            console.log(error)
+        }
+    }
 };
