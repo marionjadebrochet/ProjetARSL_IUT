@@ -23,7 +23,7 @@
   }
   header .logo {
     margin-left: 50px;
-    width: 120px;
+    width: 100px;
     height:auto;
   }
   header h1 {
@@ -576,7 +576,11 @@
       grid-column-gap: 10%;
     }
     .imgAccueil {
-      width:800px;
+      width:500px;
       height:auto;
+    }
+
+    select {
+      height: 24px;
     }
 }

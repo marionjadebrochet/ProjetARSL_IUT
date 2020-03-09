@@ -3,36 +3,51 @@
     <h1>Commencer une maraude</h1>
 
     <form @submit.stop.prevent="ajouterUneMaraude">
-      <label for="nom">Nom de la maraude</label>
-      <input type="text" v-model="nom">
+      <fieldset>
+        <div class="row">
+          <label for="nom">Nom de la maraude</label>
+          <input type="text" v-model="nom">
+        </div>
 
-      <label for="heureDepart">Heure de Départ :</label>
-      <input type="text" v-model="heureDepart">
+        <div class="row">
+          <label for="lieuDepart">Lieu de départ : </label>
+          <select v-model="lieuDepart">
+            <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="heureDepart">Heure de départ :</label>
+          <input type="text" v-model="heureDepart">
+        </div>
 
-      <label for="heureRdv">Heure du rendez-vous au cours de la maraude</label>
-      <input type="text" v-model="heureRdv">
 
-      <!-- a remettre si besoin
-      <label for="heureArrive">Heure d'arrivée prévue : </label>
-      <input type="text" v-model="heureArrive">
-      -->
+        <!-- a remettre si besoin
+        <label for="heureArrive">Heure d'arrivée prévue : </label>
+        <input type="text" v-model="heureArrive">
+        -->
 
-      <label for="lieuDepart">Lieu de départ : </label>
-      <select v-model="lieuDepart">
-        <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
-      </select>
+        <div class="row">
+          <label for="lieuRdv">Point de rendez-vous : </label>
+          <select v-model="lieuRdv">
+            <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="heureRdv">Heure au rendez-vous : </label>
+          <input type="text" v-model="heureRdv">
+        </div>
 
-      <label for="lieuRdv">Lieu de rendez-vous au cours de la maraude : </label>
-      <select v-model="lieuRdv">
-        <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
-      </select>
 
-      <label for="lieuArrive">Lieu d'arrivé : </label>
-      <select v-model="lieuArrive">
-        <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
-      </select>
+        <div class="row">
+          <label for="lieuArrive">Lieu d'arrivé : </label>
+          <select v-model="lieuArrive">
+            <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
+          </select>
+        </div>
 
-      <button type="submit">Commencer</button>
+        <button class="orangeButton" type="submit">Commencer</button>
+      </fieldset>
+
     </form>
   </div>
 </template>
@@ -91,7 +106,7 @@ export default {
           fini: false,
           dateDepart: day
         });
-        
+
         //on commence a initialiser le rapport avec une maraude
         this.$store.commit('rapport/initialiserRapport', this.maraude);
 
