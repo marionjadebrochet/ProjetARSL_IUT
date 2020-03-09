@@ -5,22 +5,25 @@
         <div class="cadre">
           <h3>Aujourd'hui</h3>
           <div v-for="maraude in filteredList" v-bind:key="maraude.id">
-              <div class="infomaraude" v-show="!maraude.enPrevisions">
-                  <p><b>Date de départ :</b> {{maraude.dateDepart}}</p>
-                  <p><b>Lieu de départ :</b> {{maraude.lieuDepart.libelle}}</p>
-                  <p><b>Heure de Départ : </b> {{maraude.heureDepart}}</p>
-                  <p><b>Point de Rendez-vous:</b> {{maraude.lieuRdv.libelle}}</p>
-                  <p><b>Heure de Rendez-vous :</b> {{maraude.heureRdv}}</p>
-                  <p><b>Lieu d'arrivé : </b>{{maraude.lieuArrive.libelle}}</p>
-                  <p><b>Personne en charge : </b> {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
+              <div class="infomaraude" v-show="maraude.enPrevisions">
+                  <div v-if="getDay < maraude.dateDepart && getTomorrow >maraude.dateDepart">
+                    <p><b>Date de départ :</b> {{maraude.dateDepart}}</p>
+                    <p><b>Lieu de départ :</b> {{maraude.lieuDepart.libelle}}</p>
+                    <p><b>Heure de Départ : </b> {{maraude.heureDepart}}</p>
+                    <p><b>Point de Rendez-vous:</b> {{maraude.lieuRdv.libelle}}</p>
+                    <p><b>Heure de Rendez-vous :</b> {{maraude.heureRdv}}</p>
+                    <p><b>Lieu d'arrivé : </b>{{maraude.lieuArrive.libelle}}</p>
+                    <p><b>Personne en charge : </b> {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
+                  </div>
+
               </div>
           </div>
         </div>
-
         <div class="cadre">
           <h3>En prévision</h3>
           <div v-for="maraude in filteredList" v-bind:key="maraude.id">
               <div class="infomaraude" v-show="maraude.enPrevisions">
+                <div v-if="getDay < maraude.dateDepart">
                   <p><b>Date de départ :</b> {{maraude.dateDepart}}</p>
                   <p><b>Lieu de départ :</b> {{maraude.lieuDepart.libelle}}</p>
                   <p><b>Heure de Départ : </b> {{maraude.heureDepart}}</p>
@@ -28,6 +31,8 @@
                   <p><b>Heure de Rendez-vous :</b> {{maraude.heureRdv}}</p>
                   <p><b>Lieu d'arrivé : </b>{{maraude.lieuArrive.libelle}}</p>
                   <p><b>Personne en charge : </b> {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
+                  <p>{{getTomorrow}}</p>
+                </div>
               </div>
           </div>
         </div>
@@ -38,7 +43,6 @@
                <l-map :zoom=14 :center="[45.835425,1.2644847]">
                  <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
                     <div class="marker" v-for="maraude in filteredList" v-bind:key="maraude.id">
-                      <!-- marqueurs temporaires -->
                       <l-marker :lat-lng="[maraude.lieuDepart.latitude, maraude.lieuDepart.longitude]" >
                             <l-popup :content="maraude.lieuDepart.libelle + ' | ' + maraude.heureDepart"  />
                       </l-marker>
@@ -69,14 +73,30 @@ export default {
     maraudes: {
       prefetch: true,
       query: maraudesQuery
-    }
+    },
   },
+
   computed: {
     // Search system
     filteredList() {
       return this.maraudes.filter(maraudes => {
         return maraudes.id.toLowerCase().includes(this.query.toLowerCase())
       })
+    },
+    getDay() {
+            var date = new Date().toJSON().slice(0,10);
+           console.log(date);
+
+           return date;
+    },
+    getTomorrow() {
+           var date = new Date().toJSON().slice(0,10);
+
+           var tomorrow = new Date(date);
+           tomorrow.setDate(tomorrow.getDate() + 1);
+           var tomorrow1 = new Date(tomorrow).toJSON().slice(0,10);;
+
+           return tomorrow1;
     },
   },
 }
