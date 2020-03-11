@@ -387,6 +387,16 @@
     grid-row-gap: 50px;
   }
 
+  .text-center {
+    text-align: center;
+  }
+
+  .justify-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
 @media screen and (min-width: 786px) {
 
   h1 {
@@ -572,9 +582,14 @@
       width: auto;
     }
     .services {
-      grid-template-columns: 40% 40%;
+      margin-top: 50px;
+      width: 90%;
+      margin-left: 5%;
+      grid-template-columns: 45% 45%;
       grid-column-gap: 10%;
     }
+
+
     .imgAccueil {
       width:500px;
       height:auto;

@@ -3,89 +3,87 @@
     <h3>Ajouter un service</h3>
     <form @submit.stop.prevent="ajouterService">
       <fieldset>
-        
+
         <div class="row">
-          <label for="nom">Nom du service:</label>
+          <label for="nom">Nom du service :</label>
           <input type="text" v-model="nom" />
         </div>
 
         <div class="row">
           <label for="description">Description du service :</label>
           <input type="text" v-model="description" />
-          <br />
-          <br />
         </div>
 
         <div class="row">
-          <label>Choississez le centre qui lui est rattaché : </label>
+          <label>Choississez le centre</label>
           <select required v-model="centre">
             <option v-for="centre in association.centres" :key="centre.id" :value="centre">{{centre.lieu.adresse}}</option>
           </select>
         </div>
 
         <h3>Horaires du service</h3>
-        
+
         <div class="row">
-          <label for="nomJours">Veuillez donner un nom à l'horaire : </label>
+          <label for="nomJours">Nom de l'horaire : </label>
           <input required v-model="nomJours" placeholder="Horaires du service n°..">
         </div>
         <div class="row">
-          <label for="lundiMatin">Saisir les horaires du lundi matin : </label>
+          <label for="lundiMatin">Lundi matin : </label>
           <input v-model="lundiMatin" placeholder="9h-12h">
         </div>
         <div class="row">
-          <label for="lundiAprem">Saisir les horaires du lundi après-midi :</label>
+          <label for="lundiAprem">Lundi après-midi :</label>
           <input v-model="lundiAprem" placeholder="13h-17h">
         </div>
         <div class="row">
-          <label for="lundiMatin">Saisir les horaires du mardi matin : </label>
+          <label for="lundiMatin">Mardi matin : </label>
           <input v-model="mardiMatin" placeholder="9h-12h">
         </div>
         <div class="row">
-          <label for="mardiAprem">Saisir les horaires du mardi après-midi : </label>
+          <label for="mardiAprem">Mardi après-midi : </label>
           <input v-model="mardiAprem" placeholder="13h-17h">
         </div>
         <div class="row">
-          <label for="mercrediMatin">Saisir les horaires du mercredi matin : </label>
+          <label for="mercrediMatin">Mercredi matin : </label>
           <input v-model="mercrediMatin" placeholder="9h-12h">
         </div>
         <div class="row">
-          <label for="mercrediAprem">Saisir les horaires du mercredi après-midi : </label>
+          <label for="mercrediAprem">Mercredi après-midi : </label>
           <input v-model="mercrediAprem" placeholder="13h-17h">
         </div>
         <div class="row">
-          <label for="jeudiMatin">Saisir les horaires du jeudi matin: </label>
+          <label for="jeudiMatin">Jeudi matin: </label>
           <input v-model="jeudiMatin" placeholder="9h-12h">
         </div>
         <div class="row">
-          <label for="jeudiAprem">Saisir les horaires du jeudi après-midi : </label>
+          <label for="jeudiAprem">Jeudi après-midi : </label>
           <input v-model="jeudiAprem" placeholder="13h-17h">
         </div>
         <div class="row">
-          <label for="vendrediMatin">Saisir les horaires du vendredi matin : </label>
+          <label for="vendrediMatin">Vendredi matin : </label>
           <input v-model="vendrediMatin" placeholder="9h-12h">
         </div>
         <div class="row">
-          <label for="venrediMatin">Saisir les horaires du vendredi après-midi : </label>
+          <label for="venrediMatin">Vendredi après-midi : </label>
           <input v-model="vendrediMatin" placeholder="13h-17h">
         </div>
         <div class="row">
-          <label for="samediMatin">Saisir les horaires du samedi matin : </label>
+          <label for="samediMatin">Samedi matin : </label>
           <input v-model="samediMatin" placeholder="9h-12h">
         </div>
         <div class="row">
-          <label for="samediAprem">Saisir les horaires du samedi après-midi : </label>
+          <label for="samediAprem">Samedi après-midi : </label>
           <input v-model="samediAprem" placeholder="13h-17h">
         </div>
         <div class="row">
-          <label for="dimancheMatin">Saisir les horaires du dimanche matin : </label>
+          <label for="dimancheMatin">Dimanche matin : </label>
           <input v-model="dimancheMatin" placeholder="9h-12h">
         </div>
         <div class="row">
-          <label for="dimancheAprem">Saisir les horaires du dimanche après-midi : </label>
+          <label for="dimancheAprem">Dimanche après-midi : </label>
           <input v-model="dimancheAprem" placeholder="13h-17h">
         </div>
-        
+
         <div class="center">
           <button class="orangeButton" type="submit">Ajouter</button>
         </div>
@@ -175,13 +173,13 @@ export default {
           centre: this.centre,
           jourshoraires: this.jourshoraires
         });
-        
+
         //on met a jour le centre associe
         await strapi.updateEntry("centres", this.centre.id, {
           service: this.service,
           centreInfos: this.centre
         });
-        
+
         alert("Le service a bien été enregistré.");
         this.$router.push("/");
       } catch (err) {

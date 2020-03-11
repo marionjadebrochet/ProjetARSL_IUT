@@ -8,7 +8,9 @@
               <img class="icon" src="~/assets/icon/dining-room.png">
               <router-link class="orangeBorderButton" tag="a" to="/services/manger" exact>Où manger ?</router-link>
             </div>
-            <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla </p>
+            <p class="justify"> Vous êtes à la recherche d'un endroit où manger, trouver un petit déjeuner ou une collation ?
+              <br>
+              Cliquez ici pour trouver le centre le plus proche de vous </p>
           </div>
           <div>
             <img class="service-manger" src="~/assets/image/Ou_manger.jpg">
@@ -20,7 +22,8 @@
               <img class="icon" src="~/assets/icon/douche.png">
               <router-link class="orangeBorderButton" tag="a" to="/services/laver" exact>Où se laver ?</router-link>
             </div>
-            <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Blanvh jbvehir nvhfebnv hezbrvhj dnvjkre bnvzvhrz  fzeh hzhg hf ipap fp ap pih aeiph pih fhd phiefa hfa ha pa h </p>
+            <p class="justify"> Vous cherchez un endroit pour vous doucher ? <br>
+              Cliquez ici pour trouver le centre le plus proche de vous </p>
           </div>
           <div>
             <img class="service-laver" src="~/assets/image/Ou_se_laver.jpg">
@@ -34,7 +37,10 @@
               <img class="icon" src="~/assets/icon/dormir.png">
               <router-link class="orangeBorderButton" tag="a" to="/services/dormir" exact>Où dormir ?</router-link>
             </div>
-            <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla </p>
+            <p class="justify"> Vous avez besoin d'un lieu pour dormir pendant une nuit ?
+              <br>
+              Cliquez ici pour trouver le centre le plus proche de vous
+            </p>
           </div>
           <div>
             <img class="service-dormir" src="~/assets/image/Ou_dormir.jpg">
@@ -46,7 +52,10 @@
               <img class="icon" src="~/assets/icon/vetements.png">
               <router-link class="orangeBorderButton" tag="a" to="/services/vestiaire" exact>Où se changer ?</router-link>
             </div>
-            <p class="justify"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla </p>
+            <p class="justify"> Vous avez besoin de nouveaux vêtements ?
+              <br>
+              Cliquez ici pour trouver le centre le plus proche de vous
+            </p>
           </div>
           <div>
             <img class="service-vestiaire" src="~/assets/image/Se_changer.jpg">

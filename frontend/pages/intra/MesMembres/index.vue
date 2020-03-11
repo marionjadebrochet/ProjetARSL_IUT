@@ -4,14 +4,10 @@
       <h3 style="padding-top:20px;"> Mes Utilisateurs </h3><br>
       <div class="center">
         <div style="width:50%;" v-for="user in association.users" v-bind:key="association.users.id">
-          <div class="cart">
+          <div class="cadre" style="margin-top: 30px">
             <div class="row">
               <h3>Nom : </h3>
               <p>{{user.Nom}}</p>
-            </div>
-            <div class="row">
-              <h3>Pseudo : </h3>
-              <p>{{user.usernames}}</p>
             </div>
             <div class="row">
               <h3>Prenom : </h3>

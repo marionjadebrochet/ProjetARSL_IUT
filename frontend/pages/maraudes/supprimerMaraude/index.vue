@@ -3,7 +3,7 @@
         <h3>Maraudes terminées</h3>
         <div class="center">
           <div v-for="maraude in this.maraudes" :key="maraude.id">
-              <div style="margin-top:10px;" class="cart" v-show="maraude.fini">
+              <div style="margin-top:10px; text-align: center" class="cadre" v-show="maraude.fini">
                   <p>Date de départ : {{maraude.dateDepart}}</p>
                   <p>Lieu de départ : {{maraude.lieuDepart.adresse}}</p>
                   <p>Lieu d'arrivé : {{maraude.lieuArrive.libelle}}</p>
