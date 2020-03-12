@@ -27,22 +27,22 @@
                     <td>{{lignerapport.nombreAnimaux}}</td>
                     <td>{{lignerapport.typeAnimaux}}</td>
                     <td>{{lignerapport.nationalite}}</td>
-                    
+
                     <td v-if="lignerapport.enceinte">Oui</td>
                     <td v-else>Non</td>
-                    
+
                     <td v-if="lignerapport.problemeSante">Oui</td>
                     <td v-else>Non</td>
-                    
+
                     <td>{{lignerapport.descriptionProblemeSante}}</td>
-                    
+
                     <td v-if="lignerapport.demandeHebergement">Oui</td>
                     <td v-else>Non</td>
                 </tr>
             </tbody>
         </table>
 
-        <button @click="ajouterRapport">Terminer la maraude</button>
+        <button @click="ajouterRapport" class="orangeButton">Terminer la maraude</button>
     </div>
 </template>
 

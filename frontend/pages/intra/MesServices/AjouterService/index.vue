@@ -184,7 +184,8 @@ export default {
         this.$router.push("/");
       } catch (err) {
         this.loading = false;
-        alert(err);
+        this.$router.push("/");
+        //alert(err);
       }
     }
   }

@@ -22,7 +22,7 @@
         <div class="cadre">
           <h3>En prévision</h3>
           <div v-for="maraude in filteredList" v-bind:key="maraude.id">
-              <div class="infomaraude" v-show="maraude.enPrevisions">
+              <div class="infomaraude" v-show="maraude.enPrevisions && getTomorrow < maraude.dateDepart">
                 <div v-if="getDay < maraude.dateDepart">
                   <p><b>Date de départ :</b> {{maraude.dateDepart}}</p>
                   <p><b>Lieu de départ :</b> {{maraude.lieuDepart.libelle}}</p>
@@ -31,7 +31,6 @@
                   <p><b>Heure de Rendez-vous :</b> {{maraude.heureRdv}}</p>
                   <p><b>Lieu d'arrivé : </b>{{maraude.lieuArrive.libelle}}</p>
                   <p><b>Personne en charge : </b> {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
-                  <p>{{getTomorrow}}</p>
                 </div>
               </div>
           </div>
