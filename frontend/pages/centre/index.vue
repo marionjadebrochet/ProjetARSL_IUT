@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <h3> Centres </h3>
+    <h3> Accueils de jour </h3>
     <div class="accueilDeJour">
 
         <div class="listeCentre">

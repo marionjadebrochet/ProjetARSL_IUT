@@ -28,9 +28,6 @@
     "dateDepart": {
       "type": "date"
     },
-    "lignerapports": {
-      "collection": "lignerapport"
-    },
     "fini": {
       "type": "boolean"
     },
@@ -48,6 +45,9 @@
     },
     "lieuArrive": {
       "model": "lieu"
+    },
+    "lignerapports": {
+      "collection": "lignerapport"
     }
   }
 }

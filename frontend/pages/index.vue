@@ -13,15 +13,30 @@
           </div>
         </div>
 
+        <div class="accueilServices">
+          <h2>Les services</h2>
+
+          <div class="space-around">
+            <router-link tag="a" to="/services/manger" exact><img src="~/assets/icon/dining-room.png" alt="Logo manger" class="rond"></router-link>
+            <router-link tag="a" to="/services/laver" exact><img src="~/assets/icon/douche.png" alt="Logo douche" class="rond"></router-link>
+            <router-link tag="a" to="/services/dormir" exact><img src="~/assets/icon/dormir.png" alt="Logo dormir" class="rond"></router-link>
+            <router-link tag="a" to="/services/vestiaire" exact><img src="~/assets/icon/vetements.png" alt="Logo vetements" class="rond"></router-link>
+          </div>
+
+        </div>
+
         <div class="accueilDeJour">
 
-          <h2>Les centres de Limoges</h2>
+          <h2>Les accueils de jour sur Limoges</h2>
 
           <div class="listeCentre space-around">
-            <div class="centreAccueil" v-for="centre in filteredList" v-bind:key="centre.id">
+            <div class="centreAccueil" v-for="centre in filteredList" v-bind:key="centre">
               <div style="width:100%">
                   <div>
                     <h4>{{centre.association.nom}}</h4>
+                    <div class="center">
+                      <img :src="'http://localhost:1337/' + centre.association.logo.url" class="logoAssociation" style="margin: 10px">
+                    </div>
                     <div class="trait"></div>
                     <p>{{centre.lieu.adresse}}</p>
                     <div v-if="getDay == 1">
@@ -56,7 +71,7 @@
               </div>
             </div>
           </div>
-          <h2>Trouvez les centres près de vous</h2>
+          <h2>Trouvez les accueils de jour près de vous</h2>
           <div class="map">
               <div id="map-wrap" style="height: 600px; ">
                  <l-map :zoom=12 :center="[45.835425,1.2644847]">

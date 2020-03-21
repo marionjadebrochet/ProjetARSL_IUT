@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2> Les associations </h2>
+    <h2> Les organismes </h2>
     <div class="listeAssociation">
         <div class="cadre association" v-for="association in filteredList" v-bind:key="association">
             <h3>{{association.nom}}</h3>

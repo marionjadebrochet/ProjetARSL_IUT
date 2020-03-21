@@ -14,40 +14,43 @@
     "comment": ""
   },
   "attributes": {
-    "pseudo": {
+    "situation": {
       "type": "string"
     },
-    "lieuRencontre": {
-      "type": "string"
-    },
-    "nombrePersonneFamille": {
+    "age": {
       "type": "integer"
     },
-    "nomFamille": {
-      "type": "string"
-    },
-    "nombreAnimaux": {
+    "nombreHomme": {
       "type": "integer"
     },
-    "typeAnimaux": {
-      "type": "string"
+    "nombreFemme": {
+      "type": "integer"
     },
-    "nationalite": {
+    "nombreEnfant": {
+      "type": "integer"
+    },
+    "animaux": {
+      "type": "boolean"
+    },
+    "comAnimaux": {
       "type": "string"
     },
     "enceinte": {
       "type": "boolean"
     },
-    "problemeSante": {
+    "pbSante": {
       "type": "boolean"
     },
-    "descriptionProblemeSante": {
-      "type": "string"
-    },
-    "situation": {
-      "type": "string"
+    "secours": {
+      "type": "boolean"
     },
     "demandeHebergement": {
+      "type": "boolean"
+    },
+    "logementactuel": {
+      "type": "string"
+    },
+    "appel": {
       "type": "boolean"
     }
   }
