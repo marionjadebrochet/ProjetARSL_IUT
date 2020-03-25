@@ -6,18 +6,18 @@
       <fieldset>
         <div class="row">
           <label for="nom">Nom de la maraude</label>
-          <input type="text" v-model="nom">
+          <input type="text" v-model="nom" required>
         </div>
 
         <div class="row">
           <label for="lieuDepart">Lieu de départ : </label>
-          <select v-model="lieuDepart">
+          <select v-model="lieuDepart" required>
             <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
           </select>
         </div>
         <div class="row">
           <label for="heureDepart">Heure de départ :</label>
-          <input type="text" v-model="heureDepart">
+          <input type="time" v-model="heureDepart" required>
         </div>
 
 
@@ -28,19 +28,19 @@
 
         <div class="row">
           <label for="lieuRdv">Point de rendez-vous : </label>
-          <select v-model="lieuRdv">
+          <select v-model="lieuRdv" required>
             <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
           </select>
         </div>
         <div class="row">
           <label for="heureRdv">Heure au rendez-vous : </label>
-          <input type="text" v-model="heureRdv">
+          <input type="time" v-model="heureRdv" required>
         </div>
 
 
         <div class="row">
           <label for="lieuArrive">Lieu d'arrivé : </label>
-          <select v-model="lieuArrive">
+          <select v-model="lieuArrive" required>
             <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
           </select>
         </div>

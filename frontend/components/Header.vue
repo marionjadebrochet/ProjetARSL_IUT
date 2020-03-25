@@ -13,7 +13,7 @@
               <li v-if="!username">Langue</li>
               <li><div v-if="!username" id="google_translate_element"></div></li>
               <li v-on:click="uncheck"><router-link tag="a" to="/" exact>Accueil</router-link></li>
-              <li v-if="!username" v-on:click="uncheck"><router-link tag="a" to="/association" exact>Associations</router-link></li>
+              <li v-if="!username" v-on:click="uncheck"><router-link tag="a" to="/association" exact>Organismes</router-link></li>
               <li v-if="!username" v-on:click="uncheck"><router-link tag="a" to="/maraudes" exact>Maraudes</router-link></li>
               <li v-if="!username" v-on:click="uncheck"><router-link tag="a" to="/services" exact>Services</router-link></li>
               <div v-if="username" class="deco">
