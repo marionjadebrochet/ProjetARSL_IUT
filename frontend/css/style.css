@@ -408,7 +408,10 @@
     width: auto;
     max-height: 120px;
     padding: 10px;
+  }
 
+  .display-none {
+    display: none;
   }
 
 @media screen and (min-width: 786px) {

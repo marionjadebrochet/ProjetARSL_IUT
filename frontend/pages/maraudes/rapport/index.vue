@@ -5,7 +5,7 @@
       <fieldset class="rapportMaraude">
         <div class="row">
           <label for="situation">Situation familiale : </label>
-          <select name="situation" id="situation" v-model="situation" required>
+          <select id="situation" v-model="situation" required>
             <option value="Homme isolé" selected>Homme isolé</option>
             <option value="Homme avec enfants(s)">Homme avec enfants(s</option>
             <option value="Femme isolée">Femme isolée</option>
@@ -22,48 +22,48 @@
         </div>
 
         <div class="row">
-          <label for="nombreHomme ">Nombre d'homme : </label>
-          <input type="number" id="nombreHomme " name="nombreHomme"  v-model="nombreHomme" required>
+          <label for="nombreHomme">Nombre d'homme : </label>
+          <input type="number" id="nombreHomme"  v-model="nombreHomme" required>
         </div>
 
         <div class="row">
           <label for="nombreFemme">Nombre de femme : </label>
-          <input type="number" id="nombreFemme" name="nombreFemme" v-model="nombreFemme" required>
+          <input type="number" id="nombreFemme" v-model="nombreFemme" required>
         </div>
 
         <div class="row">
           <label for="nombreEnfant">Nombre d'enfant : </label>
-          <input type="number" id="nombreEnfant" name="nombreEnfant" v-model="nombreEnfant" required>
+          <input type="number" id="nombreEnfant"  v-model="nombreEnfant" required>
         </div>
 
         <div class="row">
           <label for="enceinte">Femme enceinte ?</label>
-          <input type="checkbox" id="enceinte" name="enceinte" v-model="enceinte">
+          <input type="checkbox" id="enceinte" v-model="enceinte">
         </div>
 
         <div class="row">
           <label for="animaux">Présence d'animaux</label>
-          <input type="checkbox" id="animaux" name="animaux" v-model="animaux">
+          <input type="checkbox" id="animaux" v-model="animaux" v-on:click="check('commentaire')">
         </div>
 
-        <div class="row">
+        <div class="row display-none" id="commentaire">
           <label for="comAnimaux">Commentaires sur les animaux </label>
-          <input type="text" id="comAnimaux" name="comAnimaux" v-model="comAnimaux">
+          <input type="text" id="comAnimaux" v-model="comAnimaux">
         </div>
 
         <div class="row">
           <label for="pbSante">Problème de santé : </label>
-          <input type="checkbox" name="pbSante" id="pbSante" v-model="pbSante">
+          <input type="checkbox"  id="pbSante" v-model="pbSante" v-on:click="check('probleme')">
         </div>
 
-        <div class="row">
+        <div class="row display-none" id="probleme">
           <label for="secours">Intervention des secours : </label>
-          <input type="checkbox" name="secours" id="secours" v-model="secours">
+          <input type="checkbox" id="secours" v-model="secours">
         </div>
 
         <div class="row">
           <label for="logementactuel">Logement actuel</label>
-          <select name="logementactuel" id="logementactuel" v-model="logementactuel" required>
+          <select id="logementactuel" v-model="logementactuel" required>
             <option value="rue" selected>Rue</option>
             <option value="squat">Squat</option>
             <option value="lieu de culte">Lieu de culte</option>
@@ -76,12 +76,12 @@
 
         <div class="row">
           <label for="demandeHebergement">Veut-elle faire une demande d'hébergement ? </label>
-          <input type="checkbox" name="demandeHebergement" id="demandeHebergement" v-model="demandeHebergement">
+          <input type="checkbox"  id="demandeHebergement" v-model="demandeHebergement" v-on:click="check('115')">
         </div>
 
-        <div class="row">
+        <div class="row display-none" id="115">
           <label for="appel">115 appelé ?</label>
-          <input type="checkbox" name="appel" id="appel" v-model="appel">
+          <input type="checkbox" id="appel" v-model="appel">
         </div>
 
         <input type="submit" value="Ajouter" class="orangeButton">
@@ -112,13 +112,6 @@
         secours: false,
         appel:false,
         animaux:false,
-        nombreHomme: '',
-        nombreFemme: 0,
-        nombreEnfant:0,
-        age:0,
-        comAnimaux: '',
-        logementactuel: '',
-        situation: '',
       }
     },
 
@@ -127,6 +120,11 @@
     },
 
     methods: {
+      check: function(id) {
+          var element = document.getElementById(id);
+          element.style.display = "flex";
+      },
+
       async ajouterLigneRapport() {
         try {
           this.lignerapport = await strapi.createEntry("lignerapports", {
@@ -143,10 +141,12 @@
             demandeHebergement: this.demandeHebergement,
             logementactuel: this.logementactuel,
             appel: this.appel
-          });
+          })
+
           console.log(this.lignerapport);
           this.$store.commit('rapport/ajouterLigne', this.lignerapport);
           this.$router.push('/maraudes/rapport');
+          location.reload();
         } catch (error) {
           alert(error)
         }

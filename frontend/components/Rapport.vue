@@ -67,15 +67,14 @@
         idMaraude: this.$store.getters["rapport/idMaraude"]
       }
     },
-
     methods: {
       async ajouterRapport() {
+        console.log(this.lignerapports);
         try {
           //on ajoute le rapport a la maraude
           await strapi.updateEntry('maraudes', this.idMaraude, {
             lignerapportsInfos: this.lignerapports
           });
-
           //et l'on remet a zero les cookies
           this.$store.commit('rapport/resetRapport');
           this.$store.commit('rapport/resetMaraude');
