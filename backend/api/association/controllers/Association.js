@@ -10,45 +10,26 @@ module.exports = {
         const {
           nom,
           description,
-          //logo,
-          adresse,
-          email,
+          // logo,
+          Adresse,
+          Email,
           telephone
         } = ctx.request.body;
 
         try {
             const association = await strapi.services.association.create({
-                user: ctx.state.user.id,
+                // user: ctx.state.user.id,
                 nom,
                 description,
-                //logo,
-                adresse,
-                email,
+                // logo,
+                Adresse,
+                Email,
                 telephone
             });
 
             return association;
         } catch (error) {
             alert('erreur depuis apiControlleurAssociation')
-        }
-    },
-
-    update: async ctx => {
-        const {
-            centre,
-            associationInfos
-        } = ctx.request.body;
-
-        try {
-            const associaton = await strapi.query('associaton').update(
-            {id: ctx.params.id},
-            {
-                centres: [associationInfos.centres.id, centre.id]
-            });
-
-            return centre;
-        } catch (error) {
-            //silent
         }
     }
 };

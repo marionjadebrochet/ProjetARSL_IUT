@@ -14,10 +14,11 @@
           <input type="text" v-model="description" />
         </div>
 
-        <!-- <div class="row">
+        <div class="row">
           <label for="logo">Logo :</label>
-          <input type="file" v-model="logo"/>
-        </div> -->
+          <input type="file" id="file" ref="myFiles"
+    @change="previewFiles" multiple>
+        </div>
 
         <div class="row">
           <label for="adresse">Adresse :</label>
@@ -51,9 +52,10 @@ import strapi from "~/utils/Strapi";
 export default {
   data() {
     return {
+      files: [],
       nom: '',
       description: '',
-      //logo: Object,
+      logo: Object,
       adresse: '',
       email: '',
       telephone: '',
@@ -63,18 +65,23 @@ export default {
   },
 
   methods: {
-    //ajoute une maraude qui démarre immédiatement
+    previewFiles() {
+    this.files = this.$refs.myFiles.files;
+    console.log(this.files);
+  },
     async ajouterAsso() {
       this.loading = true;
       try {
+        console.log(this.$refs);
         await strapi.createEntry("associations", {
           nom: this.nom,
           description: this.description,
-          //logo: this.logo,
-          adresse: this.adresse,
-          email: this.email,
+          logo: this.files[0],
+          Adresse: this.adresse,
+          Email: this.email,
           telephone: this.telephone
         });
+        console.log("aaaaaaaaaa");
         alert(
           "L'association a bien été ajoutée"
         );
