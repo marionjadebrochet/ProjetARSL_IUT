@@ -141,10 +141,13 @@
             demandeHebergement: this.demandeHebergement,
             logementactuel: this.logementactuel,
             appel: this.appel
-          })
+          });
 
+          //ajout de la ligne ajouté dans notre cookie, pour pouvoir l'afficher ensuite dans le tableau
           console.log(this.lignerapport);
           this.$store.commit('rapport/ajouterLigne', this.lignerapport);
+          
+          //on refresh la page
           this.$router.push('/maraudes/rapport');
           location.reload();
         } catch (error) {

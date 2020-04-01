@@ -8,34 +8,36 @@
 module.exports = {
     create: async ctx => {
         const {
-            pseudo,
-            nom,
-            lieuRencontre,
-            nombrePersonneFamille,
-            nombreAnimaux,
-            typeAnimaux,
-            nationalite,
+            situation,
+            age,
+            nombreHomme,
+            nombreFemme,
+            nombreEnfant,
+            animaux,
+            comAnimaux,
             enceinte,
-            problemeSante,
-            descriptionProblemeSante,
+            pbSante,
+            secours,
             demandeHebergement,
-            situation
+            logementactuel,
+            appel
         } = ctx.request.body;
 
         try {
             const lignerapport = await strapi.services.lignerapport.create({
-                pseudo,
-                nom,
-                lieuRencontre,
-                nombrePersonneFamille,
-                nombreAnimaux,
-                typeAnimaux,
-                nationalite,
+                situation,
+                age,
+                nombreHomme,
+                nombreFemme,
+                nombreEnfant,
+                animaux,
+                comAnimaux,
                 enceinte,
-                problemeSante,
-                descriptionProblemeSante,
+                pbSante,
+                secours,
                 demandeHebergement,
-                situation
+                logementactuel,
+                appel
             });
 
             return lignerapport;
