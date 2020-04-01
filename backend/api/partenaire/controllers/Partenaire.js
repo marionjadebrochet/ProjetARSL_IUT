@@ -5,4 +5,29 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+    create: async ctx => {
+        const {
+            nom,
+            telephone,
+            email,
+            logo,
+            association
+        } = ctx.request.body;
+
+        // Register the service in the database
+        try {
+            const partenaire = await strapi.services.partenaire.create({
+              nom,
+              telephone,
+              email,
+              logo,
+              association
+            });
+
+            return partenaire;
+        } catch (err) {
+            // Silent
+        }
+    },
+};

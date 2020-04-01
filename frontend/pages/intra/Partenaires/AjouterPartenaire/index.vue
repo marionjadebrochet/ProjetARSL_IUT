@@ -13,7 +13,7 @@
         </div>
         <div class="row">
           <label> Email du partenaire :</label>
-          <input type="mail" v-model="mail">
+          <input type="mail" v-model="email">
         </div>
         <div class="row">
           <label>Logo du partenaire :</label>
@@ -28,11 +28,65 @@
 </template>
 
 <script>
-export default {
-    methods: {
-        ajouterPartenaire() {
+  import strapi from "~/utils/Strapi";
+  import associationQuery from '~/apollo/queries/association/association'
 
+  export default {
+    data() {
+      return {
+        association: Object,
+        nom: '',
+        telephone: '',
+        email: '',
+        //logo: Object,
+        query: '',
+        loading: false
+      };
+    },
+
+    apollo: {
+      association: {
+        prefetch: true,
+        query: associationQuery,
+        variables () {
+          return { id: this.associationUser.id }
         }
+      }
+    },
+
+    computed: {
+      associationUser() {
+        return this.$store.getters["auth/association"];
+      }
+    },
+
+    methods: {
+      async ajouterPartenaire() {
+        this.loading = true;
+        try {
+          //on ajoute le partenaire dans la bd
+          this.partenaire = await strapi.createEntry("partenaires", {
+            nom: this.nom,
+            telephone: this.telephone,
+            email: this.email,
+            logo: NULL,
+            association: this.association
+          });
+
+          //on met a jour le centre associe
+          // await strapi.updateEntry("centres", this.centre.id, {
+          //   service: this.service,
+          //   centreInfos: this.centre
+          // });
+
+          alert("Le partenaire a bien été enregistré.");
+          this.$router.push("/");
+        } catch (err) {
+          this.loading = false;
+          this.$router.push("/");
+          //alert(err);
+        }
+      }
     }
-}
+  };
 </script>
