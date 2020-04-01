@@ -14,7 +14,8 @@ module.exports = {
           publicConcerne,
           animaux,
           tel,
-          associaton
+          association,
+          lieu
       } = ctx.request.body;
 
       try {
@@ -25,12 +26,13 @@ module.exports = {
             association,
             publicConcerne,
             animaux,
-            tel
+            tel,
+            lieu
           });
 
           return centre;
       } catch (error) {
-          alert('erreur depuis apiControlleurCentre')
+          alert('erreur depuis apiControlleurCentre');
       }
   },
 

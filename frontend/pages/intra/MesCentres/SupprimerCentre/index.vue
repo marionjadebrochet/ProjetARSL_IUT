@@ -2,61 +2,26 @@
   <div>
     <client-only>
 
-      <h3 style="padding-top:20px;"> Suppression de centres existants </h3>
+      <h3 style="padding-top:20px;"> Mes centres </h3>
       <div class="mesCentres cadre">
         <div>
           <h2>{{association.nom}}</h2>
           <img :src="'http://localhost:1337/' + associationUser.logo.url">
         </div>
-        <div v-for="centre in association.centres" v-bind:key="association.centres.id" >
-          <h3>Adresse : </h3>
-          <p>{{centre.lieu.adresse}}</p>
-          <h3>Horaires d'ouverture :</h3>
-          <table>
-            <tr>
-              <th>Jour</th>
-              <th>Matin</th>
-              <th>Après-midi</th>
-            </tr>
-            <tr>
-              <td>Lundi </td>
-              <td>{{centre.jourshoraires.lundiMatin}} </td>
-              <td>{{centre.jourshoraires.lundiApresMidi}}</td>
-            </tr>
-            <tr>
-              <td>Mardi </td>
-              <td>{{centre.jourshoraires.mardiMatin}} </td>
-              <td>{{centre.jourshoraires.mardinApresMidi}}</td>
-            </tr>
-            <tr>
-              <td>Mercredi </td>
-              <td>{{centre.jourshoraires.mercrediMatin}} </td>
-              <td>{{centre.jourshoraires.mercrediApresMidi}}</td>
-            </tr>
-            <tr>
-              <td>Jeudi </td>
-              <td>{{centre.jourshoraires.jeudiMatin}} </td>
-              <td>{{centre.jourshoraires.jeudiApresMidi}}</td>
-            </tr>
-            <tr>
-              <td>Vendredi </td>
-              <td>{{centre.jourshoraires.vendrediMatin}} </td>
-              <td>{{centre.jourshoraires.vendrediApresMidi}}</td>
-            </tr>
-            <tr>
-              <td>Samedi </td>
-              <td>{{centre.jourshoraires.samediMatin}} </td>
-              <td>{{centre.jourshoraires.samediApresMidi}}</td>
-            </tr>
-            <tr>
-              <td>Dimanche </td>
-              <td>{{centre.jourshoraires.dimancheMatin}} </td>
-              <td>{{centre.jourshoraires.dimancheApresMidi}}</td>
-            </tr>
-          </table>
-          <div class="center">
-            <button class="orangeButton" @onclique="SupprimerCentre">Supprimer</button>
-          </div>
+          <div class="cart">
+            <form @submit.stop.prevent="supprimerCentre">
+              <fieldset>
+                <div class="row">
+                  <label>Séléctionner le centre à supprimer :</label>
+                  <select required v-model="centre">
+                    <option v-for="centre in association.centres" :key="centre.id" :value="centre.id">{{centre.libelle}}</option>
+                  </select>
+                </div>
+                <div class="center">
+                  <button class="orangeButton" type="submit">Supprimer</button>
+                </div>
+              </fieldset>
+            </form>
         </div>
       </div>
     </client-only>
@@ -65,6 +30,7 @@
 </template>
 
 <script>
+import strapi from "~/utils/Strapi";
 import associationQuery from '~/apollo/queries/association/association'
 
 export default {
@@ -90,12 +56,26 @@ export default {
       }
     }
   },
-  methods:{
-    supprimerCentre() {
-      //return ....
+  methods: {
+    async supprimerCentre() {
+      this.loading = true;
+      try {
+        console.log(this.centre);
+        await strapi.deleteEntry("centres", this.centre);
+
+        alert("Le centre a bien été supprimé.");
+        this.$router.push("/");
+      } catch (err) {
+        this.loading = false;
+        this.$router.push("/");
+        //alert(err);
+      }
     }
   }
 }
-
-
 </script>
+
+<style>
+
+
+</style>

@@ -28,6 +28,12 @@
               <label>public concerné par le centre :</label>
               <input type="text" v-model="publicConcerne">
             </div>
+            <div class="row">
+              <label for="lieu">Adresse du centre : </label>
+              <select v-model="lieu" required>
+                <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
+              </select>
+            </div>
 
             <h3>Horaires du centre</h3>
 
@@ -102,8 +108,7 @@
 
 <script>
   import strapi from "~/utils/Strapi";
-  import associationQuery from '~/apollo/queries/association/association'
-  //lieu
+  import lieusQuery from '~/apollo/queries/lieu/lieus';
 
   export default {
     data() {
@@ -111,6 +116,7 @@
         association: Object,
         centre: Object,
         jourshoraires: Object,
+        lieus: [],
         query: '',
         nomJours: '',
         lundiMatin: '',
@@ -134,15 +140,17 @@
     computed: {
       associationUser() {
         return this.$store.getters["auth/association"];
-      }
+      },
+      listeLieus() {
+        return this.lieus.filter(lieu => {
+          return lieu.libelle.toLowerCase().includes(this.query.toLowerCase())
+        })
+      },
     },
     apollo: {
-      association: {
+      lieus: {
         prefetch: true,
-        query: associationQuery,
-        variables () {
-          return { id: this.associationUser.id }
-        }
+        query: lieusQuery
       }
     },
     methods: {
@@ -171,23 +179,18 @@
           });
 
           //on ajoute le service dans la db
-          
+
           this.centre = await strapi.createEntry("centres", {
             libelle: this.libelle,
             adresse: this.adresse,
             tel: this.tel,
-            association: this.association,
+            association: this.associationUser.id,
             //animaux: ??
             animaux: false,
             publicConcerne: this.publicConcerne,
             jourshoraires: this.jourshoraires,
-            //leu:
+            lieu: this.lieu.id,
           });
-
-          // await strapi.updateEntry("associations", this.association.id, {
-          //   centre: this.centre,
-          //   associationInfos: this.association
-          // });
 
           alert("Le centre a bien été enregistré.");
           this.$router.push("/");
