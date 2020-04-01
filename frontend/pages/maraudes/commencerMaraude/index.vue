@@ -17,14 +17,8 @@
         </div>
         <div class="row">
           <label for="heureDepart">Heure de départ :</label>
-          <input type="time" v-model="heureDepart" required>
+          <input type="text" v-model="heureDepart" required>
         </div>
-
-
-        <!-- a remettre si besoin
-        <label for="heureArrive">Heure d'arrivée prévue : </label>
-        <input type="text" v-model="heureArrive">
-        -->
 
         <div class="row">
           <label for="lieuRdv">Point de rendez-vous : </label>
@@ -34,7 +28,7 @@
         </div>
         <div class="row">
           <label for="heureRdv">Heure au rendez-vous : </label>
-          <input type="time" v-model="heureRdv" required>
+          <input type="text" v-model="heureRdv" required>
         </div>
 
 
@@ -65,7 +59,6 @@ export default {
       query: '',
       heureDepart: '',
       heureRdv: '',
-      //heureArrive: '',
       nom: '',
       lieuDepart: Object,
       lieuRdv: Object,
@@ -98,7 +91,6 @@ export default {
           nom: this.nom,
           heureDepart: this.heureDepart,
           heureRdv: this.heureRdv,
-          //heureArrive: this.heureArrive,
           lieuDepart: this.lieuDepart,
           lieuArrive: this.lieuArrive,
           lieuRdv: this.lieuRdv,

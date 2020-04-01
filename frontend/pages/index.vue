@@ -1,5 +1,7 @@
 <template>
   <body>
+
+      <!--PARTIE PUBLIC QUAND NON CONNECTE-->
       <div v-if="!username">
         <div class="row" style="margin-bottom:50px;">
           <div class="explication">
@@ -91,7 +93,7 @@
 
 
 
-
+      <!--PARTIE GESTION POUR LES UTILISATEURS-->
       <div v-else>
         <h2>Bienvenue sur la partie gestion de votre application</h2>
         <div class="listeAction">

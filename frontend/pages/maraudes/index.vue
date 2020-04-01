@@ -15,7 +15,6 @@
                     <p><b>Lieu d'arrivé : </b>{{maraude.lieuArrive.libelle}}</p>
                     <p><b>Personne en charge : </b> {{maraude.user.Nom}}  {{maraude.user.Prenom}}</p>
                   </div>
-
               </div>
           </div>
         </div>
