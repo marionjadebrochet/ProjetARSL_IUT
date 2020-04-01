@@ -13,7 +13,8 @@ module.exports = {
           jourshoraires,
           publicConcerne,
           animaux,
-          tel
+          tel,
+          associaton
       } = ctx.request.body;
 
       try {
@@ -21,7 +22,7 @@ module.exports = {
             libelle,
             adresse,
             jourshoraires,
-            association: ctx.state.user.associaton,
+            association,
             publicConcerne,
             animaux,
             tel
@@ -50,5 +51,14 @@ module.exports = {
         } catch (error) {
             //silent
         }
+    },
+
+    delete: async ctx => {
+      try {
+          const centre = await strapi.query('centre').delete(
+          {id: ctx.params.id});
+      } catch (error) {
+          //silent
+      }
     }
 };

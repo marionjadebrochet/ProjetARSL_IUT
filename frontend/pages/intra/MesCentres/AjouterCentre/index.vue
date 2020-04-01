@@ -171,11 +171,12 @@
           });
 
           //on ajoute le service dans la db
+          
           this.centre = await strapi.createEntry("centres", {
             libelle: this.libelle,
             adresse: this.adresse,
             tel: this.tel,
-            //association: this.association,
+            association: this.association,
             //animaux: ??
             animaux: false,
             publicConcerne: this.publicConcerne,
@@ -183,10 +184,10 @@
             //leu:
           });
 
-          await strapi.updateEntry("associations", this.association.id, {
-            centre: this.centre,
-            associationInfos: this.association
-          });
+          // await strapi.updateEntry("associations", this.association.id, {
+          //   centre: this.centre,
+          //   associationInfos: this.association
+          // });
 
           alert("Le centre a bien été enregistré.");
           this.$router.push("/");
