@@ -11,7 +11,7 @@ module.exports = {
             nom,
             telephone,
             email,
-            logo,
+            // logo,
             association
         } = ctx.request.body;
 
@@ -21,7 +21,7 @@ module.exports = {
               nom,
               telephone,
               email,
-              logo,
+              // logo,
               association
             });
 
