@@ -20,9 +20,6 @@
     "tel": {
       "type": "string"
     },
-    "adresse": {
-      "type": "string"
-    },
     "Animaux": {
       "type": "boolean"
     },
@@ -35,12 +32,6 @@
     "association": {
       "model": "association",
       "via": "centres"
-    },
-    "latitude": {
-      "type": "string"
-    },
-    "longitude": {
-      "type": "string"
     },
     "services": {
       "collection": "service",

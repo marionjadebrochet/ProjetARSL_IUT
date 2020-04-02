@@ -5,9 +5,9 @@
       <h3>Déclencher/Désactiver une alerte</h3>
     </div>
     <div class="mesAlertes text-center">
-      <button class="orangeButton" @click="declencherCanicule">Alerte Canicule</button>
+      <button class="orangeButton" @click="changerEtatCanicule">Alerte Canicule</button>
       <button class="orangeButton" @click="changerEtatGrandFroid">Alerte Grand Froid</button>
-      <button class="orangeButton" @click="declencherEpidemie">Alerte Epidémie</button>
+      <button class="orangeButton" @click="changerEtatEpidemie">Alerte Epidémie</button>
     </div>
   </div>
 </template>
@@ -65,7 +65,7 @@ export default {
       }
     },
     
-    async declencherCanicule() {
+    async changerEtatCanicule() {
       try {
         //etablissement de l'etat
         this.etatActuel();
@@ -85,7 +85,7 @@ export default {
       }
     },
 
-    async declencherEpidemie() {
+    async changerEtatEpidemie() {
       try {
         //etablissement de l'etat
         this.etatActuel();

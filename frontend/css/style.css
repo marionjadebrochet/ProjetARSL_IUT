@@ -21,7 +21,7 @@
     z-index: 20;
   }
   header .logo {
-    margin-left: 50px;
+    margin-left: 10px;
     width: 100px;
     height:auto;
   }
@@ -86,7 +86,7 @@
   }
 
   p {
-    font-size:18px;
+    font-size:16px;
   }
 
   select {
@@ -97,7 +97,6 @@
     padding: 10px 20px;
     font-size: 24px;
     font-weight: 300;
-    font-size: 28px;
   }
 
   .call {
@@ -234,6 +233,7 @@
     height:auto;
   }
   .orangeBorderButton {
+    font-size: 16px;
     color:#E95133;
     text-transform: uppercase;
     background: #F7F7CE;
@@ -307,13 +307,21 @@
     justify-content: space-around;
     align-items:center;
   }
+
+  .bandeau-blanc p {
+    font-size:14px;
+    text-align: center;
+    width: 33%;
+  }
+
+
   .orangeButton {
     background-color: #E95133;
     padding:20px 20px;
     color:white;
     text-transform: uppercase;
     font-weight: 300;
-    font-size:24px;
+    font-size:16px;
     border:2px solid #f54522;
     transition:0.5s;
   }
@@ -326,6 +334,7 @@
 
   .explication {
     padding:20px 20px 30px 20px ;
+    text-align: center;
   }
   .explication img {
     width:100%;
@@ -418,6 +427,35 @@
     margin: 50px 0px;
     display: grid;
     grid-row-gap: 50px;
+  }
+
+  .alertes {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-row-gap: 100px;
+  }
+
+  .alerte, .alerte .row div {
+    margin-top:20px;
+  }
+
+  .alerte img {
+    width:200px;
+    height: auto;
+  }
+
+  .alerte .row  {
+    display: flex;
+    flex-direction: column;
+  }
+  .imgAccueil {
+    width:300px;
+    height:auto;
+  }
+
+  .mesAlertes button {
+    margin-bottom:50px;
   }
 
 @media screen and (min-width: 786px) {
@@ -534,6 +572,9 @@
       background-color: #F0F0B8;
       transition:0.3s;
     }
+    .orangeButton {
+      font-size:24px;
+    }
     .orangeButton:hover {
       background-color: #f54522;
       transition:0.5s;
@@ -611,10 +652,6 @@
       grid-column-gap: 10%;
     }
 
-    .imgAccueil {
-      width:500px;
-      height:auto;
-    }
 
     select {
       height: 24px;
@@ -639,5 +676,17 @@
 
   td, th {
     font-size: 20px;
+  }
+
+  .orangeBorderButton {
+    font-size: 24px;
+  }
+
+  header .logo {
+    margin-left: 50px;
+  }
+
+  p {
+    font-size:18px;
   }
 }

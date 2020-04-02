@@ -4,11 +4,13 @@ query Services {
     description
     centre{
         id
-        adresse
-        latitude
-        longitude 
         association{
         nom
+        }
+        lieu {
+        adresse
+        longitude
+        latitude
         }
     }
   }
