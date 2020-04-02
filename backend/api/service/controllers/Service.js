@@ -28,4 +28,13 @@ module.exports = {
             // Silent
         }
     },
+
+    delete: async ctx => {
+      try {
+          await strapi.query('service').delete(
+          {id: ctx.params.id});
+      } catch (error) {
+          //silent
+      }
+    }
 };

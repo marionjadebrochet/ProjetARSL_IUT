@@ -6,16 +6,23 @@
         <h2>{{association.nom}}</h2>
         <img :src="'http://localhost:1337/' + associationUser.logo.url">
       </div>
-      <div v-for="centre in association.centres" v-bind:key="association.centres.id">
-        <h4>{{centre.adresse}}</h4>
+      <div v-for="centre in association.centres" v-bind:key="centre.id">
+        <h4>{{centre.libelle}}</h4>
+        <h4>{{centre.lieu.adresse}}</h4>
         <div class="services">
-          <div class="cadre text-center" v-for="service in centre.services" v-bind:key="centre.services.id">
-            <h4>Nom : </h4>
-            <p>{{service.nom}}</p>
-            <h4>Description : </h4>
-            <p>{{service.description}}</p>
-            <button class="orangeButton" @onclique="SupprimerService">Supprimer</button>
-          </div>
+          <form @submit.stop.prevent="supprimerService">
+            <fieldset>
+              <div class="row">
+                <label>Séléctionner le service à supprimer :</label>
+                <select required v-model="service">
+                  <option v-for="service in centre.services" :key="service.id" :value="service.id">{{service.nom}} : {{service.description}}</option>
+                </select>
+              </div>
+              <div class="center">
+                <button class="orangeButton" type="submit">Supprimer</button>
+              </div>
+            </fieldset>
+          </form>
         </div>
       </div>
     </client-only>
@@ -24,13 +31,15 @@
 </template>
 
 <script>
-  import associationQuery from '~/apollo/queries/association/association'
+import strapi from "~/utils/Strapi";
+import associationQuery from '~/apollo/queries/association/association'
 
   export default {
     data() {
       return {
         association: Object,
         centres: [],
+        service: '',
         query: '',
       }
     },
@@ -50,8 +59,19 @@
       }
     },
     methods: {
-      supprimerService() {
-        //return ....
+      async supprimerService() {
+        this.loading = true;
+        try {
+
+          await strapi.deleteEntry("services", this.service);
+
+          alert("Le service a bien été supprimé.");
+          this.$router.push("/");
+        } catch (err) {
+          this.loading = false;
+          this.$router.push("/");
+          //alert(err);
+        }
       }
     }
   }
