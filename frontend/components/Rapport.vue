@@ -5,6 +5,8 @@
       <table id="datatable">
         <thead>
           <tr>
+            <th>Nom/Pseudo</th>
+            <th>Lieu de rencontre</th>
             <th>Situation</th>
             <th>Age</th>
             <th>Nombre d'homme</th>
@@ -24,6 +26,8 @@
 
         <tbody>
           <tr v-for="lignerapport in lignerapports" v-bind:key="lignerapport.id">
+            <td>{{lignerapport.pseudo}}</td>
+            <td>{{lignerapport.lieuRencontre}}</td>
             <td>{{lignerapport.situation}}</td>
             <td>{{lignerapport.age}}</td>
             <td>{{lignerapport.nombreHomme}}</td>

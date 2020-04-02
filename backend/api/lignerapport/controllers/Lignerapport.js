@@ -21,6 +21,8 @@ module.exports = {
             logementactuel,
             appel,
             animaux,
+            pseudo,
+            lieuRencontre
         } = ctx.request.body;
 
         try {
@@ -38,6 +40,8 @@ module.exports = {
                 logementactuel,
                 appel,
                 animaux,
+                pseudo,
+                lieuRencontre
             });
 
             return lignerapport;

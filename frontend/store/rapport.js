@@ -16,10 +16,12 @@ export const mutations = {
 
     setRapport(state, lignerapports) {
         state.lignerapports = lignerapports;
+        Cookies.set('rapport', state.lignerapports);
     },
 
-    setMaraude(state, maraude) {
-        state.maraude = maraude;
+    setMaraude(state, idMaraude) {
+        state.maraude = idMaraude;
+        Cookies.set('maraude', state.idMaraude);
     },
 
     ajouterLigne(state, lignerapport) {
