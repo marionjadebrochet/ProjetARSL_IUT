@@ -13,6 +13,16 @@
     <form @submit.stop.prevent="ajouterLigneRapport">
       <fieldset class="rapportMaraude">
         <div class="row">
+          <label for="pseudo">Nom ou pseudo :</label>
+          <input type="text" v-model="pseudo">
+        </div>
+
+        <div class="row">
+          <label for="lieuRencontre">Lieu de rencontre :</label>
+          <input type="text" v-model="lieuRencontre">
+        </div>
+ 
+        <div class="row">
           <label for="situation">Situation familiale :</label>
           <select id="situation" v-model="situation" required>
             <option value="Homme isolé" selected>Homme isolé</option>
@@ -136,7 +146,9 @@ export default {
       idMaraude: this.$store.getters["rapport/idMaraude"],
       maraude: Object,
       maraudes: [],
-      query: ''
+      query: '',
+      pseudo: '',
+      lieuRencontre: ''
     };
   },
 
@@ -165,7 +177,7 @@ export default {
       try {
         if (this.maraude.lignerapports != null) {
           //on initialise le nouveau cookie et on reload la page
-          this.$store.commit("rapport/initialiserRapport", this.maraude);
+          this.$store.commit("rapport/setRapport", this.maraude.lignerapports);
           window.location.reload(false);
         }
         else {
@@ -236,7 +248,9 @@ export default {
           demandeHebergement: this.demandeHebergementTexte,
           logementactuel: this.logementactuel,
           appel: this.appelTexte,
-          animaux: this.animauxTexte
+          animaux: this.animauxTexte,
+          pseudo: this.pseudo,
+          lieuRencontre: this.lieuRencontre
         });
 
         //ajout de la ligne ajouté dans notre cookie, pour pouvoir l'afficher ensuite dans le tableau

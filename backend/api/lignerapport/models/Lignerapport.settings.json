@@ -52,6 +52,12 @@
     },
     "appel": {
       "type": "string"
+    },
+    "pseudo": {
+      "type": "string"
+    },
+    "lieuRencontre": {
+      "type": "string"
     }
   }
 }

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h2> Centres où se changer </h2>
+    <h2> Accueils de jour où se changer </h2>
     <div v-for="service in filteredList" v-bind:key="service.nom">
       <div class="space-between cadre padding10" v-if="service.nom=='Vestiaire'">
                <h3> {{service.centre.lieu.adresse}} </h3>
-               <router-link class="orangeBorderButton":to="{ name: 'centre-id', params: { id: service.centre.id }}" tag="a" > Plus d'informations </router-link>
+               <router-link class="orangeBorderButton" :to="{ name: 'centre-id', params: { id: service.centre.id }}" tag="a" > Plus d'informations </router-link>
       </div>
     </div>
 
