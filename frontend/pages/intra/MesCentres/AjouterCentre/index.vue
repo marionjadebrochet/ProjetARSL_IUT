@@ -8,21 +8,12 @@
               <input type="text" v-model="libelle">
             </div>
             <div class="row">
-              <label>Adresse du centre :</label>
-              <input type="text" v-model="adresse">
-            </div>
-            <div class="row">
               <label >Téléphone du centre :</label>
               <input type="tel" v-model="tel">
             </div>
             <div class="row">
-              <label> Animaux :</label>
-              <div class="radio">
-                <label>Acceptés</label>
-                <input type="radio" v-model="accepte" name="animaux" checked>
-                <label>Interdits</label>
-      	        <input type="radio" v-model="refuse" name="animaux">
-              </div>
+              <label for="enceinte">Animaux autoriser ?</label>
+              <input type="checkbox" id="animaux" v-model="animaux">
             </div>
             <div class="row">
               <label>public concerné par le centre :</label>
@@ -182,11 +173,9 @@
 
           this.centre = await strapi.createEntry("centres", {
             libelle: this.libelle,
-            adresse: this.adresse,
             tel: this.tel,
             association: this.associationUser.id,
-            //animaux: ??
-            animaux: false,
+            Animaux: this.animaux,
             publicConcerne: this.publicConcerne,
             jourshoraires: this.jourshoraires,
             lieu: this.lieu.id,

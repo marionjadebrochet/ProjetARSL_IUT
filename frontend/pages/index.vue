@@ -119,7 +119,7 @@
       <div class="gestion">
         <div class="align-center">
           <img class="rond" src="~/assets/image/iconsIntra/association.svg" />
-          <h3>Association</h3>
+          <h3>Mon Association</h3>
         </div>
         <div>
           <router-link
@@ -128,6 +128,33 @@
             to="/intra/MonAssociation"
             exact
           >Visualiser</router-link>
+        </div>
+      </div>
+
+      <div class="gestion">
+        <div class="align-center">
+          <img class="rond" src="~/assets/image/iconsIntra/association.svg" />
+          <h3>Association</h3>
+        </div>
+        <div>
+          <router-link
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Associations"
+            exact
+          >Visualiser tout les associations</router-link>
+          <router-link
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Associations/AjouterAsso"
+            exact
+          >Ajouter</router-link>
+          <router-link
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Associations/SupprimerAsso"
+            exact
+          >Supprimer</router-link>
         </div>
       </div>
 
@@ -227,6 +254,28 @@
 
       <div class="gestion">
         <div class="align-center">
+          <img class="rond" src="~/assets/image/iconsIntra/maraudes.svg" />
+          <h3>Lieu</h3>
+        </div>
+        <div>
+          <router-link class="orangeBorderButton" tag="a" to="/intra/Lieu" exact>Visualiser</router-link>
+          <router-link
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Lieu/AjouterLieu"
+            exact
+          >Ajouter</router-link>
+          <router-link
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Lieu/SupprimerLieu"
+            exact
+          >Supprimer</router-link>
+        </div>
+      </div>
+
+      <div class="gestion">
+        <div class="align-center">
           <img class="rond" src="~/assets/image/iconsIntra/membres.svg" />
           <h3>Membres</h3>
         </div>
@@ -242,6 +291,28 @@
             class="orangeBorderButton"
             tag="a"
             to="/intra/MesMembres/SupprimerMembre"
+            exact
+          >Supprimer</router-link>
+        </div>
+      </div>
+
+      <div class="gestion">
+        <div class="align-center">
+          <img class="rond" src="~/assets/image/iconsIntra/membres.svg" />
+          <h3>Utilisateurs</h3>
+        </div>
+        <div>
+          <router-link class="orangeBorderButton" tag="a" to="/intra/Utilisateurs" exact>Visualiser</router-link>
+          <router-link
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Utilisateurs/AjouterUser"
+            exact
+          >Ajouter</router-link>
+          <router-link
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Utilisateurs/SupprimerUser"
             exact
           >Supprimer</router-link>
         </div>

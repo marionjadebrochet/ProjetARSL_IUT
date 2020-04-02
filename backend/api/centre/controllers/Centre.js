@@ -9,10 +9,9 @@ module.exports = {
   create: async ctx => {
       const {
           libelle,
-          adresse,
           jourshoraires,
           publicConcerne,
-          animaux,
+          Animaux,
           tel,
           association,
           lieu
@@ -21,11 +20,10 @@ module.exports = {
       try {
           const centre = await strapi.services.centre.create({
             libelle,
-            adresse,
             jourshoraires,
             association,
             publicConcerne,
-            animaux,
+            Animaux,
             tel,
             lieu
           });
