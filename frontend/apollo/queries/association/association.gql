@@ -54,6 +54,7 @@ query Association($id: ID!) {
         }
    }
   users {
+    id
      username
      email
      Nom

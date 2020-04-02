@@ -5,19 +5,19 @@
             <fieldset>
               <div class="row">
                 <label>Nom :</label>
-    						<input id="name" v-model="nom" type="text" size="30" placeholder="Tapez votre nom" required>
+    						<input  v-model="nom" type="text" size="30"  required>
               </div>
               <div class="row">
                 <label>Prénom :</label>
-  					    <input id="name" v-model="prenom" type="text" size="30" placeholder="Tapez votre prenom" required>
+  					    <input v-model="prenom" type="text" size="30" required>
               </div>
               <div class="row">
                 <label>Pseudo :</label>
-                <input id="name" v-model="pseudo" type="text" size="30" placeholder="Tapez votre pseudo" required>
+                <input v-model="pseudo" type="text" size="30" required>
               </div>
               <div class="row">
                 <label>Votre mot de passe :</label>
-                <input type="password"  v-model="motdepasse" id="pass" placeholder="Tapez votre mot de passe" required/>
+                <input type="password"  v-model="motdepasse" id="pass" required/>
               </div>
               <div class="row">
                 <label>Email :</label>
@@ -30,7 +30,7 @@
               <div class="row">
                 <label>Rôle au sein de l'association :</label>
                 <select required v-model="role">
-                  <option v-for="role in listeRole" :key="role.id" :value="role.id">{{role.nom}}</option>
+                  <option v-for="role in roles" :key="role.id" :value="role.id">{{role.name}}</option>
                 </select>
               </div>
               <div class="center">
@@ -49,55 +49,36 @@
     data() {
       return {
         roles:[],
-        association: Object,
-        nom: '',
-        prenom: '',
-        password: '',
-        username: '',
-        email: '',
-        telephone: '',
-        role: Object,
+        role: '',
         query: '',
-        queryRole: '',
         loading: false
       };
     },
-
     apollo: {
-      association: {
-        prefetch: true,
-        query: associationQuery,
-        variables () {
-          return { id: this.associationUser.id }
-        }
-      },
       roles: {
         prefetch: true,
-        queryRole: roleQuery,
+        query: roleQuery,
       }
     },
     computed: {
-        listeRole() {
-          return this.roles.filter(role => {
-            return role.nom.toLowerCase().includes(this.query.toLowerCase());
-          });
-        }
+        associationUser() {
+          return this.$store.getters["auth/association"];
+        },
       },
 
     methods: {
       async ajouterMembre() {
         this.loading = true;
         try {
-
-          //on ajoute le service dans la db
+          console.log(this.role);
           this.user = await strapi.createEntry("users", {
-            association: this.association,
-            nom: this.nom,
-            prenom: this.prenom,
+            association: this.associationUser.id,
+            Nom: this.nom,
+            Prenom: this.prenom,
             password: this.motdepasse,
             username: this.pseudo,
             email: this.email,
-            telephone: this.telephone,
+            Telephone: this.telephone,
             role: this.role
           });
 

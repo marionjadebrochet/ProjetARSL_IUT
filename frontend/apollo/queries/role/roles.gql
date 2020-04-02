@@ -1,4 +1,4 @@
-query Role {
+query Roles {
   roles {
     id
     name

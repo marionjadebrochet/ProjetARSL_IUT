@@ -20,8 +20,8 @@
 </template>
 
 <script>
-    import strapi from "~/utils/Strapi";
-    import associationQuery from '~/apollo/queries/association/associationPartenaires';
+import strapi from "~/utils/Strapi";
+import associationQuery from '~/apollo/queries/association/associationPartenaires';
 
 export default {
   data() {
@@ -53,7 +53,7 @@ export default {
 
         await strapi.deleteEntry("partenaires", this.partenaire);
 
-        alert("Le partenaire a bien été supprimé.");
+        alert("L'utilisateur a bien été supprimé.");
         this.$router.push("/");
       } catch (err) {
         this.loading = false;
@@ -62,17 +62,6 @@ export default {
       }
     }
   },
-  //   mounted() {
-  //     if (localStorage.getItem('reloaded')) {
-  //         // The page was just reloaded. Clear the value from local storage
-  //         // so that it will reload the next time this page is visited.
-  //         localStorage.removeItem('reloaded');
-  //     } else {
-  //         // Set a flag so that we know not to reload the page twice.
-  //         localStorage.setItem('reloaded', '1');
-  //         location.reload();
-  //     }
-  //   }
 }
 
 </script>

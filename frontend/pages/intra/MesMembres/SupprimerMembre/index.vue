@@ -3,32 +3,20 @@
     <client-only>
       <h3 style="padding-top:20px;"> Mes Utilisateurs </h3><br>
       <div class="center">
-        <div style="width:50%" v-for="user in association.users" v-bind:key="association.users.id">
           <div class="cadre" style="margin-top: 30px">
-            <div class="row">
-              <h3>Nom : </h3>
-              <p>{{user.Nom}}</p>
-            </div>
-            <div class="row">
-              <h3>Prenom : </h3>
-              <p>{{user.Prenom}}</p>
-            </div>
-            <div class="row">
-              <h3>Telephone : </h3>
-              <p>{{user.Telephone}}</p>
-            </div>
-            <div class="row">
-              <h3>Email : </h3>
-              <p>{{user.email}}</p>
-            </div>
-            <div class="row">
-              <h3>Role : </h3>
-              <p>{{user.role.name}}</p>
-            </div>
-            <div class="center">
-              <button class="orangeButton" @onclique="SupprimerCentre">Supprimer</button>
-            </div>
-          </div>
+            <form @submit.stop.prevent="supprimerMembre">
+              <fieldset>
+                <div class="row">
+                  <label>Séléctionner le partenaire à supprimer :</label>
+                  <select required v-model="user">
+                    <option v-for="user in association.users" :key="user.id" :value="user.id">{{user.username}} : {{user.Prenom}} {{user.Nom}}</option>
+                  </select>
+                </div>
+                <div class="center">
+                  <button class="orangeButton" type="submit">Supprimer</button>
+                </div>
+              </fieldset>
+            </form>
         </div>
       </div>
     </client-only>
@@ -36,6 +24,7 @@
 </template>
 
 <script>
+import strapi from "~/utils/Strapi";
 import associationQuery from '~/apollo/queries/association/association'
 
 export default {
@@ -43,6 +32,7 @@ export default {
     return {
       association: Object,
       users: [],
+      user: '',
       query: '',
     }
   },
@@ -62,9 +52,20 @@ export default {
     }
   },
   methods:{
-    supprimerMembre() {
-      //return ....
+    async supprimerMembre() {
+      this.loading = true;
+      try {
+        console.log(this.user);
+        await strapi.deleteEntry("users", this.user);
+
+        alert("Le partenaire a bien été supprimé.");
+        this.$router.push("/");
+      } catch (err) {
+        this.loading = false;
+        this.$router.push("/");
+        //alert(err);
+      }
     }
-  }
+  },
 }
 </script>
