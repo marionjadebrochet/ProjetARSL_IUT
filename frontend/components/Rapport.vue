@@ -51,7 +51,9 @@
 
             <td>
               <button @click="supprimerLigne(lignerapport)">Supprimer</button>
-              <button @click="modifierLigne(lignerapport)">Modifier</button>
+              <!--
+                <button @click="modifierLigne(lignerapport)">Modifier</button>
+              -->
             </td>
           </tr>
         </tbody>
