@@ -1,6 +1,5 @@
 <template>
   <div style="margin-bottom: 100px">
-    <h2>Alerte(s) en cours</h2>
     <div v-for="alerteglobale in filteredList" v-bind:key="alerteglobale.id" class="alertes">
       <div v-if="alerteglobale.actif == true" class="alerte">
         <div class="row">
