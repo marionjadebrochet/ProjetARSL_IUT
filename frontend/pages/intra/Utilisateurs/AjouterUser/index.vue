@@ -27,14 +27,14 @@
         <div class="row">
           <label>Choississez l'organisme associé à l'utilisateur</label>
           <select required v-model="association">
-            <option v-for="association in listeAsso" :key="association.id" :value="association.id">{{association.nom}}</option>
+            <option v-for="association in associations" :key="association.id" :value="association.id">{{association.nom}}</option>
           </select>
         </div>
 
         <div class="row">
           <label>Choississez le rôle de l'utilisateur</label>
           <select required v-model="role">
-            <option v-for="role in listeRole" :key="role.id" :value="role.id">{{role.nom}}</option>
+            <option v-for="role in roles" :key="role.id" :value="role.id">{{role.name}}</option>
           </select>
         </div>
 
@@ -59,8 +59,7 @@
 
 <script>
 import strapi from "~/utils/Strapi";
-import associationQuery from '~/apollo/queries/association/associations';
-import roleQuery from '~/apollo/queries/role/roles';
+import roleQuery from '~/apollo/queries/role/assoRoles';
 
 export default {
   data() {
@@ -84,25 +83,13 @@ export default {
   apollo: {
     associations: {
       prefetch: true,
-      query: associationQuery
+      query: roleQuery
     },
     roles: {
       prefetch: true,
-      queryRole: roleQuery,
+      query: roleQuery
     }
   },
-  computed: {
-    listeAsso() {
-      return this.associations.filter(association => {
-        return association.nom.toLowerCase().includes(this.query.toLowerCase());
-      });
-    },
-      listeRole() {
-        return this.roles.filter(role => {
-          return role.nom.toLowerCase().includes(this.query.toLowerCase());
-        });
-      }
-    },
 
   methods: {
     async ajouterUser() {
@@ -112,12 +99,12 @@ export default {
         //on ajoute le service dans la db
         this.user = await strapi.createEntry("users", {
           association: this.association,
-          nom: this.nom,
-          prenom: this.prenom,
+          Nom: this.nom,
+          Prenom: this.prenom,
           password: this.motdepasse,
           username: this.pseudo,
           email: this.email,
-          telephone: this.telephone,
+          Telephone: this.telephone,
           role: this.role
         });
 
