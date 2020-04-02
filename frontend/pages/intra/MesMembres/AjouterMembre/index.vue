@@ -30,7 +30,7 @@
               <div class="row">
                 <label>Rôle au sein de l'association :</label>
                 <select required v-model="role">
-                  <option v-for="role in roles" :key="role.id" :value="role.id">{{role.name}}</option>
+                  <option v-for="role in roles" :key="role.id" :value="role.id" v-if="role.name != 'Admin' && role.name != 'admin structure'" >{{role.name}}</option>
                 </select>
               </div>
               <div class="center">
