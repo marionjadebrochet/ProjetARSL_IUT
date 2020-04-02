@@ -1,0 +1,10 @@
+query AssoRoles {
+  roles {
+    id
+    name
+  }
+  associations {
+    id
+    nom
+  }
+}
