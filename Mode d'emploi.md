@@ -1,4 +1,5 @@
-﻿# Site SIAO : mode d'emploi
+﻿
+# Site SIAO : mode d'emploi
  - [Partie grand public](#GPublic)
 	- [Langue](#langue)
 	- [Page d'accueil](#accueil)
@@ -33,7 +34,7 @@ On peut finalement trouver sur la page d'accueil en haut et tout à fait en bas 
 ### Associations <a id="asso"></a>
 La page des associations liste toutes les associations travaillant avec l'ARSL. En cliquant sur le bouton "plus d'informations" vous pourrez accéder à une **description** ainsi qu'aux **centres** proposés par les associations.
 ### Maraudes <a id="maraude"></a>
-Sur cette page la personne visitant le site pourra voir toutes les information sur les **maraudes du jour** (heures, lieux...) mais aussi sur les **maraudes en prévision**.
+Sur cette page la personne visitant le site pourra voir toutes les information sur les **maraudes du jour** (heures, lieux...).
 
 Il aura, la possibilité de voir ces maraudes sur une **carte**.
 ### Services <a id="service"></a>
@@ -47,18 +48,22 @@ Pour pouvoir accéder à la partie admin, l'utilisateur doit atteindre la page d
 
 En fonction de la personne qui se connecte les **droits** ne serons pas les même.
 ### Associations <a id="adasso"></a>
-> Tout le monde à le droit de visualiser l'association
+> Tout le monde à le droit de visualiser son association, seul certain compte tel que l'Admin peut toutes les visualiser et en ajouter/supprimer à sa guise.
 
 VISUALISER
 Vous pouvez voir quelle est la description de votre association, ainsi que  l'image qui la représente.
+
+AJOUTER/SUPPRIMER
+L'administrateur peut décider d'ajouter ou de supprimer des associations. En raison de quelques problèmes techniques, il n'est aps encore possible d'ajouter un logo à une association.
 ### Maraudes<a id="admaraude"></a>
 > Seul des référents de maraudes peuvent commencer une maraude mais n'importe qui peut les visualiser.
 
 Les maraudes peuvent être commencées par n'importe quel **référent d'association** via le bouton **commencer une maraude**. Il sera demandé de rentrer le **nom de la maraude**, pour la référencer plus facilement, ainsi que le **lieu et l'heure de départ**, le **lieu et l'heure du rendez-vous** et le **lieu d'arrivé**. Il sera ensuite redirigé vers une autre page où il pourra compléter son rapport de maraude.
 Une fois sa **maraude** commencée, le référent remplira une nouvelle ligne contenant les informations importantes concernant la personne (nom de famille ou pseudo, lieu de rencontre, situation, etc) via un **formulaire** à chaque fois qu'il rencontrera une **personne en difficulté**.
 La maraude une fois terminée pourra être validée et le rapport enregistré dans la base de données.
+Le référent peut choisir un ancien rapport déjà complété, et pourra ensuite enlever les lignes dont ils jugent inutiles, et les réajouter si besoin. Il n'est malheureusement pas encore possible de modifier directement une ligne d'un rapport d'une maraude en cours.
 
-Les rapports pourront être ensuite consultés via un bouton **Visualiser** dans la partie **Maraudes**.
+Les rapports pourront être ensuite consultés et téléchargés au format Excel via le bouton **Télécharger Rapport**.
 ### Centres <a id="adcentre"></a>
 > Tout le monde peut les visualiser mais seulement l’administrateur de l'association peut ajouter ou supprimer.
 
@@ -107,12 +112,8 @@ Dans cette rubrique vous pouvez ajouter un nouveau membre en renseignant son **n
 SUPPRIMER
 Sur cette page vous verrez tous les membres de votre association et vous aurez la possibilité de les supprimer. Une telle suppression supprimera leur compte et le membre supprimé n'aura plus accès à la partie admin du site.
 
-### Alertes <a id="adalerte"></a>
-> Seul l'administrateur de l'état peut déclencher une alerte
+### Alertes Globales <a id="adalerte"></a>
+> Seul l'administrateur de l'état peut déclencher/désactiver une alerte
 
-DÉCLENCHER 
-Des alertes sont créés, l'utilisateur n'a plus qu'à cliquer dessus pour qu'une alerte se créée.
-
-CRÉER
-Sur cette page l'utilisateur pourra créer l'alertes qu'il veut.
-
+DÉCLENCHER /DÉSACTIVER
+Des alertes présentent, l'utilisateur n'a plus qu'à cliquer dessus pour qu'une alerte se déclenche ou se désactive selon l'état dans lequel elle est. Par exemple, si une alerte est désactivée, il suffit de cliquer sur le bouton le concernant pour pouvoir l'activer, et vice-versa.
