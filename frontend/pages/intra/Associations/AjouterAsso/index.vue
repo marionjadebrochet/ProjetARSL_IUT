@@ -72,7 +72,7 @@ export default {
     async ajouterAsso() {
       this.loading = true;
       try {
-        console.log(this.$refs);
+        console.log(this.files[0]);
         await strapi.createEntry("associations", {
           nom: this.nom,
           description: this.description,

@@ -57,7 +57,7 @@ module.exports = {
 
     delete: async ctx => {
       try {
-          const centre = await strapi.query('centre').delete(
+          await strapi.query('centre').delete(
           {id: ctx.params.id});
       } catch (error) {
           //silent

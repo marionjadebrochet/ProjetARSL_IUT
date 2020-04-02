@@ -38,6 +38,7 @@ export default {
     return {
       association: Object,
       centres: [],
+      centre: '',
       query: '',
     }
   },

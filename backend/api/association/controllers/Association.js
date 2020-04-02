@@ -10,7 +10,7 @@ module.exports = {
         const {
           nom,
           description,
-          // logo,
+          logo,
           Adresse,
           Email,
           telephone
@@ -21,7 +21,7 @@ module.exports = {
                 // user: ctx.state.user.id,
                 nom,
                 description,
-                // logo,
+                logo,
                 Adresse,
                 Email,
                 telephone
@@ -31,5 +31,14 @@ module.exports = {
         } catch (error) {
             alert('erreur depuis apiControlleurAssociation')
         }
+    },
+
+    delete: async ctx => {
+      try {
+          await strapi.query('association').delete(
+          {id: ctx.params.id});
+      } catch (error) {
+          //silent
+      }
     }
 };
