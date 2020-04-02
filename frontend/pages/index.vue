@@ -2,7 +2,7 @@
 <body>
   <!--PARTIE PUBLIC QUAND NON CONNECTE-->
   <div v-if="!username">
-    <Alerte />
+
     <div class="row" style="margin-bottom:50px;">
       <div class="explication">
         <h1>Service d’Intégrité d’Accueil et d’Orientation de la Haute-Vienne</h1>
@@ -10,19 +10,19 @@
           Notre objectif ? Faciliter la prise en charge des personnes sans-abris ou des personnes qui sont menacées de l’être en améliorant
           l’offre et la demande des hébergements sur le territoire.
         </section>
-        <section style="margin-top:20px;">
+        <div class="center">
           <a class="orangeButton" href="tel:+33115">
-            Besoin d'aide ? Appelez le
+            Appelez le
             <b>115</b>
           </a>
-        </section>
+        </div>
       </div>
       <div>
         <img class="imgAccueil" src="~/assets/image/image-accueil.jpg" />
       </div>
     </div>
-
-    <div class="accueilServices">
+    <Alerte />
+    <div class="accueilServices" style="margin-bottom:100px">
       <h2>Les services</h2>
 
       <div class="space-around">
