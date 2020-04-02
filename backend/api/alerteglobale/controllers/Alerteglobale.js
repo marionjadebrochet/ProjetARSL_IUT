@@ -5,4 +5,22 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+    update: async ctx => {
+        const {
+            actif
+        } = ctx.request.body;
+
+        try {
+            const alerteglobale = await strapi.query('alerteglobale').update(
+            {id: ctx.params.id},
+            {
+                actif: actif
+            });
+
+            return alerteglobale;
+        } catch (error) {
+            //silent
+        }
+    },
+};
