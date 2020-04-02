@@ -14,7 +14,7 @@
           <input type="text" v-model="adresse" />
         </div>
         <div class="row">
-            <a href="https://www.google.fr/maps"><button type="button">Pour récupérer latitude et longitude</button></a>
+            <a href="https://www.coordonnees-gps.fr" target="_blank"><button type="button">Pour récupérer latitude et longitude</button></a>
         </div>
         <div class="row">
           <label for="latitude">Latitude :</label>
