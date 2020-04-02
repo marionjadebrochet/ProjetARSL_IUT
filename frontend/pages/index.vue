@@ -142,7 +142,7 @@
             tag="a"
             to="/intra/Associations"
             exact
-          >Visualiser tout les associations</router-link>
+          >Visualiser toutes les associations</router-link>
           <router-link
             class="orangeBorderButton"
             tag="a"

@@ -13,7 +13,9 @@
           <label for="adresse">Adresse :</label>
           <input type="text" v-model="adresse" />
         </div>
-
+        <div class="row">
+            <a href="https://www.google.fr/maps"><button type="button">Pour récupérer latitude et longitude</button></a>
+        </div>
         <div class="row">
           <label for="latitude">Latitude :</label>
           <input type="text" v-model="latitude" />

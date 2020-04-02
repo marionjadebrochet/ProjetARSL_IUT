@@ -3,6 +3,8 @@ query Associations{
     id
     nom
     description
+    Adresse
+    Email
     logo {
       url
     }
