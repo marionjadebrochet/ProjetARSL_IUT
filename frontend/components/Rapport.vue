@@ -29,23 +29,23 @@
           <td>{{lignerapport.nombreFemme}}</td>
           <td>{{lignerapport.nombreEnfant}}</td>
           <td>{{lignerapport.logementactuel}}</td>
-          <td v-if="lignerapport.animaux">Oui</td>
+          <td v-if="lignerapport.animaux == 'Oui'">Oui</td>
           <td v-else>Non</td>
           <td>{{lignerapport.comAnimaux}}</td>
 
-          <td v-if="lignerapport.enceinte">Oui</td>
+          <td v-if="lignerapport.enceinte == 'Oui'">Oui</td>
           <td v-else>Non</td>
 
-          <td v-if="lignerapport.pbSante">Oui</td>
+          <td v-if="lignerapport.pbSante == 'Oui'">Oui</td>
           <td v-else>Non</td>
 
-          <td v-if="lignerapport.secours">Oui</td>
+          <td v-if="lignerapport.secours == 'Oui'">Oui</td>
           <td v-else>Non</td>
 
-          <td v-if="lignerapport.demandeHebergement">Oui</td>
+          <td v-if="lignerapport.demandeHebergement == 'Oui'">Oui</td>
           <td v-else>Non</td>
 
-          <td v-if="lignerapport.appel">Oui</td>
+          <td v-if="lignerapport.appel == 'Oui'">Oui</td>
           <td v-else>Non</td>
         </tr>
         </tbody>
