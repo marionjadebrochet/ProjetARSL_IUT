@@ -13,14 +13,14 @@ module.exports = {
             nombreHomme,
             nombreFemme,
             nombreEnfant,
-            animaux,
             comAnimaux,
             enceinte,
             pbSante,
             secours,
             demandeHebergement,
             logementactuel,
-            appel
+            appel,
+            animaux,
         } = ctx.request.body;
 
         try {
@@ -30,14 +30,14 @@ module.exports = {
                 nombreHomme,
                 nombreFemme,
                 nombreEnfant,
-                animaux,
                 comAnimaux,
                 enceinte,
                 pbSante,
                 secours,
                 demandeHebergement,
                 logementactuel,
-                appel
+                appel,
+                animaux,
             });
 
             return lignerapport;

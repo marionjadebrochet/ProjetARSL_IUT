@@ -29,29 +29,29 @@
     "nombreEnfant": {
       "type": "integer"
     },
-    "animaux": {
-      "type": "boolean"
-    },
     "comAnimaux": {
       "type": "string"
-    },
-    "enceinte": {
-      "type": "boolean"
-    },
-    "pbSante": {
-      "type": "boolean"
-    },
-    "secours": {
-      "type": "boolean"
-    },
-    "demandeHebergement": {
-      "type": "boolean"
     },
     "logementactuel": {
       "type": "string"
     },
+    "animaux": {
+      "type": "string"
+    },
+    "enceinte": {
+      "type": "string"
+    },
+    "pbSante": {
+      "type": "string"
+    },
+    "secours": {
+      "type": "string"
+    },
+    "demandeHebergement": {
+      "type": "string"
+    },
     "appel": {
-      "type": "boolean"
+      "type": "string"
     }
   }
 }

@@ -108,11 +108,17 @@
       return {
         lignerapport: Object,
         enceinte: false,
+        enceinteTexte: "Non",
         pbSante: false,
+        pbSanteTexte: "Non",
         demandeHebergement: false,
+        demandeHebergementTexte: "Non",
         secours: false,
+        secoursTexte: "Non",
         appel:false,
+        appelTexte: "Non",
         animaux:false,
+        animauxTexte: "Non",
         lignerapports: this.$store.getters["rapport/lignerapports"],
         idMaraude: this.$store.getters["rapport/idMaraude"]
       }
@@ -149,20 +155,40 @@
 
       async ajouterLigneRapport() {
         try {
+          //gestion des booleens
+          if (this.animaux == true) {
+            this.animauxTexte = "Oui";
+          }
+          if (this.enceinte == true) {
+            this.enceinteTexte = "Oui";
+          }
+          if (this.pbSante == true) {
+            this.pbSanteTexte = "Oui";
+          }
+          if (this.demandeHebergement == true) {
+            this.demandeHebergementTexte = "Oui";
+          }
+          if (this.secours == true) {
+            this.secoursTexte = "Oui";
+          }
+          if (this.appel == true) {
+            this.appelTexte = "Oui";
+          }
+
           this.lignerapport = await strapi.createEntry("lignerapports", {
             situation: this.situation,
             age: this.age,
             nombreHomme: this.nombreHomme,
             nombreFemme: this.nombreFemme,
             nombreEnfant: this.nombreEnfant,
-            animaux: this.animaux,
             comAnimaux: this.comAnimaux,
-            enceinte: this.enceinte,
-            pbSante: this.pbSante,
-            secours: this.secours,
-            demandeHebergement: this.demandeHebergement,
+            enceinte: this.enceinteTexte,
+            pbSante: this.pbSanteTexte,
+            secours: this.secoursTexte,
+            demandeHebergement: this.demandeHebergementTexte,
             logementactuel: this.logementactuel,
-            appel: this.appel
+            appel: this.appelTexte,
+            animaux: this.animauxTexte,
           });
 
           //ajout de la ligne ajouté dans notre cookie, pour pouvoir l'afficher ensuite dans le tableau
