@@ -4,9 +4,6 @@ query Services {
     description
     centre{
         id
-        adresse
-        latitude
-        longitude
         association{
         nom
         }
