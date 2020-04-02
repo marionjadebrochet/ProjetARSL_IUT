@@ -6,9 +6,14 @@ query Services {
         id
         adresse
         latitude
-        longitude 
+        longitude
         association{
         nom
+        }
+        lieu {
+        adresse
+        longitude
+        latitude
         }
     }
   }

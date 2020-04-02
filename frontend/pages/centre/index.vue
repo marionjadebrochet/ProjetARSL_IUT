@@ -21,8 +21,8 @@
                <l-map :zoom=13 :center="[45.8188956,1.2521794]">
                  <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
                     <div class="marker" v-for="centre in filteredList" v-bind:key="centre">
-                         <l-marker :lat-lng="[centre.latitude, centre.longitude]" >
-                         <l-popup :content="centre.association.nom + ' | ' + centre.adresse"/> </l-marker>
+                         <l-marker :lat-lng="[centre.lieu.latitude, centre.lieu.longitude]" >
+                         <l-popup :content="centre.association.nom + ' | ' + centre.lieu.adresse"/> </l-marker>
                        </div>
                </l-map>
             </div>
@@ -51,7 +51,7 @@ export default {
     // Search system
     filteredList() {
       return this.centres.filter(centre => {
-        return centre.adresse.toLowerCase().includes(this.query.toLowerCase())
+        return centre.lieu.adresse.toLowerCase().includes(this.query.toLowerCase())
       })
     },
   },

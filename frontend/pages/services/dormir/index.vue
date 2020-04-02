@@ -15,8 +15,8 @@
              <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>
                 <div class="marker" v-for="service in filteredList" v-bind:key="service.centre.id">
                   <div v-if="service.nom=='Dormir'">
-                     <l-marker :lat-lng="[service.centre.latitude, service.centre.longitude]" >
-                     <l-popup :content="service.centre.association.nom + ' | ' + service.centre.adresse"/> </l-marker>
+                     <l-marker :lat-lng="[service.centre.lieu.latitude, service.centre.lieu.longitude]" >
+                     <l-popup :content="service.centre.association.nom + ' | ' + service.centre.lieu.adresse"/> </l-marker>
                    </div>
                 </div>
            </l-map>
