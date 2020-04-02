@@ -2,15 +2,17 @@
   <div>
     <h1>Liste des rapports des différentes maraudes</h1>
 
-    <form @submit.stop.prevent="selectionnerRapport">
-      <select v-model="maraude">
-        <option v-for="maraude in filteredList" :key="maraude.id" :value="maraude">{{maraude.nom}}</option>
-      </select>
-      <button class="orangeButton" type="submit">Choisir</button>
+    <form @submit.stop.prevent="selectionnerRapport" class="telechargement">
+        <select v-model="maraude">
+          <option v-for="maraude in filteredList" :key="maraude.id" :value="maraude">{{maraude.nom}}</option>
+        </select>
+        <button class="orangeButton" type="submit">Choisir</button>
     </form>
 
     <Rapport />
-    <a download="rapport.csv" href="#" @click="telechargerRapport">TELECHARGER</a>
+    <div class="center">
+      <a download="rapport.csv" href="#" @click="telechargerRapport" class="orangeButton">Télécharger</a>
+    </div>
   </div>
 </template>
 
@@ -60,7 +62,7 @@ export default {
         else {
           alert("Vous devez d'abord selectionner un rapport");
         }
-        
+
       } catch (error) {
         alert(error);
       }
@@ -74,7 +76,7 @@ export default {
       } catch (error) {
         alert(error);
       }
-      
+
     }
   },
 

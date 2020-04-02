@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Rapport</h1>
-    <div class="overflow-scroll">
+    <div class="overflow-scroll" style="margin: 50px 0px;">
       <table id="datatable">
         <thead>
         <tr>
