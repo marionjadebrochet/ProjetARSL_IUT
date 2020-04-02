@@ -1,0 +1,32 @@
+{
+  "connection": "default",
+  "collectionName": "alerteglobales",
+  "info": {
+    "name": "alerteglobale",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "actif": {
+      "type": "boolean"
+    }
+  }
+}

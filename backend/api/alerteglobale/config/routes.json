@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/alerteglobales",
+      "handler": "Alerteglobale.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/alerteglobales/count",
+      "handler": "Alerteglobale.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/alerteglobales/:id",
+      "handler": "Alerteglobale.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/alerteglobales",
+      "handler": "Alerteglobale.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/alerteglobales/:id",
+      "handler": "Alerteglobale.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/alerteglobales/:id",
+      "handler": "Alerteglobale.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
