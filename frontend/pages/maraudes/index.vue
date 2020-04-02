@@ -39,6 +39,7 @@
           </div>
         </div>
       </div>
+      <!--mise en commentaire provisoire le temps d'implementer la prevision d'une maraude
       <div class="cadre">
         <h3>En prévision</h3>
         <div v-for="maraude in filteredList" v-bind:key="maraude.id">
@@ -76,7 +77,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="map">
