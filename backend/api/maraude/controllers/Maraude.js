@@ -11,7 +11,6 @@ module.exports = {
             nom,
             heureDepart,
             heureRdv,
-            //heureArrive,
             lieuDepart,
             lieuRdv,
             lieuArrive,
@@ -26,7 +25,6 @@ module.exports = {
                 nom,
                 heureDepart,
                 heureRdv,
-                //heureArrive,
                 enPrevisions,
                 fini,
                 lieuDepart,
@@ -37,7 +35,7 @@ module.exports = {
 
             return maraude;
         } catch (error) {
-            alert('erreur depuis apiControlleurMaraude')
+            console.log(error);
         }
     },
 

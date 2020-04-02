@@ -99,7 +99,7 @@
         <div class="listeAction">
           <div class="gestion">
             <div class="align-center">
-              <img class="rond" src="~/assets/image/iconsIntra/association.svg"></img>
+              <img class="rond" src="~/assets/image/iconsIntra/association.svg" />
               <h3> Association </h3>
             </div>
             <div>
@@ -109,7 +109,7 @@
 
           <div class="gestion">
             <div class="align-center">
-              <img class="rond" src="~/assets/image/iconsIntra/partenaire.svg"></img>
+              <img class="rond" src="~/assets/image/iconsIntra/partenaire.svg" />
               <h3> Partenaires </h3>
             </div>
             <div>
@@ -121,7 +121,7 @@
 
         <div class="gestion">
           <div class="align-center">
-            <img class="rond" src="~/assets/image/iconsIntra/centres.svg"></img>
+            <img class="rond" src="~/assets/image/iconsIntra/centres.svg" />
             <h3> Centres </h3>
           </div>
           <div>
@@ -133,7 +133,7 @@
 
         <div class="gestion">
           <div class="align-center">
-            <img class="rond" src="~/assets/image/iconsIntra/services.svg"></img>
+            <img class="rond" src="~/assets/image/iconsIntra/services.svg" />
             <h3> Services </h3>
           </div>
           <div>
@@ -145,19 +145,20 @@
 
         <div class="gestion">
           <div class="align-center">
-            <img class="rond" src="~/assets/image/iconsIntra/maraudes.svg"></img>
+            <img class="rond" src="~/assets/image/iconsIntra/maraudes.svg" />
             <h3> Maraudes </h3>
           </div>
           <div>
             <router-link class="orangeBorderButton" tag="a" to="/maraudes" exact>Visualiser </router-link>
             <router-link class="orangeBorderButton" tag="a" to="/maraudes/commencerMaraude" exact>Commencer une maraude </router-link>
             <router-link class="orangeBorderButton" tag="a" to="/maraudes/supprimerMaraude" exact>Supprimer </router-link>
+            <router-link class="orangeBorderButton" tag="a" to="/maraudes/telechargerRapport" exact>Telecharger Rapport</router-link>
           </div>
         </div>
 
         <div class="gestion">
           <div class="align-center">
-            <img class="rond" src="~/assets/image/iconsIntra/membres.svg"></img>
+            <img class="rond" src="~/assets/image/iconsIntra/membres.svg" />
             <h3> Membres </h3>
           </div>
           <div>
@@ -169,7 +170,7 @@
 
         <div class="gestion">
           <div class="align-center">
-            <img class="rond" src="~/assets/image/iconsIntra/alarme.svg"></img>
+            <img class="rond" src="~/assets/image/iconsIntra/alarme.svg" />
             <h3> Alertes </h3>
           </div>
           <div>

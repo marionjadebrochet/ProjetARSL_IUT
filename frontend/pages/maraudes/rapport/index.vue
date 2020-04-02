@@ -88,10 +88,11 @@
       </fieldset>
     </form>
 
-    <!--Clement je met le composant Rapport dans une div pour que tu puisse modifier plus facilement la page
-    avec ton css-->
     <div style="margin: 100px 0px;">
       <Rapport/>
+      <div class="center">
+        <button @click="ajouterRapport" class="orangeButton">Terminer la maraude</button>
+      </div>
     </div>
 
   </div>
@@ -112,6 +113,8 @@
         secours: false,
         appel:false,
         animaux:false,
+        lignerapports: this.$store.getters["rapport/lignerapports"],
+        idMaraude: this.$store.getters["rapport/idMaraude"]
       }
     },
 
@@ -123,6 +126,25 @@
       check: function(id) {
           var element = document.getElementById(id);
           element.style.display = "flex";
+      },
+
+      async ajouterRapport() {
+        console.log(this.lignerapports);
+        try {
+          //on ajoute le rapport a la maraude
+          await strapi.updateEntry('maraudes', this.idMaraude, {
+            lignerapportsInfos: this.lignerapports
+          });
+          //et l'on remet a zero les cookies
+          this.$store.commit('rapport/resetRapport');
+          this.$store.commit('rapport/resetMaraude');
+
+          //on redirige vers la page d'accueil
+          alert('Rapport de maraude enregistré et maraude terminé')
+          this.$router.push('/');
+        } catch (error) {
+          alert(error)
+        }
       },
 
       async ajouterLigneRapport() {

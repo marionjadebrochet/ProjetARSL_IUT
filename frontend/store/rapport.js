@@ -9,7 +9,7 @@ export const state = () => ({
 export const mutations = {
     initialiserRapport(state, maraude) {
         state.idMaraude = maraude.id;
-        state.lignerapports = [];
+        state.lignerapports = maraude.lignerapports;
         Cookies.set('maraude', state.idMaraude);
         Cookies.set('rapport', state.lignerapports);
     },

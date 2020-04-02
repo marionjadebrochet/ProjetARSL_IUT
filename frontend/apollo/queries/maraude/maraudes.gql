@@ -1,19 +1,20 @@
 query Maraudes {
   maraudes {
     id
-    lieuDepart{
+    nom
+    lieuDepart {
       libelle
       adresse
       latitude
       longitude
     }
-    lieuArrive{
+    lieuArrive {
       libelle
       adresse
       latitude
       longitude
     }
-    lieuRdv{
+    lieuRdv {
       libelle
       adresse
       latitude
@@ -22,15 +23,29 @@ query Maraudes {
     dateDepart
     heureDepart
     heureRdv
-    enPrevisions
     fini
     user {
       username
       Nom
       Prenom
-      association{
+      association {
         nom
       }
+    }
+    lignerapports {
+      situation
+      age,
+      nombreHomme,
+      nombreFemme,
+      nombreEnfant,
+      animaux,
+      comAnimaux,
+      enceinte,
+      pbSante,
+      secours,
+      demandeHebergement,
+      logementactuel,
+      appel
     }
   }
 }

@@ -17,9 +17,6 @@
     "heureDepart": {
       "type": "string"
     },
-    "enPrevisions": {
-      "type": "boolean"
-    },
     "user": {
       "model": "user",
       "via": "maraudes",

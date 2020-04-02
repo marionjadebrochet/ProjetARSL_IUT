@@ -99,7 +99,7 @@ export default {
           dateDepart: day
         });
 
-        //on commence a initialiser le rapport avec une maraude
+        //on commence a initialiser le rapport avec cette nouvelle maraude
         this.$store.commit('rapport/initialiserRapport', this.maraude);
 
         //redirection vers une autre page pour compléter le rapport ligne par ligne
