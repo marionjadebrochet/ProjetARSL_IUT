@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2> Centres où se laver </h2>
+    <h2> Accueils de jour où se laver </h2>
     <div  v-for="service in filteredList" v-bind:key="service.nom">
       <div class="space-between cadre padding10" v-if="service.nom=='Douche'">
            <h3> {{service.centre.lieu.adresse}} </h3>
