@@ -4,7 +4,7 @@
 
     <div v-for="service in filteredList" v-bind:key="service.nom">
       <div class="space-between cadre padding10" v-if="service.nom=='Dormir'">
-           <h3> {{service.centre.adresse}} </h3>
+           <h3> {{service.centre.lieu.adresse}} </h3>
            <router-link class="orangeBorderButton":to="{ name: 'centre-id', params: { id: service.centre.id }}" tag="a" > Plus d'informations </router-link>
       </div>
     </div>
