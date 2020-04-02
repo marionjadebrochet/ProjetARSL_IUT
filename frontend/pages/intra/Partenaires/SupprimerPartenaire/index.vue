@@ -2,21 +2,26 @@
   <div>
     <h3 style="padding-top:20px;"> Mes partenaires </h3><br>
     <div class="allpartenaires">
-      <div class="partenaires" v-for="partenaire in association.partenaires" :key="association.partenaires.id">
-        <img :src="'http://localhost:1337/' + partenaire.logo.url">
-        <div class="infoPartenaire">
-          <h2>{{partenaire.nom}}</h2>
-          <p> Téléphone du partenaire : <b>{{partenaire.telephone}}</b></p>
-          <p> Email du partenaire : <b>{{partenaire.email}}</b> </p>
-        </div>
-        <button class="orangeButton" @onclique="SupprimerPartenaire">Supprimer</button>
-      </div>
+        <form @submit.stop.prevent="supprimerPartenaire">
+          <fieldset>
+            <div class="row">
+              <label>Séléctionner le partenaire à supprimer :</label>
+              <select required v-model="partenaire">
+                <option v-for="partenaire in association.partenaires" :key="partenaire.id" :value="partenaire.id">{{partenaire.nom}}</option>
+              </select>
+            </div>
+            <div class="center">
+              <button class="orangeButton" type="submit">Supprimer</button>
+            </div>
+          </fieldset>
+        </form>
     </div>
   </div>
 </template>
 
 <script>
-import associationQuery from '~/apollo/queries/association/associationPartenaires'
+    import strapi from "~/utils/Strapi";
+    import associationQuery from '~/apollo/queries/association/associationPartenaires';
 
 export default {
   data() {
@@ -42,22 +47,34 @@ export default {
     }
   },
   methods : {
-    SupprimerPartenaire() {
-      //contenu....
-    }
-  },
-    mounted() {
-      if (localStorage.getItem('reloaded')) {
-          // The page was just reloaded. Clear the value from local storage
-          // so that it will reload the next time this page is visited.
-          localStorage.removeItem('reloaded');
-      } else {
-          // Set a flag so that we know not to reload the page twice.
-          localStorage.setItem('reloaded', '1');
-          location.reload();
+    async supprimerPartenaire() {
+      this.loading = true;
+      try {
+
+        await strapi.deleteEntry("partenaires", this.partenaire);
+
+        alert("Le partenaire a bien été supprimé.");
+        this.$router.push("/");
+      } catch (err) {
+        this.loading = false;
+        this.$router.push("/");
+        //alert(err);
       }
     }
+  },
+  //   mounted() {
+  //     if (localStorage.getItem('reloaded')) {
+  //         // The page was just reloaded. Clear the value from local storage
+  //         // so that it will reload the next time this page is visited.
+  //         localStorage.removeItem('reloaded');
+  //     } else {
+  //         // Set a flag so that we know not to reload the page twice.
+  //         localStorage.setItem('reloaded', '1');
+  //         location.reload();
+  //     }
+  //   }
 }
+
 </script>
 
 <style>

@@ -15,10 +15,10 @@
           <label> Email du partenaire :</label>
           <input type="mail" v-model="email">
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <label>Logo du partenaire :</label>
           <input type="file" name="nom_du_fichier">
-        </div>
+        </div> -->
         <div class="center">
           <button class="orangeButton" type="submit">Ajouter</button>
         </div>
@@ -35,15 +35,16 @@
     data() {
       return {
         association: Object,
-        nom: '',
-        telephone: '',
-        email: '',
-        //logo: Object,
+        logo: Object,
         query: '',
         loading: false
       };
     },
-
+    computed: {
+      associationUser() {
+        return this.$store.getters["auth/association"];
+      }
+    },
     apollo: {
       association: {
         prefetch: true,
@@ -54,30 +55,20 @@
       }
     },
 
-    computed: {
-      associationUser() {
-        return this.$store.getters["auth/association"];
-      }
-    },
+
 
     methods: {
       async ajouterPartenaire() {
         this.loading = true;
         try {
-          //on ajoute le partenaire dans la bd
+
           this.partenaire = await strapi.createEntry("partenaires", {
             nom: this.nom,
             telephone: this.telephone,
             email: this.email,
-            logo: NULL,
-            association: this.association
+            // logo: NULL,
+            association: this.association.id
           });
-
-          //on met a jour le centre associe
-          // await strapi.updateEntry("centres", this.centre.id, {
-          //   service: this.service,
-          //   centreInfos: this.centre
-          // });
 
           alert("Le partenaire a bien été enregistré.");
           this.$router.push("/");

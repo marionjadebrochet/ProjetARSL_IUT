@@ -6,5 +6,34 @@
  */
 
 module.exports = {
-    
+  create: async ctx => {
+      const {
+        libelle,
+        adresse,
+        longitude,
+        latitude
+      } = ctx.request.body;
+
+      try {
+          const lieu = await strapi.services.lieu.create({
+            libelle,
+            adresse,
+            longitude,
+            latitude
+          });
+
+          return lieu;
+      } catch (error) {
+          alert('erreur depuis apiControlleurLieu')
+      }
+  },
+
+  delete: async ctx => {
+    try {
+        await strapi.query('lieu').delete(
+        {id: ctx.params.id});
+    } catch (error) {
+        //silent
+    }
+  }
 };
