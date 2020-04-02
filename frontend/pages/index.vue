@@ -253,7 +253,7 @@
           <h3>Alertes</h3>
         </div>
         <div>
-          <router-link class="orangeBorderButton" tag="a" to="/intra/alerte" exact>Déclencher</router-link>
+          <router-link class="orangeBorderButton" tag="a" to="/intra/alerte" exact>Déclencher/Désactiver</router-link>
         </div>
       </div>
     </div>
