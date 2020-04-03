@@ -6,7 +6,7 @@
       <div class="mesCentres cadre">
         <div>
           <h2>{{association.nom}}</h2>
-          <img :src="'http://localhost:1337/' + associationUser.logo.url">
+          <img :src="'http://localhost:1337' + associationUser.logo.url">
         </div>
           <div class="cart">
             <form @submit.stop.prevent="supprimerCentre">

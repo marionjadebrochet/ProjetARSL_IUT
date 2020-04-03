@@ -51,7 +51,7 @@
               <h4>{{centre.association.nom}}</h4>
               <div class="center">
                 <img
-                  :src="'http://localhost:1337/' + centre.association.logo.url"
+                  :src="'http://localhost:1337' + centre.association.logo.url"
                   class="logoAssociation"
                   style="margin: 10px"
                 />

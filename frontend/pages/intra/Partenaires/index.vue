@@ -3,7 +3,7 @@
     <h3 style="padding-top:20px;"> Mes partenaires </h3><br>
     <div class="allpartenaires">
       <div class="partenaires" v-for="partenaire in association.partenaires" :key="association.partenaires.id">
-        <img :src="'http://localhost:1337/' + partenaire.logo.url">
+        <img :src="'http://localhost:1337' + partenaire.logo.url">
         <div class="infoPartenaire">
           <h2>{{partenaire.nom}}</h2>
           <p> Téléphone du partenaire : <b>{{partenaire.telephone}}</b></p>

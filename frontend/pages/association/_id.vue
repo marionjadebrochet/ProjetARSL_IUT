@@ -3,7 +3,7 @@
     <h3>{{association.nom}}</h3>
     <div class="row cadre">
       <div class="image">
-        <img :src="'http://localhost:1337/' + association.logo.url">
+        <img :src="'http://localhost:1337' + association.logo.url">
       </div>
       <section class="justify">{{association.description}}</section>
     </div>

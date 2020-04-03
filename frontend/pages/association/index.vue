@@ -6,7 +6,7 @@
             <h3>{{association.nom}}</h3>
             <div class="trait"></div>
             <div class="image">
-              <img :src="'http://localhost:1337/' + association.logo.url">
+              <img :src="'http://localhost:1337' + association.logo.url">
             </div>
            <router-link class="orangeBorderButton" :to="{ name: 'association-id', params: { id: association.id }}" tag="a" > Plus d'informations </router-link>
          </div>

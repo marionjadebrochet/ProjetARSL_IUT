@@ -3,7 +3,7 @@
     <h3 style="padding-top:20px;"> Mon organisme </h3><br>
 
     <div class="association cadre" v-bind:key="association">
-      <img :src="'http://localhost:1337/' + association.logo.url">
+      <img :src="'http://localhost:1337' + association.logo.url">
       <div class="infoAssociation">
         <h4 >{{association.nom}}</h4>
         <section>{{association.description}}</section>
