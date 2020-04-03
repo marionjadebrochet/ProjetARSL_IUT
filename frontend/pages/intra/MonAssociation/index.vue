@@ -38,11 +38,6 @@ export default {
       }
     }
   },
-  methods : {
-    SupprimerPartenaire() {
-      //contenu....
-    }
-  },
     mounted() {
       if (localStorage.getItem('reloaded')) {
           // The page was just reloaded. Clear the value from local storage
