@@ -1,9 +1,9 @@
 <template>
   <div>
     <client-only>
-      <h3 style="padding-top:20px;"> Mes Utilisateurs </h3><br>
+      <h3 style="padding-top:20px;"> Mes Membres </h3><br>
       <div class="center">
-        <div style="width:50%;" v-for="user in association.users" v-bind:key="association.users.id">
+        <div style="width:50%;" v-for="user in association.users" v-bind:key="user.id">
           <div class="cadre" style="margin-top: 30px">
             <div class="row">
               <h3>Nom : </h3>
