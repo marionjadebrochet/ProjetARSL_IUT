@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Ajouter une association</h3>
+    <h3>Ajouter un organisme</h3>
     <form @submit.stop.prevent="ajouterAsso">
       <fieldset>
 

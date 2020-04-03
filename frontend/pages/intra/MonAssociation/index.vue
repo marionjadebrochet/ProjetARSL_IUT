@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 style="padding-top:20px;"> Mon association </h3><br>
+    <h3 style="padding-top:20px;"> Mon organisme </h3><br>
 
     <div class="association cadre" v-bind:key="association">
       <img :src="'http://localhost:1337/' + association.logo.url">

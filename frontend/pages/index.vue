@@ -119,7 +119,7 @@
       <div class="gestion" v-if="role.name != 'Admin' || role.name != 'Etat'">
         <div class="align-center">
           <img class="rond" src="~/assets/image/iconsIntra/association.svg" />
-          <h3>Mon Association</h3>
+          <h3>Mon organisme</h3>
         </div>
         <div>
           <router-link
@@ -134,7 +134,7 @@
       <div class="gestion">
         <div class="align-center">
           <img class="rond" src="~/assets/image/iconsIntra/association.svg" />
-          <h3>Association</h3>
+          <h3>organismes</h3>
         </div>
         <div>
           <router-link
@@ -142,7 +142,7 @@
             tag="a"
             to="/intra/Associations"
             exact
-          >Visualiser toutes les associations</router-link>
+          >Visualiser tous les organismes</router-link>
           <router-link v-if="role.name == 'Admin' || (role.name == 'admin structure' && association == null )"
             class="orangeBorderButton"
             tag="a"
