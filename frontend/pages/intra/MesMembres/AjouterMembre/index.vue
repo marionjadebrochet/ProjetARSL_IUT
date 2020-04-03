@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Ajouter un membre à votre association</h3>
+        <h3>Ajouter un membre à votre organisme</h3>
           <form @submit.stop.prevent="ajouterMembre">
             <fieldset>
               <div class="row">
@@ -28,9 +28,9 @@
   						  <input type="tel" v-model="telephone" placeholder="Tapez votre numéro de téléphone" required pattern = '[0-9]{10}'>
               </div>
               <div class="row">
-                <label>Rôle au sein de l'association :</label>
+                <label>Rôle au sein de l'organisme :</label>
                 <select required v-model="role">
-                  <option v-for="role in roles" :key="role.id" :value="role.id">{{role.name}}</option>
+                  <option v-for="role in roles" :key="role.id" :value="role.id" v-if="role.name == 'Bénévole' || role.name == 'Référent'" >{{role.name}}</option>
                 </select>
               </div>
               <div class="center">

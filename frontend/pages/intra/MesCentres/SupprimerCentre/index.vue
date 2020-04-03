@@ -2,17 +2,17 @@
   <div>
     <client-only>
 
-      <h3 style="padding-top:20px;"> Mes centres </h3>
+      <h3 style="padding-top:20px;"> Supprimer un accueil de jour </h3>
       <div class="mesCentres cadre">
         <div>
           <h2>{{association.nom}}</h2>
-          <img :src="'http://localhost:1337/' + associationUser.logo.url">
+          <img :src="'http://localhost:1337' + associationUser.logo.url">
         </div>
           <div class="cart">
             <form @submit.stop.prevent="supprimerCentre">
               <fieldset>
                 <div class="row">
-                  <label>Séléctionner le centre à supprimer :</label>
+                  <label>Séléctionner l'accueil de jour à supprimer :</label>
                   <select required v-model="centre">
                     <option v-for="centre in association.centres" :key="centre.id" :value="centre.id">{{centre.libelle}}</option>
                   </select>

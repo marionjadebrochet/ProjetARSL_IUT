@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Ajouter une association</h3>
+    <h3>Ajouter un organisme</h3>
     <form @submit.stop.prevent="ajouterAsso">
       <fieldset>
 
@@ -14,11 +14,10 @@
           <input type="text" v-model="description" />
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <label for="logo">Logo :</label>
-          <input type="file" id="file" ref="myFiles"
-    @change="previewFiles" multiple>
-        </div>
+          <input type="file" @change="previewFiles" >
+        </div> -->
 
         <div class="row">
           <label for="adresse">Adresse :</label>
@@ -52,7 +51,7 @@ import strapi from "~/utils/Strapi";
 export default {
   data() {
     return {
-      files: [],
+      selectedFile: null,
       nom: '',
       description: '',
       logo: Object,
@@ -65,23 +64,26 @@ export default {
   },
 
   methods: {
-    previewFiles() {
-    this.files = this.$refs.myFiles.files;
-    console.log(this.files);
-  },
+  //   previewFiles(event) {
+  //     console.log(event.target.files[0]);
+  //     this.selectedFile = event.target.files[0];
+  // },
     async ajouterAsso() {
       this.loading = true;
+      // const fd = new FormData();
+      // fd.append('image', this.selectedFile, this.selectedFile.name);
+      // console.log(this.selectedFile.name);
       try {
-        console.log(this.files[0]);
+
         await strapi.createEntry("associations", {
           nom: this.nom,
           description: this.description,
-          logo: this.files[0],
+          // logo: fd,
           Adresse: this.adresse,
           Email: this.email,
           telephone: this.telephone
         });
-        console.log("aaaaaaaaaa");
+
         alert(
           "L'association a bien été ajoutée"
         );

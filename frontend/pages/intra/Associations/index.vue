@@ -8,11 +8,14 @@
             <div class="image">
               <img :src="'http://localhost:1337' + association.logo.url">
             </div>
-           <router-link class="orangeBorderButton" :to="{ name: 'association-id', params: { id: association.id }}" tag="a" > Plus d'informations </router-link>
+            <div class="center">
+              <p>{{association.Adresse}}</p>
+              <p>{{association.Email}}</p>
+              <p>{{association.description}}</p>
+            </div>
          </div>
       </div>
     </div>
-  </div>
 </template>
 
 

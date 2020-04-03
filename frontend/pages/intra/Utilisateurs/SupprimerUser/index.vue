@@ -7,7 +7,7 @@
             <form @submit.stop.prevent="supprimerUser">
               <fieldset>
                 <div class="row">
-                  <label>Séléctionner le partenaire à supprimer :</label>
+                  <label>Séléctionner l'utilisateur à supprimer :</label>
                   <select required v-model="user">
                     <option v-for="user in users" :key="user.id" :value="user.id">{{user.username}} : {{user.Prenom}} {{user.Nom}}</option>
                   </select>

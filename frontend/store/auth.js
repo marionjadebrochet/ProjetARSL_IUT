@@ -28,5 +28,8 @@ export const getters = {
   },
   maraudes: state => {
     return state.user && state.user.maraudes
+  },
+  role: state => {
+    return state.user.role
   }
 }

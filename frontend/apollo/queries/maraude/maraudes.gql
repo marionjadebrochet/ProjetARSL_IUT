@@ -45,7 +45,9 @@ query Maraudes {
       secours,
       demandeHebergement,
       logementactuel,
-      appel
+      appel,
+      pseudo,
+      lieuRencontre
     }
   }
 }

@@ -4,7 +4,7 @@
       <h3 style="padding-top:20px;"> Suppression de services existants </h3>
       <div class="cadre center">
         <h2>{{association.nom}}</h2>
-        <img :src="'http://localhost:1337/' + associationUser.logo.url">
+        <img :src="'http://localhost:1337' + associationUser.logo.url">
       </div>
       <div v-for="centre in association.centres" v-bind:key="centre.id">
         <h4>{{centre.libelle}}</h4>

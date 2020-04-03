@@ -15,7 +15,7 @@
         </div>
 
         <div class="row">
-          <label>Choississez le centre</label>
+          <label>Choississez l'accueil de jour</label>
           <select required v-model="centre">
             <option v-for="centre in association.centres" :key="centre.id" :value="centre">{{centre.lieu.adresse}}</option>
           </select>

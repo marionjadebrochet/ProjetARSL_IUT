@@ -10,7 +10,7 @@
             </div>
             <p class="justify"> Vous êtes à la recherche d'un endroit où manger, trouver un petit déjeuner ou une collation ?
               <br>
-              Cliquez ici pour trouver le centre le plus proche de vous </p>
+              Cliquez ici pour trouver l'accueil de jour le plus proche de vous </p>
           </div>
           <div>
             <img class="service-manger" src="~/assets/image/Ou_manger.jpg">
@@ -23,7 +23,7 @@
               <router-link class="orangeBorderButton" tag="a" to="/services/laver" exact>Où se laver ?</router-link>
             </div>
             <p class="justify"> Vous cherchez un endroit pour vous doucher ? <br>
-              Cliquez ici pour trouver le centre le plus proche de vous </p>
+              Cliquez ici pour trouver l'accueil de jour le plus proche de vous </p>
           </div>
           <div>
             <img class="service-laver" src="~/assets/image/Ou_se_laver.jpg">
@@ -39,7 +39,7 @@
             </div>
             <p class="justify"> Vous avez besoin d'un lieu pour dormir pendant une nuit ?
               <br>
-              Cliquez ici pour trouver le centre le plus proche de vous
+              Cliquez ici pour trouver l'accueil de jour le plus proche de vous
             </p>
           </div>
           <div>
@@ -54,7 +54,7 @@
             </div>
             <p class="justify"> Vous avez besoin de nouveaux vêtements ?
               <br>
-              Cliquez ici pour trouver le centre le plus proche de vous
+              Cliquez ici pour trouver l'accueil de jour le plus proche de vous
             </p>
           </div>
           <div>

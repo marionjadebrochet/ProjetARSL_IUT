@@ -16,7 +16,7 @@
         </div>
 
         <div class="map">
-            <h4> Les centres </h4>
+            <h4> Les accueils de jour </h4>
             <div id="map-wrap" style="height: 100vh">
                <l-map :zoom=13 :center="[45.8188956,1.2521794]">
                  <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"> </l-tile-layer>

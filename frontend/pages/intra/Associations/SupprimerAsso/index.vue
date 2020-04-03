@@ -2,13 +2,13 @@
   <div>
     <client-only>
 
-      <h3 style="padding-top:20px;"> Les associations </h3>
+      <h3 style="padding-top:20px;"> Les organismes </h3>
       <div class="mesCentres cadre">
           <div class="cart">
             <form @submit.stop.prevent="supprimerAsso">
               <fieldset>
                 <div class="row">
-                  <label>Séléctionner l'association à supprimer :</label>
+                  <label>Séléctionner l'organisme à supprimer :</label>
                   <select required v-model="association">
                     <option v-for="association in listeAsso" :key="association.id" :value="association.id">{{association.nom}}</option>
                   </select>
@@ -55,7 +55,7 @@ export default {
     async supprimerAsso() {
       this.loading = true;
       try {
-      
+
         await strapi.deleteEntry("associations", this.association);
 
         alert("L'association a bien été supprimé.");

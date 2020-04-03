@@ -1,9 +1,9 @@
 <template>
   <div>
     <client-only>
-      <h3 style="padding-top:20px;"> Mes Membres </h3><br>
+      <h3 style="padding-top:20px;"> Utilisateurs </h3><br>
       <div class="center">
-        <div style="width:50%;" v-for="user in association.users" v-bind:key="user.id">
+        <div style="width:50%;" v-for="user in users" v-bind:key="users.id">
           <div class="cadre" style="margin-top: 30px">
             <div class="row">
               <h3>Nom : </h3>
@@ -25,6 +25,10 @@
               <h3>Role : </h3>
               <p>{{user.role.name}}</p>
             </div>
+            <div class="row" v-if="user.association != null">
+              <h3>Organisation : </h3>
+              <p>{{user.association.nom}}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -33,29 +37,19 @@
 </template>
 
 <script>
-import associationQuery from '~/apollo/queries/association/association'
+import usersQuery from '~/apollo/queries/user/users'
 
 export default {
   data() {
     return {
-      association: Object,
       users: [],
       query: '',
     }
   },
-  computed: {
-    // Get your association thanks to your getter
-    associationUser() {
-      return this.$store.getters["auth/association"];
-    }
-  },
   apollo: {
-    association: {
+    users: {
       prefetch: true,
-      query: associationQuery,
-      variables () {
-        return { id: this.associationUser.id }
-      }
+      query: usersQuery,
     }
   }
 }

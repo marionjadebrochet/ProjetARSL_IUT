@@ -4,5 +4,13 @@ query Users {
     username
     Prenom
     Nom
+    Telephone
+    email
+    association {
+      nom
+    }
+    role {
+      name
     }
   }
+}

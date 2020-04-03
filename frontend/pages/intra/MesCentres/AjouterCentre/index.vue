@@ -1,41 +1,32 @@
 <template>
     <div>
-        <h3>Ajouter un centre</h3>
+        <h3>Ajouter un accueil de jour</h3>
         <form @submit.stop.prevent="ajouterCentre">
           <fieldset>
             <div class="row">
-              <label>Nom du nouveau centre :</label>
+              <label>Nom du nouvel accueil de jour :</label>
               <input type="text" v-model="libelle">
             </div>
             <div class="row">
-              <label>Adresse du centre :</label>
-              <input type="text" v-model="adresse">
-            </div>
-            <div class="row">
-              <label >Téléphone du centre :</label>
+              <label >Téléphone de l'accueil de jour :</label>
               <input type="tel" v-model="tel">
             </div>
             <div class="row">
-              <label> Animaux :</label>
-              <div class="radio">
-                <label>Acceptés</label>
-                <input type="radio" v-model="accepte" name="animaux" checked>
-                <label>Interdits</label>
-      	        <input type="radio" v-model="refuse" name="animaux">
-              </div>
+              <label for="enceinte">Animaux autoriser ?</label>
+              <input type="checkbox" id="animaux" v-model="animaux">
             </div>
             <div class="row">
-              <label>public concerné par le centre :</label>
+              <label>public concerné par l'accueil de jour :</label>
               <input type="text" v-model="publicConcerne">
             </div>
             <div class="row">
-              <label for="lieu">Adresse du centre : </label>
+              <label for="lieu">Adresse de l'accueil de jour : </label>
               <select v-model="lieu" required>
                 <option v-for="lieu in listeLieus" :key="lieu.id" :value="lieu">{{lieu.libelle}}</option>
               </select>
             </div>
 
-            <h3>Horaires du centre</h3>
+            <h3>Horaires de l'accueil de jour</h3>
 
             <div class="row">
               <label for="nomJours">Nom de l'horaire : </label>
@@ -182,11 +173,9 @@
 
           this.centre = await strapi.createEntry("centres", {
             libelle: this.libelle,
-            adresse: this.adresse,
             tel: this.tel,
             association: this.associationUser.id,
-            //animaux: ??
-            animaux: false,
+            Animaux: this.animaux,
             publicConcerne: this.publicConcerne,
             jourshoraires: this.jourshoraires,
             lieu: this.lieu.id,

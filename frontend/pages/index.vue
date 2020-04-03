@@ -51,7 +51,7 @@
               <h4>{{centre.association.nom}}</h4>
               <div class="center">
                 <img
-                  :src="'http://localhost:1337/' + centre.association.logo.url"
+                  :src="'http://localhost:1337' + centre.association.logo.url"
                   class="logoAssociation"
                   style="margin: 10px"
                 />
@@ -116,10 +116,10 @@
   <div v-else>
     <h2>Bienvenue sur la partie gestion de votre application</h2>
     <div class="listeAction">
-      <div class="gestion">
+      <!-- <div class="gestion" v-if="role.name != 'Etat'">
         <div class="align-center">
           <img class="rond" src="~/assets/image/iconsIntra/association.svg" />
-          <h3>Association</h3>
+          <h3>Mon organisme</h3>
         </div>
         <div>
           <router-link
@@ -128,6 +128,39 @@
             to="/intra/MonAssociation"
             exact
           >Visualiser</router-link>
+        </div>
+      </div> -->
+
+      <div class="gestion">
+        <div class="align-center">
+          <img class="rond" src="~/assets/image/iconsIntra/association.svg" />
+          <h3>Organismes</h3>
+        </div>
+        <div>
+          <router-link
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Associations"
+            exact
+          >Visualiser tous les organismes</router-link>
+          <router-link v-if="role.name != 'Etat'"
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/MonAssociation"
+            exact
+          >Visualiser mon organisme</router-link>
+          <router-link v-if="role.name == 'Admin' || role.name == 'adminDev'"
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Associations/AjouterAsso"
+            exact
+          >Ajouter</router-link>
+          <router-link v-if="role.name == 'Admin' || role.name == 'adminDev'"
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Associations/SupprimerAsso"
+            exact
+          >Supprimer</router-link>
         </div>
       </div>
 
@@ -138,35 +171,35 @@
         </div>
         <div>
           <router-link class="orangeBorderButton" tag="a" to="/intra/Partenaires" exact>Visualiser</router-link>
-          <router-link
+          <router-link v-if="(role.name == 'admin structure' && association != null) || role.name == 'adminDev'"
             class="orangeBorderButton"
             tag="a"
             to="/intra/Partenaires/AjouterPartenaire"
             exact
           >Ajouter</router-link>
-          <router-link
+          <router-link v-if="(role.name == 'admin structure' && association != null) || role.name == 'adminDev'"
             class="orangeBorderButton"
             tag="a"
             to="/intra/Partenaires/SupprimerPartenaire"
             exact
-          >Supprimer</router-link>
+          >Supprimer </router-link>
         </div>
       </div>
 
       <div class="gestion">
         <div class="align-center">
           <img class="rond" src="~/assets/image/iconsIntra/centres.svg" />
-          <h3>Centres</h3>
+          <h3>Accueils de jour</h3>
         </div>
         <div>
           <router-link class="orangeBorderButton" tag="a" to="/intra/MesCentres" exact>Visualiser</router-link>
-          <router-link
+          <router-link v-if="(role.name == 'admin structure' && association != null) || role.name == 'adminDev'"
             class="orangeBorderButton"
             tag="a"
             to="/intra/MesCentres/AjouterCentre"
             exact
           >Ajouter</router-link>
-          <router-link
+          <router-link v-if="(role.name == 'admin structure' && association != null) || role.name == 'adminDev'"
             class="orangeBorderButton"
             tag="a"
             to="/intra/MesCentres/SupprimerCentre"
@@ -182,13 +215,13 @@
         </div>
         <div>
           <router-link class="orangeBorderButton" tag="a" to="/intra/MesServices" exact>Visualiser</router-link>
-          <router-link
+          <router-link v-if="(role.name == 'admin structure' && association != null) || role.name == 'adminDev'"
             class="orangeBorderButton"
             tag="a"
             to="/intra/MesServices/AjouterService"
             exact
           >Ajouter</router-link>
-          <router-link
+          <router-link v-if="(role.name == 'admin structure' && association != null) || role.name == 'adminDev'"
             class="orangeBorderButton"
             tag="a"
             to="/intra/MesServices/SupprimerService"
@@ -204,13 +237,13 @@
         </div>
         <div>
           <router-link class="orangeBorderButton" tag="a" to="/maraudes" exact>Visualiser</router-link>
-          <router-link
+          <router-link v-if="role.name == 'Référent' || role.name == 'adminDev'"
             class="orangeBorderButton"
             tag="a"
             to="/maraudes/commencerMaraude"
             exact
           >Commencer une maraude</router-link>
-          <router-link
+          <router-link v-if="role.name == 'Référent' || role.name == 'adminDev'"
             class="orangeBorderButton"
             tag="a"
             to="/maraudes/supprimerMaraude"
@@ -227,18 +260,40 @@
 
       <div class="gestion">
         <div class="align-center">
+          <img class="rond" src="~/assets/image/iconsIntra/lieu.svg" />
+          <h3>Lieu</h3>
+        </div>
+        <div>
+          <router-link class="orangeBorderButton" tag="a" to="/intra/Lieu" exact>Visualiser</router-link>
+          <router-link v-if="role.name != 'Bénévole' && role.name != 'Etat'"
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Lieu/AjouterLieu"
+            exact
+          >Ajouter</router-link>
+          <router-link v-if="role.name != 'Bénévole' && role.name != 'Etat'"
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Lieu/SupprimerLieu"
+            exact
+          >Supprimer</router-link>
+        </div>
+      </div>
+
+      <div class="gestion">
+        <div class="align-center">
           <img class="rond" src="~/assets/image/iconsIntra/membres.svg" />
           <h3>Membres</h3>
         </div>
         <div>
           <router-link class="orangeBorderButton" tag="a" to="/intra/MesMembres" exact>Visualiser</router-link>
-          <router-link
+          <router-link v-if="(role.name == 'admin structure' && association != null) || role.name == 'adminDev'"
             class="orangeBorderButton"
             tag="a"
             to="/intra/MesMembres/AjouterMembre"
             exact
           >Ajouter</router-link>
-          <router-link
+          <router-link v-if="(role.name == 'admin structure' && association != null) || role.name == 'adminDev'"
             class="orangeBorderButton"
             tag="a"
             to="/intra/MesMembres/SupprimerMembre"
@@ -247,13 +302,39 @@
         </div>
       </div>
 
-      <div class="gestion">
+      <div class="gestion" v-if="role.name == 'Admin' || role.name == 'adminDev'">
+        <div class="align-center">
+          <img class="rond" src="~/assets/image/iconsIntra/membres.svg" />
+          <h3>Utilisateurs</h3>
+        </div>
+        <div>
+          <router-link
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Utilisateurs"
+            exact>Visualiser</router-link>
+          <router-link
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Utilisateurs/AjouterUser"
+            exact
+          >Ajouter</router-link>
+          <router-link
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/Utilisateurs/SupprimerUser"
+            exact
+          >Supprimer</router-link>
+        </div>
+      </div>
+
+      <div class="gestion" v-if="(username == 'SIAO' || username == '115') && role.name == 'admin structure'">
         <div class="align-center">
           <img class="rond" src="~/assets/image/iconsIntra/alarme.svg" />
           <h3>Alertes</h3>
         </div>
         <div>
-          <router-link class="orangeBorderButton" tag="a" to="/intra/alerte" exact>Déclencher</router-link>
+          <router-link class="orangeBorderButton" tag="a" to="/intra/alerte" exact>Déclencher/Désactiver</router-link>
         </div>
       </div>
     </div>
@@ -295,9 +376,14 @@ export default {
     // Set your username thanks to your getter
     username() {
       return this.$store.getters["auth/username"];
+    },
+    role() {
+      return this.$store.getters["auth/role"];
+    },
+    association() {
+      return this.$store.getters["auth/association"];
     }
   },
-
   components: {
     Alerte
   },
