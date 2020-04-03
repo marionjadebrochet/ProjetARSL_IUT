@@ -287,7 +287,7 @@
         </div>
         <div>
           <router-link class="orangeBorderButton" tag="a" to="/intra/MesMembres" exact>Visualiser</router-link>
-          <router-link v-if="role.name == '(admin structure' && association != null) || role.name == 'adminDev'"
+          <router-link v-if="(role.name == 'admin structure' && association != null) || role.name == 'adminDev'"
             class="orangeBorderButton"
             tag="a"
             to="/intra/MesMembres/AjouterMembre"
