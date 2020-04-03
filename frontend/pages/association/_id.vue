@@ -12,7 +12,7 @@
       <div class="cadre space-around align-center" v-for="centres in association.centres"
            v-bind:key="association.centres.id">
         <p>{{centres.lieu.adresse}}</p>
-        <p> Services du centre : </p>
+        <p> Services du de l'accueil de jour : </p>
         <p v-for="services in centres.services" v-bind:key="centres.services.id"> {{services.nom}} </p>
         <router-link class="orangeBorderButton" :to="{ name: 'centre-id', params: { id: centres.id }}" tag="a"> Plus
           d'informations

@@ -183,7 +183,7 @@
       <div class="gestion">
         <div class="align-center">
           <img class="rond" src="~/assets/image/iconsIntra/centres.svg" />
-          <h3>Centres</h3>
+          <h3>Accueils de jour</h3>
         </div>
         <div>
           <router-link class="orangeBorderButton" tag="a" to="/intra/MesCentres" exact>Visualiser</router-link>

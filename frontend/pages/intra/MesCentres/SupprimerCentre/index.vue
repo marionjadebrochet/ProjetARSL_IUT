@@ -2,7 +2,7 @@
   <div>
     <client-only>
 
-      <h3 style="padding-top:20px;"> Mes centres </h3>
+      <h3 style="padding-top:20px;"> Mes accueils de jour </h3>
       <div class="mesCentres cadre">
         <div>
           <h2>{{association.nom}}</h2>
@@ -12,7 +12,7 @@
             <form @submit.stop.prevent="supprimerCentre">
               <fieldset>
                 <div class="row">
-                  <label>Séléctionner le centre à supprimer :</label>
+                  <label>Séléctionner l'accueil de jour à supprimer :</label>
                   <select required v-model="centre">
                     <option v-for="centre in association.centres" :key="centre.id" :value="centre.id">{{centre.libelle}}</option>
                   </select>
