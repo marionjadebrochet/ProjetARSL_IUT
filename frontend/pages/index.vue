@@ -254,7 +254,7 @@
 
       <div class="gestion">
         <div class="align-center">
-          <img class="rond" src="~/assets/image/iconsIntra/maraudes.svg" />
+          <img class="rond" src="~/assets/image/iconsIntra/lieu.svg" />
           <h3>Lieu</h3>
         </div>
         <div>
