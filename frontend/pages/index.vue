@@ -116,7 +116,7 @@
   <div v-else>
     <h2>Bienvenue sur la partie gestion de votre application</h2>
     <div class="listeAction">
-      <div class="gestion" v-if="role.name != 'Admin' || role.name != 'Etat'">
+      <!-- <div class="gestion" v-if="role.name != 'Etat'">
         <div class="align-center">
           <img class="rond" src="~/assets/image/iconsIntra/association.svg" />
           <h3>Mon organisme</h3>
@@ -129,12 +129,12 @@
             exact
           >Visualiser</router-link>
         </div>
-      </div>
+      </div> -->
 
       <div class="gestion">
         <div class="align-center">
           <img class="rond" src="~/assets/image/iconsIntra/association.svg" />
-          <h3>organismes</h3>
+          <h3>Organismes</h3>
         </div>
         <div>
           <router-link
@@ -143,7 +143,13 @@
             to="/intra/Associations"
             exact
           >Visualiser tous les organismes</router-link>
-          <router-link v-if="role.name == 'Admin' || (role.name == 'admin structure' && association == null )"
+          <router-link v-if="role.name != 'Etat'"
+            class="orangeBorderButton"
+            tag="a"
+            to="/intra/MonAssociation"
+            exact
+          >Visualiser mon organisme</router-link>
+          <router-link v-if="role.name == 'Admin'"
             class="orangeBorderButton"
             tag="a"
             to="/intra/Associations/AjouterAsso"

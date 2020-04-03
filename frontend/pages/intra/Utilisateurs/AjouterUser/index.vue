@@ -34,7 +34,7 @@
         <div class="row">
           <label>Choississez le rôle de l'utilisateur</label>
           <select required v-model="role">
-            <option v-for="role in roles" :key="role.id" :value="role.id">{{role.name}}</option>
+            <option v-for="role in roles" :key="role.id" :value="role.id" v-if="role.name != 'adminDev' && role.name != 'Authenticated' && role.name != 'Public'">{{role.name}}</option>
           </select>
         </div>
 
