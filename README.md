@@ -27,3 +27,11 @@ Tapez : ```localhost:3000```
 Strapi
 Nuxt.js
 GraphQL
+
+### Etudiants :
+
+Brochet Marion
+Le Caloch Clément
+Mare Dorian
+Martzolf Tom
+Rousselet Guillaume
