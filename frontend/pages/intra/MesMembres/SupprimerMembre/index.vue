@@ -1,13 +1,13 @@
 <template>
   <div>
     <client-only>
-      <h3 style="padding-top:20px;"> Mes Utilisateurs </h3><br>
+      <h3 style="padding-top:20px;"> Mes Membres </h3><br>
       <div class="center">
           <div class="cadre" style="margin-top: 30px">
             <form @submit.stop.prevent="supprimerMembre">
               <fieldset>
                 <div class="row">
-                  <label>Séléctionner le partenaire à supprimer :</label>
+                  <label>Séléctionner le membre à supprimer :</label>
                   <select required v-model="user">
                     <option v-for="user in association.users" :key="user.id" :value="user.id">{{user.username}} : {{user.Prenom}} {{user.Nom}}</option>
                   </select>
