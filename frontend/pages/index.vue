@@ -10,12 +10,12 @@
           Notre objectif ? Faciliter la prise en charge des personnes sans-abris ou des personnes qui sont menacées de l’être en améliorant
           l’offre et la demande des hébergements sur le territoire.
         </section>
-        <div class="center">
+        <section>
           <a class="orangeButton" href="tel:+33115">
             Appelez le
             <b>115</b>
           </a>
-        </div>
+        </section>
       </div>
       <div>
         <img class="imgAccueil" src="~/assets/image/image-accueil.jpg" />
