@@ -2,7 +2,7 @@
   <div>
     <client-only>
 
-      <h3 style="padding-top:20px;"> Mes accueils de jour </h3>
+      <h3 style="padding-top:20px;"> Supprimer un accueil de jour </h3>
       <div class="mesCentres cadre">
         <div>
           <h2>{{association.nom}}</h2>
